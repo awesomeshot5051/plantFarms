@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "plant_farms:copy_block_entity"
+            }
+          ],
+          "name": "plant_farms:warden_farm"
+        }
+      ]
+    }
+  ]
+}
