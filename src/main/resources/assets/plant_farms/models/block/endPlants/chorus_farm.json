@@ -1,0 +1,7 @@
+{
+  "parent": "plant_farms:block/farm",
+  "textures": {
+    "front": "plant_farms:block/end_stone",
+    "back": "minecraft:block/end_stone"
+  }
+}

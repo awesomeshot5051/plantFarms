@@ -1,7 +1,7 @@
 package com.awesomeshot5051.plantfarms.integration.waila;
 
-import com.awesomeshot5051.plantfarms.blocks.aggressiveMobs.CreeperFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.neutralMobs.IronFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.undergroundPlants.CreeperFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.IronFarmBlock;
 import snownee.jade.api.IWailaClientRegistration;
 import snownee.jade.api.IWailaPlugin;
 import snownee.jade.api.WailaPlugin;

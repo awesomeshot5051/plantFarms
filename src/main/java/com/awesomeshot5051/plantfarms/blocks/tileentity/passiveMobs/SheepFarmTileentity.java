@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.awesomeshot5051.plantfarms.blocks.passiveMobs.SheepFarmBlock.COLOR;
+import static com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.SheepFarmBlock.COLOR;
 
 public class SheepFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 

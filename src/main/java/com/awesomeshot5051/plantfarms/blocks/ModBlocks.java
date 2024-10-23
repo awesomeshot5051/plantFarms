@@ -1,11 +1,12 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
 import com.awesomeshot5051.plantfarms.Main;
+import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.Trees.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.undergroundPlants.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.*;
+import com.awesomeshot5051.plantfarms.blocks.theend.ChorusfarmBlock;
 import com.awesomeshot5051.plantfarms.fluids.waterBlock;
-import com.awesomeshot5051.plantfarms.blocks.aggressiveMobs.*;
-import com.awesomeshot5051.plantfarms.blocks.neutralMobs.*;
-import com.awesomeshot5051.plantfarms.blocks.overworldTrees.OakFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.passiveMobs.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
@@ -38,7 +39,7 @@ public class ModBlocks {
 
 
     // Neutral Mobs
-    public static final DeferredHolder<Block, EndermanFarmBlock> ENDERMAN_FARM = BLOCK_REGISTER.register("enderman_farm", EndermanFarmBlock::new);
+    public static final DeferredHolder<Block, ChorusfarmBlock> CHORUS_FARM = BLOCK_REGISTER.register("chorus_farm", ChorusfarmBlock::new);
     public static final DeferredHolder<Block, GoatFarmBlock> GOAT_FARM = BLOCK_REGISTER.register("goat_farm", GoatFarmBlock::new);
     public static final DeferredHolder<Block, IronFarmBlock> IRON_FARM = BLOCK_REGISTER.register("iron_farm", IronFarmBlock::new);
     public static final DeferredHolder<Block, SpiderFarmBlock> SPIDER_FARM = BLOCK_REGISTER.register("spider_farm", SpiderFarmBlock::new);

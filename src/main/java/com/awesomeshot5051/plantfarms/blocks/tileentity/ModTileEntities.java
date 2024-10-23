@@ -3,10 +3,12 @@ package com.awesomeshot5051.plantfarms.blocks.tileentity;
 import com.awesomeshot5051.plantfarms.Main;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.aggressiveMobs.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.neutralMobs.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.overworldPlants.Trees.OakFarmTileentity;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworldPlants.Trees.OakFarmRenderer;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.theend.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.passiveMobs.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.render.aggressiveMobs.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.neutralMobs.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.theend.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.render.passiveMobs.*;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -103,8 +105,8 @@ public class ModTileEntities {
             BlockEntityType.Builder.of(SpiderFarmTileentity::new, ModBlocks.SPIDER_FARM.get()).build(null)
     );
 
-    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EndermanFarmTileentity>> ENDERMAN_FARM = BLOCK_ENTITY_REGISTER.register("enderman_farm", () ->
-            BlockEntityType.Builder.of(EndermanFarmTileentity::new, ModBlocks.ENDERMAN_FARM.get()).build(null)
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ChorusFarmTileentity>> CHORUS_FARM = BLOCK_ENTITY_REGISTER.register("chorus_farm", () ->
+            BlockEntityType.Builder.of(ChorusFarmTileentity::new, ModBlocks.CHORUS_FARM.get()).build(null)
     );
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GoatFarmTileentity>> GOAT_FARM = BLOCK_ENTITY_REGISTER.register("goat_farm", () ->
@@ -160,13 +162,13 @@ public class ModTileEntities {
 //
 //        //netherPlants mobs
         BlockEntityRenderers.register(ModTileEntities.SPIDER_FARM.get(), SpiderFarmRenderer::new);
-        BlockEntityRenderers.register(ModTileEntities.ENDERMAN_FARM.get(), EndermanFarmRenderer::new);
+        BlockEntityRenderers.register(ModTileEntities.CHORUS_FARM.get(), ChorusFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.GOAT_FARM.get(), GoatFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.IRON_FARM.get(), IronFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.PIGLIN_FARM.get(), PiglinFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.ZOMBIFIED_PIGLIN_FARM.get(), ZombifiedPiglinFarmRenderer::new);
 //
-//        //overworldPlants mobs
+//        //overworld Plants mobs
         BlockEntityRenderers.register(ModTileEntities.OAK_FARM.get(), OakFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.CREEPER_FARM.get(), CreeperFarmRenderer::new);
         BlockEntityRenderers.register(ModTileEntities.DROWNED_FARM.get(), DrownedFarmRenderer::new);
@@ -216,7 +218,7 @@ public class ModTileEntities {
 //
 //        //netherPlants mobs
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SPIDER_FARM.get(), (object, context) -> object.getItemHandler());
-        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ENDERMAN_FARM.get(), (object, context) -> object.getItemHandler());
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CHORUS_FARM.get(), (object, context) -> object.getItemHandler());
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, GOAT_FARM.get(), (object, context) -> object.getItemHandler());
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, IRON_FARM.get(), (object, context) -> object.getItemHandler());
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, PIGLIN_FARM.get(), (object, context) -> object.getItemHandler());

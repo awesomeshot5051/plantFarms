@@ -1,6 +1,6 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
-import com.awesomeshot5051.plantfarms.blocks.passiveMobs.SheepFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.SheepFarmBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.dispenser.BlockSource;

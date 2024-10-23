@@ -2,7 +2,7 @@ package com.awesomeshot5051.plantfarms;
 
 import com.awesomeshot5051.plantfarms.advancements.MobFarmsTriggerInstance;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.aggressiveMobs.WitherFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.undergroundPlants.WitherFarmBlock;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.events.BlockEvents;
 import com.awesomeshot5051.plantfarms.events.GuiEvents;

@@ -1,6 +1,6 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.passiveMobs;
 
-import com.awesomeshot5051.plantfarms.blocks.passiveMobs.SheepFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.SheepFarmBlock;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.passiveMobs.SheepFarmTileentity;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
 import com.mojang.blaze3d.vertex.PoseStack;
