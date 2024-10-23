@@ -10,7 +10,7 @@ displayName = "Plant Farms"
 #displayURL = "https://www.curseforge.com/minecraft/mc-mods/easy-villagers"
 logoFile = "../assets/plant_farms/textures/gui/icons/icon.png"
 authors = "awesomeshot5051"
-description = '''Mod Farms'''
+description = '''Plant Farms'''
 [[dependencies.plant_farms]]
 modId = "neoforge"
 type = "required"

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobFarms.iml" filepath="$PROJECT_DIR$/.idea/modules/MobFarms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MobFarms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main~1.iml" />
     </modules>
   </component>
 </project>
