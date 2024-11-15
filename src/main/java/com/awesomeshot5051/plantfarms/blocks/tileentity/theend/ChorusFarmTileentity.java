@@ -45,12 +45,12 @@ public class ChorusFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getSaplingSpawnTime() {
-        return Main.SERVER_CONFIG.blazeSpawnTime.get() - 20 * 4;
+    public static int getChorusSpawnTime() {
+        return Main.SERVER_CONFIG.chorusSpawnTime.get() - 20 * 4;
     }
 
-    public static int getSaplingDeathTime() {
-        return getSaplingSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static int getChorusDeathTime() {
+        return getChorusSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -65,7 +65,7 @@ public class ChorusFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getSaplingSpawnTime()) {
+        if (timer == getChorusSpawnTime()) {
 //            // Play blaze spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_PRIMED);
             sync();
@@ -73,7 +73,7 @@ public class ChorusFarmTileentity extends VillagerTileentity implements ITickabl
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_HURT);
 //            }
-        } else if (timer >= getSaplingDeathTime()) {
+        } else if (timer >= getChorusDeathTime()) {
             // Play blaze death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_DEATH);
             for (ItemStack drop : getDrops()) {
@@ -101,10 +101,11 @@ public class ChorusFarmTileentity extends VillagerTileentity implements ITickabl
 
         if (serverWorld.random.nextDouble() < dropChance) {
             int dropCount = serverWorld.random.nextIntBetweenInclusive(1, 4);
-            drops.add(new ItemStack(Items.OAK_SAPLING, dropCount)); // Drop 1 blaze rod
+            drops.add(new ItemStack(Items.CHORUS_PLANT, dropCount)); // Drop 1 blaze rod
+            drops.add(new ItemStack(Items.CHORUS_FLOWER));
         }
-        drops.add(new ItemStack(Items.OAK_WOOD));
-        drops.add(new ItemStack(Items.APPLE));
+
+        drops.add(new ItemStack(Items.CHORUS_FRUIT));
         // Optionally, you can add other items to drop here if needed
         // drops.add(new ItemStack(Items.SOME_OTHER_ITEM, 1));
 

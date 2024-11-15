@@ -23,9 +23,17 @@ public class BlockRendererBase<T extends FakeWorldTileentity> implements BlockEn
     public void render(T tileEntity, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
 
     }
-
     public EntityRendererProvider.Context createEntityRenderer() {
-        return new EntityRendererProvider.Context(minecraft.getEntityRenderDispatcher(), minecraft.getItemRenderer(), minecraft.getBlockRenderer(), minecraft.gameRenderer.itemInHandRenderer, minecraft.getResourceManager(), minecraft.getEntityModels(), minecraft.font);
+        return new EntityRendererProvider.Context(
+                minecraft.getEntityRenderDispatcher(),
+                minecraft.getItemRenderer(),
+                minecraft.getMapRenderer(),
+                minecraft.getBlockRenderer(),
+                minecraft.getResourceManager(),
+                minecraft.getEntityModels(),
+                minecraft.getEquipmentModels(),
+                minecraft.font
+        );
     }
 
     @Override
