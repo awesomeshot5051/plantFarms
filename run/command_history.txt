@@ -1,5 +1,3 @@
-/time set noon
-/tick rate 10000
 /clear Dev minecraft:crossbow
 /tick rate 20
 /tick rate 10000
@@ -48,3 +46,5 @@
 /random roll 2 minecraft:blocks/brown_mushroom
 /tick rate 10000
 /tick rate 20
+/clear
+/give Dev minecraft:wooden_hoe
