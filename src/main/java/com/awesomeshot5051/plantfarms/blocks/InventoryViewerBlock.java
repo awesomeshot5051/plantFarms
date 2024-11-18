@@ -9,7 +9,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -55,7 +55,7 @@ public class InventoryViewerBlock extends BlockBase implements EntityBlock {
 
 
     @Override
-    protected @NotNull InteractionResult useItemOn(ItemStack heldItem, BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
+    protected @NotNull ItemInteractionResult useItemOn(ItemStack heldItem, BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
         BlockEntity tileEntity = worldIn.getBlockEntity(pos);
 
         // Check if the block entity is an instance of InventoryViewerTileentity
@@ -78,7 +78,7 @@ public class InventoryViewerBlock extends BlockBase implements EntityBlock {
             }, packetBuffer -> packetBuffer.writeBlockPos(inventoryViewer.getBlockPos()));
         }
 
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
 

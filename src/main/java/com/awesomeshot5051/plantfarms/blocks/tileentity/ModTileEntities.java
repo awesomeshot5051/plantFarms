@@ -200,154 +200,156 @@ public class ModTileEntities {
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<farmBlockTileentity>> FARM_BLOCK = BLOCK_ENTITY_REGISTER.register("farm_block", () ->
-            new BlockEntityType<>(farmBlockTileentity::new, ModBlocks.FARM_BLOCK.get())
+            BlockEntityType.Builder.of(farmBlockTileentity::new, ModBlocks.FARM_BLOCK.get()).build(null)
     );
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<tfarmBlockTileentity>> TFARM_BLOCK = BLOCK_ENTITY_REGISTER.register("tfarm_block", () ->
-            new BlockEntityType<>(tfarmBlockTileentity::new, ModBlocks.TFARM_BLOCK.get())
+            BlockEntityType.Builder.of(tfarmBlockTileentity::new, ModBlocks.TFARM_BLOCK.get()).build(null)
     );
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<bambooFarmTileentity>> BAMBOO_FARM = BLOCK_ENTITY_REGISTER.register("bamboo_farm", () ->
-            new BlockEntityType<>(bambooFarmTileentity::new, ModBlocks.BAMBOO_FARM.get()));
+            BlockEntityType.Builder.of(bambooFarmTileentity::new, ModBlocks.BAMBOO_FARM.get()).build(null));
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<InventoryViewerTileentity>> INVENTORY_VIEWER = BLOCK_ENTITY_REGISTER.register("inventory_viewer", () ->
-            new BlockEntityType<>(InventoryViewerTileentity::new, ModBlocks.INVENTORY_VIEWER.get())
+            BlockEntityType.Builder.of(InventoryViewerTileentity::new, ModBlocks.INVENTORY_VIEWER.get()).build(null)
     );
 
 
     /// The End
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<ChorusFarmTileentity>> CHORUS_FARM = BLOCK_ENTITY_REGISTER.register("chorus_farm", () ->
-            new BlockEntityType<>(ChorusFarmTileentity::new, ModBlocks.CHORUS_FARM.get())
+            BlockEntityType.Builder.of(ChorusFarmTileentity::new, ModBlocks.CHORUS_FARM.get()).build(null)
     );
 
 
     /// Overworld
     //Overworld Trees
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AcaciaFarmTileentity>> ACACIA_FARM = BLOCK_ENTITY_REGISTER.register("acacia_farm", () ->
-            new BlockEntityType<>(AcaciaFarmTileentity::new, ModBlocks.ACACIA_FARM.get())
+            BlockEntityType.Builder.of(AcaciaFarmTileentity::new, ModBlocks.ACACIA_FARM.get()).build(null)
     );
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AzaleaFarmTileentity>> AZALEA_FARM = BLOCK_ENTITY_REGISTER.register("azalea_farm", () ->
-            new BlockEntityType<>(AzaleaFarmTileentity::new, ModBlocks.AZALEA_FARM.get())
+            BlockEntityType.Builder.of(AzaleaFarmTileentity::new, ModBlocks.AZALEA_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<BirchFarmTileentity>> BIRCH_FARM = BLOCK_ENTITY_REGISTER.register("birch_farm", () ->
-            new BlockEntityType<>(BirchFarmTileentity::new, ModBlocks.BIRCH_FARM.get())
+            BlockEntityType.Builder.of(BirchFarmTileentity::new, ModBlocks.BIRCH_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CherryFarmTileentity>> CHERRY_FARM = BLOCK_ENTITY_REGISTER.register("cherry_farm", () ->
-            new BlockEntityType<>(CherryFarmTileentity::new, ModBlocks.CHERRY_FARM.get())
+            BlockEntityType.Builder.of(CherryFarmTileentity::new, ModBlocks.CHERRY_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<DarkOakFarmTileentity>> DARK_OAK_FARM = BLOCK_ENTITY_REGISTER.register("dark_oak_farm", () ->
-            new BlockEntityType<>(DarkOakFarmTileentity::new, ModBlocks.DARK_OAK_FARM.get())
+            BlockEntityType.Builder.of(DarkOakFarmTileentity::new, ModBlocks.DARK_OAK_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<JungleFarmTileentity>> JUNGLE_FARM = BLOCK_ENTITY_REGISTER.register("jungle_farm", () ->
-            new BlockEntityType<>(JungleFarmTileentity::new, ModBlocks.JUNGLE_FARM.get())
+            BlockEntityType.Builder.of(JungleFarmTileentity::new, ModBlocks.JUNGLE_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MangroveFarmTileentity>> MANGROVE_FARM = BLOCK_ENTITY_REGISTER.register("mangrove_farm", () ->
-            new BlockEntityType<>(MangroveFarmTileentity::new, ModBlocks.MANGROVE_FARM.get())
+            BlockEntityType.Builder.of(MangroveFarmTileentity::new, ModBlocks.MANGROVE_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<OakFarmTileentity>> OAK_FARM = BLOCK_ENTITY_REGISTER.register("oak_farm", () ->
-            new BlockEntityType<>(OakFarmTileentity::new, ModBlocks.OAK_FARM.get())
+            BlockEntityType.Builder.of(OakFarmTileentity::new, ModBlocks.OAK_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpruceFarmTileentity>> SPRUCE_FARM = BLOCK_ENTITY_REGISTER.register("spruce_farm", () ->
-            new BlockEntityType<>(SpruceFarmTileentity::new, ModBlocks.SPRUCE_FARM.get())
+            BlockEntityType.Builder.of(SpruceFarmTileentity::new, ModBlocks.SPRUCE_FARM.get()).build(null)
     );
 
 
     //Overworld Crops
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<wheatFarmTileentity>> WHEAT_FARM = BLOCK_ENTITY_REGISTER.register("wheat_farm", () ->
-            new BlockEntityType<>(wheatFarmTileentity::new, ModBlocks.WHEAT_FARM.get()));
+            BlockEntityType.Builder.of(wheatFarmTileentity::new, ModBlocks.WHEAT_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<carrotFarmTileentity>> CARROT_FARM = BLOCK_ENTITY_REGISTER.register("carrot_farm", () ->
-            new BlockEntityType<>(carrotFarmTileentity::new, ModBlocks.CARROT_FARM.get()));
+            BlockEntityType.Builder.of(carrotFarmTileentity::new, ModBlocks.CARROT_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<gcarrotFarmTileentity>> GCARROT_FARM = BLOCK_ENTITY_REGISTER.register("gcarrot_farm", () ->
-            new BlockEntityType<>(gcarrotFarmTileentity::new, ModBlocks.GCARROT_FARM.get()));
+            BlockEntityType.Builder.of(gcarrotFarmTileentity::new, ModBlocks.GCARROT_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<potatoFarmTileentity>> POTATO_FARM = BLOCK_ENTITY_REGISTER.register("potato_farm", () ->
-            new BlockEntityType<>(potatoFarmTileentity::new, ModBlocks.POTATO_FARM.get()));
+            BlockEntityType.Builder.of(potatoFarmTileentity::new, ModBlocks.POTATO_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<beetrootFarmTileentity>> BEETROOT_FARM = BLOCK_ENTITY_REGISTER.register("beetroot_farm", () ->
-            new BlockEntityType<>(beetrootFarmTileentity::new, ModBlocks.BEETROOT_FARM.get()));
+            BlockEntityType.Builder.of(beetrootFarmTileentity::new, ModBlocks.BEETROOT_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pumpkinFarmTileentity>> PUMPKIN_FARM = BLOCK_ENTITY_REGISTER.register("pumpkin_farm", () ->
-            new BlockEntityType<>(pumpkinFarmTileentity::new, ModBlocks.PUMPKIN_FARM.get()));
+            BlockEntityType.Builder.of(pumpkinFarmTileentity::new, ModBlocks.PUMPKIN_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<melonFarmTileentity>> MELON_FARM = BLOCK_ENTITY_REGISTER.register("melon_farm", () ->
-            new BlockEntityType<>(melonFarmTileentity::new, ModBlocks.MELON_FARM.get()));
+            BlockEntityType.Builder.of(melonFarmTileentity::new, ModBlocks.MELON_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sugarFarmTileentity>> SUGAR_FARM = BLOCK_ENTITY_REGISTER.register("sugar_farm", () ->
-            new BlockEntityType<>(sugarFarmTileentity::new, ModBlocks.SUGAR_FARM.get()));
+            BlockEntityType.Builder.of(sugarFarmTileentity::new, ModBlocks.SUGAR_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cocoFarmTileentity>> COCO_FARM = BLOCK_ENTITY_REGISTER.register("coco_farm", () ->
-            new BlockEntityType<>(cocoFarmTileentity::new, ModBlocks.COCO_FARM.get()));
+            BlockEntityType.Builder.of(cocoFarmTileentity::new, ModBlocks.COCO_FARM.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<berryFarmTileentity>> BERRY_FARM = BLOCK_ENTITY_REGISTER.register("berry_farm", () ->
-            new BlockEntityType<>(berryFarmTileentity::new, ModBlocks.BERRY_FARM.get()));
+            BlockEntityType.Builder.of(berryFarmTileentity::new, ModBlocks.BERRY_FARM.get()).build(null));
 
     //Overworld Flowers
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<dandelionFarmTileentity>> DANDELION_FARM = BLOCK_ENTITY_REGISTER.register("dandelion_farm", () ->
-            new BlockEntityType<>(dandelionFarmTileentity::new, ModBlocks.DANDELION_FARM.get()));
+            BlockEntityType.Builder.of(dandelionFarmTileentity::new, ModBlocks.DANDELION_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<poppyFarmTileentity>> POPPY_FARM = BLOCK_ENTITY_REGISTER.register("poppy_farm", () ->
-            new BlockEntityType<>(poppyFarmTileentity::new, ModBlocks.POPPY_FARM.get()));
+            BlockEntityType.Builder.of(poppyFarmTileentity::new, ModBlocks.POPPY_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orchidFarmTileentity>> ORCHID_FARM = BLOCK_ENTITY_REGISTER.register("orchid_farm", () ->
-            new BlockEntityType<>(orchidFarmTileentity::new, ModBlocks.ORCHID_FARM.get()));
+            BlockEntityType.Builder.of(orchidFarmTileentity::new, ModBlocks.ORCHID_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<alliumFarmTileentity>> ALLIUM_FARM = BLOCK_ENTITY_REGISTER.register("allium_farm", () ->
-            new BlockEntityType<>(alliumFarmTileentity::new, ModBlocks.ALLIUM_FARM.get()));
+            BlockEntityType.Builder.of(alliumFarmTileentity::new, ModBlocks.ALLIUM_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<azureFarmTileentity>> AZURE_FARM = BLOCK_ENTITY_REGISTER.register("azure_farm", () ->
-            new BlockEntityType<>(azureFarmTileentity::new, ModBlocks.AZURE_FARM.get())); // Shortened from azure_bluet_farm
+            BlockEntityType.Builder.of(azureFarmTileentity::new, ModBlocks.AZURE_FARM.get()).build(null)); // Shortened from azure_bluet_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<redFarmTileentity>> RED_FARM = BLOCK_ENTITY_REGISTER.register("red_farm", () ->
-            new BlockEntityType<>(redFarmTileentity::new, ModBlocks.RED_FARM.get())); // Shortened from red_tulip_farm
+            BlockEntityType.Builder.of(redFarmTileentity::new, ModBlocks.RED_FARM.get()).build(null)); // Shortened from red_tulip_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<orangeFarmTileentity>> ORANGE_FARM = BLOCK_ENTITY_REGISTER.register("orange_farm", () ->
-            new BlockEntityType<>(orangeFarmTileentity::new, ModBlocks.ORANGE_FARM.get())); // Shortened from orange_tulip_farm
+            BlockEntityType.Builder.of(orangeFarmTileentity::new, ModBlocks.ORANGE_FARM.get()).build(null)); // Shortened from orange_tulip_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<whiteFarmTileentity>> WHITE_FARM = BLOCK_ENTITY_REGISTER.register("white_farm", () ->
-            new BlockEntityType<>(whiteFarmTileentity::new, ModBlocks.WHITE_FARM.get())); // Shortened from white_tulip_farm
+            BlockEntityType.Builder.of(whiteFarmTileentity::new, ModBlocks.WHITE_FARM.get()).build(null)); // Shortened from white_tulip_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<pinkFarmTileentity>> PINK_FARM = BLOCK_ENTITY_REGISTER.register("pink_farm", () ->
-            new BlockEntityType<>(pinkFarmTileentity::new, ModBlocks.PINK_FARM.get())); // Shortened from pink_tulip_farm
+            BlockEntityType.Builder.of(pinkFarmTileentity::new, ModBlocks.PINK_FARM.get()).build(null)); // Shortened from pink_tulip_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<daisyFarmTileentity>> DAISY_FARM = BLOCK_ENTITY_REGISTER.register("daisy_farm", () ->
-            new BlockEntityType<>(daisyFarmTileentity::new, ModBlocks.DAISY_FARM.get())); // Shortened from oxeye_daisy_farm
+            BlockEntityType.Builder.of(daisyFarmTileentity::new, ModBlocks.DAISY_FARM.get()).build(null)); // Shortened from oxeye_daisy_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cornflowerFarmTileentity>> CORNFLOWER_FARM = BLOCK_ENTITY_REGISTER.register("cornflower_farm", () ->
-            new BlockEntityType<>(cornflowerFarmTileentity::new, ModBlocks.CORNFLOWER_FARM.get()));
+            BlockEntityType.Builder.of(cornflowerFarmTileentity::new, ModBlocks.CORNFLOWER_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lilyFarmTileentity>> LILY_FARM = BLOCK_ENTITY_REGISTER.register("lily_farm", () ->
-            new BlockEntityType<>(lilyFarmTileentity::new, ModBlocks.LILY_FARM.get())); // Changed from lilly_farm
+            BlockEntityType.Builder.of(lilyFarmTileentity::new, ModBlocks.LILY_FARM.get()).build(null)); // Changed from lilly_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<sunflowerFarmTileentity>> SUNFLOWER_FARM = BLOCK_ENTITY_REGISTER.register("sunflower_farm", () ->
-            new BlockEntityType<>(sunflowerFarmTileentity::new, ModBlocks.SUNFLOWER_FARM.get()));
+            BlockEntityType.Builder.of(sunflowerFarmTileentity::new, ModBlocks.SUNFLOWER_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<lilacFarmTileentity>> LILAC_FARM = BLOCK_ENTITY_REGISTER.register("lilac_farm", () ->
-            new BlockEntityType<>(lilacFarmTileentity::new, ModBlocks.LILAC_FARM.get()));
+            BlockEntityType.Builder.of(lilacFarmTileentity::new, ModBlocks.LILAC_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<roseFarmTileentity>> ROSE_FARM = BLOCK_ENTITY_REGISTER.register("rose_farm", () ->
-            new BlockEntityType<>(roseFarmTileentity::new, ModBlocks.ROSE_FARM.get())); // Shortened from rose_bush_farm
+            BlockEntityType.Builder.of(roseFarmTileentity::new, ModBlocks.ROSE_FARM.get()).build(null)); // Shortened from rose_bush_farm
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<peonyFarmTileentity>> PEONY_FARM = BLOCK_ENTITY_REGISTER.register("peony_farm", () ->
-            new BlockEntityType<>(peonyFarmTileentity::new, ModBlocks.PEONY_FARM.get()));
+            BlockEntityType.Builder.of(peonyFarmTileentity::new, ModBlocks.PEONY_FARM.get()).build(null));
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<vineFarmTileentity>> VINE_FARM = BLOCK_ENTITY_REGISTER.register("vine_farm", () ->
-            new BlockEntityType<>(vineFarmTileentity::new, ModBlocks.VINE_FARM.get()));
+            BlockEntityType.Builder.of(vineFarmTileentity::new, ModBlocks.VINE_FARM.get()).build(null));
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<mushroomFarmTileentity>> MUSHROOM_FARM = BLOCK_ENTITY_REGISTER.register("mushroom_farm", () ->
-            new BlockEntityType<>(mushroomFarmTileentity::new, ModBlocks.MUSHROOM_FARM.get()));
+            BlockEntityType.Builder.of(mushroomFarmTileentity::new, ModBlocks.MUSHROOM_FARM.get()).build(null));
 
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<kelpFarmTileentity>> KELP_FARM = BLOCK_ENTITY_REGISTER.register("kelp_farm", () ->
-            new BlockEntityType<>(kelpFarmTileentity::new, ModBlocks.KELP_FARM.get()));
+            BlockEntityType.Builder.of(kelpFarmTileentity::new, ModBlocks.KELP_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<cgrassFarmTileentity>> CGRASS_FARM = BLOCK_ENTITY_REGISTER.register("cgrass_farm", () ->
-            new BlockEntityType<>(cgrassFarmTileentity::new, ModBlocks.CGRASS_FARM.get()));
+            BlockEntityType.Builder.of(cgrassFarmTileentity::new, ModBlocks.CGRASS_FARM.get()).build(null));
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<leafFarmTileentity>> LEAF_FARM = BLOCK_ENTITY_REGISTER.register("leaf_farm", () ->
-            new BlockEntityType<>(leafFarmTileentity::new, ModBlocks.LEAF_FARM.get()));
+            BlockEntityType.Builder.of(leafFarmTileentity::new, ModBlocks.LEAF_FARM.get()).build(null)
+    );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<padFarmTileentity>> PAD_FARM = BLOCK_ENTITY_REGISTER.register("pad_farm", () ->
-            new BlockEntityType<>(padFarmTileentity::new, ModBlocks.PAD_FARM.get()));
+            BlockEntityType.Builder.of(padFarmTileentity::new, ModBlocks.PAD_FARM.get()).build(null)
+    );
 
 
     /// The Nether
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<crimsonFarmTileentity>> CRIMSON_FARM = BLOCK_ENTITY_REGISTER.register("crimson_farm", () ->
-            new BlockEntityType<>(crimsonFarmTileentity::new, ModBlocks.CRIMSON_FARM.get()));
+            BlockEntityType.Builder.of(crimsonFarmTileentity::new, ModBlocks.CRIMSON_FARM.get()).build(null)
+    );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<warpedFarmTileentity>> WARPED_FARM = BLOCK_ENTITY_REGISTER.register("warped_farm", () ->
-            new BlockEntityType<>(warpedFarmTileentity::new, ModBlocks.WARPED_FARM.get())
+            BlockEntityType.Builder.of(warpedFarmTileentity::new, ModBlocks.WARPED_FARM.get()).build(null)
     );
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<netherWartFarmTileentity>> WART_FARM = BLOCK_ENTITY_REGISTER.register("wart_farm", () ->
-            new BlockEntityType<>(netherWartFarmTileentity::new, ModBlocks.WART_FARM.get())
+            BlockEntityType.Builder.of(netherWartFarmTileentity::new, ModBlocks.WART_FARM.get()).build(null)
     );
-
 
 }

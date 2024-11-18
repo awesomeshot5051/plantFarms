@@ -9,7 +9,7 @@ import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -49,7 +49,7 @@ public class JungleFarmBlock extends BlockBase implements EntityBlock {
     }
 
     @Override
-    protected InteractionResult useItemOn(ItemStack heldItem, BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
+    protected ItemInteractionResult useItemOn(ItemStack heldItem, BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
         BlockEntity tileEntity = worldIn.getBlockEntity(pos);
         if (!(tileEntity instanceof JungleFarmTileentity farm)) { // Check for JungleFarmTileentity
             return super.useItemOn(heldItem, state, worldIn, pos, player, handIn, hit);
@@ -68,7 +68,7 @@ public class JungleFarmBlock extends BlockBase implements EntityBlock {
                 return new OutputContainer(id, playerInventory, farm.getOutputInventory(), ContainerLevelAccess.create(worldIn, pos), ModBlocks.JUNGLE_FARM::get); // Adjust for jungle farm
             }
         });
-        return InteractionResult.SUCCESS;
+        return ItemInteractionResult.SUCCESS;
     }
 
     @Nullable
