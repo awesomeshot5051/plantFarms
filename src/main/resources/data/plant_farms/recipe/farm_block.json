@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "pattern": [
+    "###",
+    "# #",
+    "#L#"
+  ],
+  "key": {
+    "#": "minecraft:glass_pane",
+    "L": "minecraft:dirt"
+  },
+  "result": {
+    "id": "plant_farms:farm_block",
+    "count": 1
+  }
+}

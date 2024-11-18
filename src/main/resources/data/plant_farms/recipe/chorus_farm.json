@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:end_stone",
+    "plant_farms:farm_block",
+    "minecraft:chorus_fruit"
+  ],
+  "result": {
+    "id": "plant_farms:chorus_farm"
+  }
+}

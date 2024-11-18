@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:gold_nugget",
+    "plant_farms:carrot_farm"
+  ],
+  "result": {
+    "id": "plant_farms:gcarrot_farm",
+    "count": 1
+  }
+}

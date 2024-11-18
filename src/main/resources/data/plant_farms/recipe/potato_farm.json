@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:potato",
+    "plant_farms:tfarm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:potato_farm",
+    "count": 1
+  }
+}

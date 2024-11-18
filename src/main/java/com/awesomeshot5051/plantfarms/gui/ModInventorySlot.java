@@ -21,7 +21,7 @@ public class ModInventorySlot extends Slot {
         if (v == null) {
             return false;
         }
-        return super.mayPlace(stack) && v.wantsToPickUp(stack);
+        return super.mayPlace(stack) && v.wantsToPickUp(null, stack);
     }
 
 }

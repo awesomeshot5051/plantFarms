@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/dirt",
+    "up": "plant_farms:block/waterstill2",
+    "north": "minecraft:block/light_blue_stained_glass",
+    "east": "minecraft:block/light_blue_stained_glass",
+    "south": "minecraft:block/light_blue_stained_glass",
+    "west": "minecraft:block/light_blue_stained_glass",
+    "particle": "plant_farms:block/waterstill2"
+  },
+  "render_type": "translucent"
+}

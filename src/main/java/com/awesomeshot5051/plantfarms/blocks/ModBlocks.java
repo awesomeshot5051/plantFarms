@@ -1,88 +1,102 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
 import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.*;
-import com.awesomeshot5051.plantfarms.blocks.overworld.overworldPlants.Trees.*;
-import com.awesomeshot5051.plantfarms.blocks.overworld.undergroundPlants.*;
-import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.*;
-import com.awesomeshot5051.plantfarms.blocks.theend.ChorusfarmBlock;
-import com.awesomeshot5051.plantfarms.fluids.waterBlock;
-import net.minecraft.core.registries.BuiltInRegistries;
+import com.awesomeshot5051.plantfarms.blocks.nether.crimsonForest.crimsonFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.nether.other.netherWartFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.nether.warpedForest.warpedFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.Trees.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.crops.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.flowers.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.mushroomFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.vineFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.cgrassFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.kelpFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.leafFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.padFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.theend.ChorusFarmBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModBlocks {
 
-    private static final DeferredRegister<Block> BLOCK_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK, Main.MODID);
-
-    // Passive Mobs
-    public static final DeferredHolder<Block, ChickenFarmBlock> CHICKEN_FARM = BLOCK_REGISTER.register("chicken_farm", ChickenFarmBlock::new);
-    public static final DeferredHolder<Block, CodFarmBlock> COD_FARM = BLOCK_REGISTER.register("cod_farm", CodFarmBlock::new);
-    public static final DeferredHolder<Block, CowFarmBlock> COW_FARM = BLOCK_REGISTER.register("cow_farm", CowFarmBlock::new);
-    public static final DeferredHolder<Block, GlowSquidFarmBlock> GLOW_SQUID_FARM = BLOCK_REGISTER.register("glow_squid_farm", GlowSquidFarmBlock::new);
-    public static final DeferredHolder<Block, HorseFarmBlock> HORSE_FARM = BLOCK_REGISTER.register("horse_farm", HorseFarmBlock::new);
-    public static final DeferredHolder<Block, MooshroomFarmBlock> MOOSHROOM_FARM = BLOCK_REGISTER.register("mooshroom_farm", MooshroomFarmBlock::new);
-    public static final DeferredHolder<Block, ParrotFarmBlock> PARROT_FARM = BLOCK_REGISTER.register("parrot_farm", ParrotFarmBlock::new);
-    public static final DeferredHolder<Block, PigFarmBlock> PIG_FARM = BLOCK_REGISTER.register("pig_farm", PigFarmBlock::new);
-    public static final DeferredHolder<Block, PufferfishFarmBlock> PUFFERFISH_FARM = BLOCK_REGISTER.register("pufferfish_farm", PufferfishFarmBlock::new);
-    public static final DeferredHolder<Block, RabbitFarmBlock> RABBIT_FARM = BLOCK_REGISTER.register("rabbit_farm", RabbitFarmBlock::new);
-    public static final DeferredHolder<Block, SalmonFarmBlock> SALMON_FARM = BLOCK_REGISTER.register("salmon_farm", SalmonFarmBlock::new);
-    public static final DeferredHolder<Block, SheepFarmBlock> SHEEP_FARM = BLOCK_REGISTER.register("sheep_farm", SheepFarmBlock::new);
-    public static final DeferredHolder<Block, SnowGolemFarmBlock> SNOW_GOLEM_FARM = BLOCK_REGISTER.register("snow_golem_farm", SnowGolemFarmBlock::new);
-    public static final DeferredHolder<Block, SquidFarmBlock> SQUID_FARM = BLOCK_REGISTER.register("squid_farm", SquidFarmBlock::new);
-    public static final DeferredHolder<Block, StriderFarmBlock> STRIDER_FARM = BLOCK_REGISTER.register("strider_farm", StriderFarmBlock::new);
-    public static final DeferredHolder<Block, TropicalFishFarmBlock> TROPICAL_FISH_FARM = BLOCK_REGISTER.register("tropical_fish_farm", TropicalFishFarmBlock::new);
-    public static final DeferredHolder<Block, TurtleFarmBlock> TURTLE_FARM = BLOCK_REGISTER.register("turtle_farm", TurtleFarmBlock::new);
-
-
-    // Neutral Mobs
-    public static final DeferredHolder<Block, ChorusfarmBlock> CHORUS_FARM = BLOCK_REGISTER.register("chorus_farm", ChorusfarmBlock::new);
-    public static final DeferredHolder<Block, GoatFarmBlock> GOAT_FARM = BLOCK_REGISTER.register("goat_farm", GoatFarmBlock::new);
-    public static final DeferredHolder<Block, IronFarmBlock> IRON_FARM = BLOCK_REGISTER.register("iron_farm", IronFarmBlock::new);
-    public static final DeferredHolder<Block, SpiderFarmBlock> SPIDER_FARM = BLOCK_REGISTER.register("spider_farm", SpiderFarmBlock::new);
-    public static final DeferredHolder<Block, PiglinFarmBlock> PIGLIN_FARM = BLOCK_REGISTER.register("piglin_farm", PiglinFarmBlock::new);
-    public static final DeferredHolder<Block, ZombifiedPiglinFarmBlock> ZOMBIFIED_PIGLIN_FARM = BLOCK_REGISTER.register("zombified_piglin_farm", ZombifiedPiglinFarmBlock::new);
-//    public static final DeferredBlock<Block, waterBlock> WATER = BLOCK_REGISTER.register("water", waterBlock::new);
-
-    // Aggressive Mobs
-    public static final DeferredHolder<Block, OakFarmBlock> OAK_FARM = BLOCK_REGISTER.register("oak_farm", OakFarmBlock::new);
-    public static final DeferredHolder<Block, CreeperFarmBlock> CREEPER_FARM = BLOCK_REGISTER.register("creeper_farm", CreeperFarmBlock::new);
-    public static final DeferredHolder<Block, DrownedFarmBlock> DROWNED_FARM = BLOCK_REGISTER.register("drowned_farm", DrownedFarmBlock::new);
-    public static final DeferredHolder<Block, ElderGuardianFarmBlock> ELDER_GUARDIAN_FARM = BLOCK_REGISTER.register("elder_guardian_farm", ElderGuardianFarmBlock::new);
-    public static final DeferredHolder<Block, EvokerFarmBlock> EVOKER_FARM = BLOCK_REGISTER.register("evoker_farm", EvokerFarmBlock::new);
-    public static final DeferredHolder<Block, GhastFarmBlock> GHAST_FARM = BLOCK_REGISTER.register("ghast_farm", GhastFarmBlock::new);
-    public static final DeferredHolder<Block, GuardianFarmBlock> GUARDIAN_FARM = BLOCK_REGISTER.register("guardian_farm", GuardianFarmBlock::new);
-    public static final DeferredHolder<Block, HoglinFarmBlock> HOGLIN_FARM = BLOCK_REGISTER.register("hoglin_farm", HoglinFarmBlock::new);
-    public static final DeferredHolder<Block, IllusionerFarmBlock> ILLUSIONER_FARM = BLOCK_REGISTER.register("illusioner_farm", IllusionerFarmBlock::new);
-    public static final DeferredHolder<Block, MagmaCubeFarmBlock> MAGMA_CUBE_FARM = BLOCK_REGISTER.register("magma_cube_farm", MagmaCubeFarmBlock::new);
-    public static final DeferredHolder<Block, PhantomFarmBlock> PHANTOM_FARM = BLOCK_REGISTER.register("phantom_farm", PhantomFarmBlock::new);
-    public static final DeferredHolder<Block, PillagerFarmBlock> PILLAGER_FARM = BLOCK_REGISTER.register("pillager_farm", PillagerFarmBlock::new);
-    public static final DeferredHolder<Block, RavagerFarmBlock> RAVAGER_FARM = BLOCK_REGISTER.register("ravager_farm", RavagerFarmBlock::new);
-    public static final DeferredHolder<Block, ShulkerFarmBlock> SHULKER_FARM = BLOCK_REGISTER.register("shulker_farm", ShulkerFarmBlock::new);
-    public static final DeferredHolder<Block, SkeletonFarmBlock> SKELETON_FARM = BLOCK_REGISTER.register("skeleton_farm", SkeletonFarmBlock::new);
-    public static final DeferredHolder<Block, SlimeFarmBlock> SLIME_FARM = BLOCK_REGISTER.register("slime_farm", SlimeFarmBlock::new);
-    public static final DeferredHolder<Block, VindicatorFarmBlock> VINDICATOR_FARM = BLOCK_REGISTER.register("vindicator_farm", VindicatorFarmBlock::new);
-    public static final DeferredHolder<Block, WardenFarmBlock> WARDEN_FARM = BLOCK_REGISTER.register("warden_farm", WardenFarmBlock::new);
-    public static final DeferredHolder<Block, WitchFarmBlock> WITCH_FARM = BLOCK_REGISTER.register("witch_farm", WitchFarmBlock::new);
-    public static final DeferredHolder<Block, WitherSkeletonFarmBlock> WITHER_SKELETON_FARM = BLOCK_REGISTER.register("wither_skeleton_farm", WitherSkeletonFarmBlock::new);
-    public static final DeferredHolder<Block, WitherFarmBlock> WITHER_FARM = BLOCK_REGISTER.register("wither_farm", WitherFarmBlock::new);
-    public static final DeferredHolder<Block, ZoglinFarmBlock> ZOGLIN_FARM = BLOCK_REGISTER.register("zoglin_farm", ZoglinFarmBlock::new);
-    public static final DeferredHolder<Block, ZombieFarmBlock> ZOMBIE_FARM = BLOCK_REGISTER.register("zombie_farm", ZombieFarmBlock::new);
-
-
-
     /*
-    * Custom Water Block For Plant Farm display ONLY
-    *
-    * */
+     * Custom Water Block For Plant Farm display ONLY
+     *
+     * */
     public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(Main.MODID);
-    public static final DeferredBlock<Block> WATER = REGISTRY.register("water", waterBlock::new);
+    private static final DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(Main.MODID);
+    // End Plants
+    public static final DeferredHolder<Block, ChorusFarmBlock> CHORUS_FARM = BLOCK_REGISTER.registerBlock("chorus_farm", ChorusFarmBlock::new, BlockBehaviour.Properties.of());
+    /// Overworld
+
+    // Overworld Trees
+    public static final DeferredHolder<Block, OakFarmBlock> OAK_FARM = BLOCK_REGISTER.registerBlock("oak_farm", OakFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, SpruceFarmBlock> SPRUCE_FARM = BLOCK_REGISTER.registerBlock("spruce_farm", SpruceFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, BirchFarmBlock> BIRCH_FARM = BLOCK_REGISTER.registerBlock("birch_farm", BirchFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, JungleFarmBlock> JUNGLE_FARM = BLOCK_REGISTER.registerBlock("jungle_farm", JungleFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, DarkOakFarmBlock> DARK_OAK_FARM = BLOCK_REGISTER.registerBlock("dark_oak_farm", DarkOakFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, AcaciaFarmBlock> ACACIA_FARM = BLOCK_REGISTER.registerBlock("acacia_farm", AcaciaFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, AzaleaFarmBlock> AZALEA_FARM = BLOCK_REGISTER.registerBlock("azalea_farm", AzaleaFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, MangroveFarmBlock> MANGROVE_FARM = BLOCK_REGISTER.registerBlock("mangrove_farm", MangroveFarmBlock::new, BlockBehaviour.Properties.of());
+
+    //Overworld Crops
+    public static final DeferredHolder<Block, CherryFarmBlock> CHERRY_FARM = BLOCK_REGISTER.registerBlock("cherry_farm", CherryFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, wheatFarmBlock> WHEAT_FARM = BLOCK_REGISTER.registerBlock("wheat_farm", wheatFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, carrotFarmBlock> CARROT_FARM = BLOCK_REGISTER.registerBlock("carrot_farm", carrotFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, gcarrotFarmBlock> GCARROT_FARM = BLOCK_REGISTER.registerBlock("gcarrot_farm", gcarrotFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, potatoFarmBlock> POTATO_FARM = BLOCK_REGISTER.registerBlock("potato_farm", potatoFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, beetrootFarmBlock> BEETROOT_FARM = BLOCK_REGISTER.registerBlock("beetroot_farm", beetrootFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, pumpkinFarmBlock> PUMPKIN_FARM = BLOCK_REGISTER.registerBlock("pumpkin_farm", pumpkinFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, melonFarmBlock> MELON_FARM = BLOCK_REGISTER.registerBlock("melon_farm", melonFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, sugarFarmBlock> SUGAR_FARM = BLOCK_REGISTER.registerBlock("sugar_farm", sugarFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, cocoFarmBlock> COCO_FARM = BLOCK_REGISTER.registerBlock("coco_farm", cocoFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, berryFarmBlock> BERRY_FARM = BLOCK_REGISTER.registerBlock("berry_farm", berryFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, bambooFarmBlock> BAMBOO_FARM = BLOCK_REGISTER.registerBlock("bamboo_farm", bambooFarmBlock::new, BlockBehaviour.Properties.of());
+
+    //Overworld Flowers
+    public static final DeferredHolder<Block, dandelionFarmBlock> DANDELION_FARM = BLOCK_REGISTER.registerBlock("dandelion_farm", dandelionFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, poppyFarmBlock> POPPY_FARM = BLOCK_REGISTER.registerBlock("poppy_farm", poppyFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, orchidFarmBlock> ORCHID_FARM = BLOCK_REGISTER.registerBlock("orchid_farm", orchidFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, alliumFarmBlock> ALLIUM_FARM = BLOCK_REGISTER.registerBlock("allium_farm", alliumFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, azureFarmBlock> AZURE_FARM = BLOCK_REGISTER.registerBlock("azure_farm", azureFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from azureBluetFarmBlock
+    public static final DeferredHolder<Block, redFarmBlock> RED_FARM = BLOCK_REGISTER.registerBlock("red_farm", redFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from redTulipFarmBlock
+    public static final DeferredHolder<Block, orangeFarmBlock> ORANGE_FARM = BLOCK_REGISTER.registerBlock("orange_farm", orangeFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from orangeTulipFarmBlock
+    public static final DeferredHolder<Block, whiteFarmBlock> WHITE_FARM = BLOCK_REGISTER.registerBlock("white_farm", whiteFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from whiteTulipFarmBlock
+    public static final DeferredHolder<Block, pinkFarmBlock> PINK_FARM = BLOCK_REGISTER.registerBlock("pink_farm", pinkFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from pinkTulipFarmBlock
+    public static final DeferredHolder<Block, daisyFarmBlock> DAISY_FARM = BLOCK_REGISTER.registerBlock("daisy_farm", daisyFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from oxeyeDaisyFarmBlock
+    public static final DeferredHolder<Block, cornflowerFarmBlock> CORNFLOWER_FARM = BLOCK_REGISTER.registerBlock("cornflower_farm", cornflowerFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, lilyFarmBlock> LILY_FARM = BLOCK_REGISTER.registerBlock("lily_farm", lilyFarmBlock::new, BlockBehaviour.Properties.of()); // Lily of the Valley
+    public static final DeferredHolder<Block, sunflowerFarmBlock> SUNFLOWER_FARM = BLOCK_REGISTER.registerBlock("sunflower_farm", sunflowerFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, lilacFarmBlock> LILAC_FARM = BLOCK_REGISTER.registerBlock("lilac_farm", lilacFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, roseFarmBlock> ROSE_FARM = BLOCK_REGISTER.registerBlock("rose_farm", roseFarmBlock::new, BlockBehaviour.Properties.of()); // Shortened from roseBushFarmBlock
+    public static final DeferredHolder<Block, peonyFarmBlock> PEONY_FARM = BLOCK_REGISTER.registerBlock("peony_farm", peonyFarmBlock::new, BlockBehaviour.Properties.of());
 
 
-    public static final DeferredHolder<Block, InventoryViewerBlock> INVENTORY_VIEWER = BLOCK_REGISTER.register("inventory_viewer", InventoryViewerBlock::new);
+    public static final DeferredHolder<Block, vineFarmBlock> VINE_FARM = BLOCK_REGISTER.registerBlock("vine_farm", vineFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, mushroomFarmBlock> MUSHROOM_FARM = BLOCK_REGISTER.registerBlock("mushroom_farm", mushroomFarmBlock::new, BlockBehaviour.Properties.of());
+
+
+    public static final DeferredHolder<Block, cgrassFarmBlock> CGRASS_FARM = BLOCK_REGISTER.registerBlock("cgrass_farm", cgrassFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, padFarmBlock> PAD_FARM = BLOCK_REGISTER.registerBlock("pad_farm", padFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, leafFarmBlock> LEAF_FARM = BLOCK_REGISTER.registerBlock("leaf_farm", leafFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, kelpFarmBlock> KELP_FARM = BLOCK_REGISTER.registerBlock("kelp_farm", kelpFarmBlock::new, BlockBehaviour.Properties.of());
+
+    //    public static final DeferredHolder<Block, ConverterBlock> CONVERTER = BLOCK_REGISTER.registerBlock("converter", ConverterBlock::new, BlockBehaviour.Properties.of());
+    //Nether Trees
+    public static final DeferredHolder<Block, crimsonFarmBlock> CRIMSON_FARM = BLOCK_REGISTER.registerBlock("crimson_farm", crimsonFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, warpedFarmBlock> WARPED_FARM = BLOCK_REGISTER.registerBlock("warped_farm", warpedFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, netherWartFarmBlock> WART_FARM = BLOCK_REGISTER.registerBlock("wart_farm", netherWartFarmBlock::new, BlockBehaviour.Properties.of());
+    //    public static final DeferredBlock<Block> WATER = REGISTRY.registerBlock("water", waterBlock::new,BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, InventoryViewerBlock> INVENTORY_VIEWER = BLOCK_REGISTER.registerBlock("inventory_viewer", InventoryViewerBlock::new, BlockBehaviour.Properties.of());
+
+
+    public static final DeferredHolder<Block, FarmBlock> FARM_BLOCK = BLOCK_REGISTER.registerBlock("farm_block", FarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, TFarmBlock> TFARM_BLOCK = BLOCK_REGISTER.registerBlock("tfarm_block", TFarmBlock::new, BlockBehaviour.Properties.of());
+
+
     public static void init(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);
     }

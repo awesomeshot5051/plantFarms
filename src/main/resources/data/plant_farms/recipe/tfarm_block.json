@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "blocks",
+  "pattern": [
+    "###",
+    "#H#",
+    "#L#"
+  ],
+  "key": {
+    "#": "minecraft:glass_pane",
+    "L": "minecraft:dirt",
+    "H": "#minecraft:hoes"
+  },
+  "result": {
+    "id": "plant_farms:tfarm_block",
+    "count": 1
+  }
+}

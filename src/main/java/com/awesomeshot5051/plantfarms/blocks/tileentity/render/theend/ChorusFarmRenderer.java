@@ -24,7 +24,7 @@ public class ChorusFarmRenderer extends RendererBase<ChorusFarmTileentity> {
         matrixStack.pushPose();
 
         Direction direction = Direction.SOUTH;
-        if (farm.getTimer() >= ChorusFarmTileentity.getSaplingSpawnTime() && farm.getTimer() < ChorusFarmTileentity.getSaplingDeathTime()) {
+        if (farm.getTimer() >= ChorusFarmTileentity.getChorusSpawnTime() && farm.getTimer() < ChorusFarmTileentity.getChorusDeathTime()) {
             matrixStack.pushPose();
             matrixStack.translate(0D, 0D, 0.2D); // Center the sapling in the dirt block
             matrixStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));

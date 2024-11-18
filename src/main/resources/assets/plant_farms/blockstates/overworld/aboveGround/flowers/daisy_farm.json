@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "plant_farms:block/daisy_farm"
+    },
+    "facing=south": {
+      "model": "plant_farms:block/daisy_farm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "plant_farms:block/daisy_farm",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "plant_farms:block/daisy_farm",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:chorus_fruit",
+    "plant_farms:farm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:chorus_farm",
+    "count": 1
+  }
+}
+

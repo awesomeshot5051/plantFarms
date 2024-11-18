@@ -1,7 +1,7 @@
 package com.awesomeshot5051.plantfarms.gui;
 
-import de.maxhenkel.corelib.inventory.ScreenBase;
 import com.awesomeshot5051.plantfarms.Main;
+import de.maxhenkel.corelib.inventory.ScreenBase;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -11,8 +11,8 @@ public class InventoryViewerScreen extends ScreenBase<InventoryViewerContainer> 
 
     public static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(Main.MODID, "textures/gui/container/villager_inventory.png");
 
-    public static final Component VILLAGER_INVENTORY = Component.translatable("gui.plant_farms.villager_inventory");
-    public static final Component VILLAGER_EQUIPMENT = Component.translatable("gui.plant_farms.villager_equipment");
+    public static final Component VILLAGER_INVENTORY = Component.translatable("gui.mob_farms.villager_inventory");
+    public static final Component VILLAGER_EQUIPMENT = Component.translatable("gui.mob_farms.villager_equipment");
 
     protected final Inventory playerInventory;
 

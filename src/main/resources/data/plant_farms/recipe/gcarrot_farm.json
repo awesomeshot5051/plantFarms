@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:golden_carrot",
+    "plant_farms:tfarm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:gcarrot_farm",
+    "count": 1
+  }
+}

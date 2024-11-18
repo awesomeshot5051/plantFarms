@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:birch_sapling",
+    "plant_farms:farm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:birch_farm",
+    "count": 1
+  }
+}
