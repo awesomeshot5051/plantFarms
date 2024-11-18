@@ -236,3 +236,45 @@
 	# Default: 60
 	# Range: 60 ~ 60
 	spawn_time = 60
+
+[gcarrot_farm]
+	#The time in ticks the golden carrot farm takes to spawn golden carrots
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[vine_farm]
+	#The time in ticks the vine farm takes to spawn vines
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[mushroom_farm]
+	#The time in ticks the mushroom farm takes to spawn mushrooms
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[kelp_farm]
+	#The time in ticks the Kelp farm takes to spawn Kelp
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[leaf_farm]
+	#The time in ticks the Drip Leaf farm takes to spawn Drip Leaves
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[seagrass_farm]
+	#The time in ticks the seagrass farm takes to spawn seagrass
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60
+
+[pad_farm]
+	#The time in ticks the lily pad farm takes to spawn lily pads
+	# Default: 60
+	# Range: 60 ~ 60
+	spawn_time = 60

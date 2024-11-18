@@ -8,12 +8,20 @@ import com.awesomeshot5051.plantfarms.events.ModSoundEvents;
 import com.awesomeshot5051.plantfarms.gui.Containers;
 import com.awesomeshot5051.plantfarms.integration.IMC;
 import com.awesomeshot5051.plantfarms.items.ModItems;
+import com.awesomeshot5051.plantfarms.items.render.farmBlockItemRenderer;
 import com.awesomeshot5051.plantfarms.items.render.nether.crimsonForest.crimsonFarmItemRenderer;
 import com.awesomeshot5051.plantfarms.items.render.nether.other.netherWartFarmItemRenderer;
 import com.awesomeshot5051.plantfarms.items.render.nether.warpedForest.warpedFarmItemRenderer;
 import com.awesomeshot5051.plantfarms.items.render.overworldPlants.aboveGround.Trees.*;
 import com.awesomeshot5051.plantfarms.items.render.overworldPlants.aboveGround.crops.*;
 import com.awesomeshot5051.plantfarms.items.render.overworldPlants.aboveGround.flowers.*;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.aboveGround.miscellaneous.mushroomFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.aboveGround.miscellaneous.vineFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.underwater.cgrassFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.underwater.kelpFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.underwater.leafFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.overworldPlants.underwater.padFarmItemRenderer;
+import com.awesomeshot5051.plantfarms.items.render.tfarmBlockItemRenderer;
 import com.awesomeshot5051.plantfarms.items.render.theend.ChorusFarmItemRenderer;
 import com.awesomeshot5051.plantfarms.loottable.ModLootTables;
 import de.maxhenkel.corelib.CommonRegistry;
@@ -110,6 +118,7 @@ public class Main {
         //Overworld Crops
         event.registerItem(new CustomRenderItemExtension(new wheatFarmItemRenderer()), ModItems.WHEAT_FARM);
         event.registerItem(new CustomRenderItemExtension(new carrotFarmItemRenderer()), ModItems.CARROT_FARM);
+        event.registerItem(new CustomRenderItemExtension(new gcarrotFarmItemRenderer()), ModItems.GCARROT_FARM);
         event.registerItem(new CustomRenderItemExtension(new potatoFarmItemRenderer()), ModItems.POTATO_FARM);
         event.registerItem(new CustomRenderItemExtension(new beetrootFarmItemRenderer()), ModItems.BEETROOT_FARM);
         event.registerItem(new CustomRenderItemExtension(new pumpkinFarmItemRenderer()), ModItems.PUMPKIN_FARM);
@@ -143,5 +152,19 @@ public class Main {
         event.registerItem(new CustomRenderItemExtension(new crimsonFarmItemRenderer()), ModItems.CRIMSON_FARM);
         event.registerItem(new CustomRenderItemExtension(new warpedFarmItemRenderer()), ModItems.WARPED_FARM);
         event.registerItem(new CustomRenderItemExtension(new netherWartFarmItemRenderer()), ModItems.WART_FARM);
+
+
+        event.registerItem(new CustomRenderItemExtension(new vineFarmItemRenderer()), ModItems.VINE_FARM);
+        event.registerItem(new CustomRenderItemExtension(new mushroomFarmItemRenderer()), ModItems.MUSHROOM_FARM);
+
+
+        event.registerItem(new CustomRenderItemExtension(new kelpFarmItemRenderer()), ModItems.KELP_FARM);
+        event.registerItem(new CustomRenderItemExtension(new cgrassFarmItemRenderer()), ModItems.CGRASS_FARM);
+        event.registerItem(new CustomRenderItemExtension(new leafFarmItemRenderer()), ModItems.LEAF_FARM);
+        event.registerItem(new CustomRenderItemExtension(new padFarmItemRenderer()), ModItems.PAD_FARM);
+
+
+        event.registerItem(new CustomRenderItemExtension(new farmBlockItemRenderer()), ModItems.FARM_BLOCK);
+        event.registerItem(new CustomRenderItemExtension(new tfarmBlockItemRenderer()), ModItems.TFARM_BLOCK);
     }
 }

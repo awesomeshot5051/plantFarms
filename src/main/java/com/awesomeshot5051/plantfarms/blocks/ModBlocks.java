@@ -7,6 +7,12 @@ import com.awesomeshot5051.plantfarms.blocks.nether.warpedForest.warpedFarmBlock
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.Trees.*;
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.crops.*;
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.flowers.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.mushroomFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.vineFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.cgrassFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.kelpFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.leafFarmBlock;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwaterPlants.padFarmBlock;
 import com.awesomeshot5051.plantfarms.blocks.theend.ChorusFarmBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -40,6 +46,7 @@ public class ModBlocks {
     public static final DeferredHolder<Block, CherryFarmBlock> CHERRY_FARM = BLOCK_REGISTER.registerBlock("cherry_farm", CherryFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, wheatFarmBlock> WHEAT_FARM = BLOCK_REGISTER.registerBlock("wheat_farm", wheatFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, carrotFarmBlock> CARROT_FARM = BLOCK_REGISTER.registerBlock("carrot_farm", carrotFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, gcarrotFarmBlock> GCARROT_FARM = BLOCK_REGISTER.registerBlock("gcarrot_farm", gcarrotFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, potatoFarmBlock> POTATO_FARM = BLOCK_REGISTER.registerBlock("potato_farm", potatoFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, beetrootFarmBlock> BEETROOT_FARM = BLOCK_REGISTER.registerBlock("beetroot_farm", beetrootFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, pumpkinFarmBlock> PUMPKIN_FARM = BLOCK_REGISTER.registerBlock("pumpkin_farm", pumpkinFarmBlock::new, BlockBehaviour.Properties.of());
@@ -68,12 +75,27 @@ public class ModBlocks {
     public static final DeferredHolder<Block, peonyFarmBlock> PEONY_FARM = BLOCK_REGISTER.registerBlock("peony_farm", peonyFarmBlock::new, BlockBehaviour.Properties.of());
 
 
+    public static final DeferredHolder<Block, vineFarmBlock> VINE_FARM = BLOCK_REGISTER.registerBlock("vine_farm", vineFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, mushroomFarmBlock> MUSHROOM_FARM = BLOCK_REGISTER.registerBlock("mushroom_farm", mushroomFarmBlock::new, BlockBehaviour.Properties.of());
+
+
+    public static final DeferredHolder<Block, cgrassFarmBlock> CGRASS_FARM = BLOCK_REGISTER.registerBlock("cgrass_farm", cgrassFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, padFarmBlock> PAD_FARM = BLOCK_REGISTER.registerBlock("pad_farm", padFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, leafFarmBlock> LEAF_FARM = BLOCK_REGISTER.registerBlock("leaf_farm", leafFarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, kelpFarmBlock> KELP_FARM = BLOCK_REGISTER.registerBlock("kelp_farm", kelpFarmBlock::new, BlockBehaviour.Properties.of());
+
+    //    public static final DeferredHolder<Block, ConverterBlock> CONVERTER = BLOCK_REGISTER.registerBlock("converter", ConverterBlock::new, BlockBehaviour.Properties.of());
     //Nether Trees
     public static final DeferredHolder<Block, crimsonFarmBlock> CRIMSON_FARM = BLOCK_REGISTER.registerBlock("crimson_farm", crimsonFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, warpedFarmBlock> WARPED_FARM = BLOCK_REGISTER.registerBlock("warped_farm", warpedFarmBlock::new, BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, netherWartFarmBlock> WART_FARM = BLOCK_REGISTER.registerBlock("wart_farm", netherWartFarmBlock::new, BlockBehaviour.Properties.of());
     //    public static final DeferredBlock<Block> WATER = REGISTRY.registerBlock("water", waterBlock::new,BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, InventoryViewerBlock> INVENTORY_VIEWER = BLOCK_REGISTER.registerBlock("inventory_viewer", InventoryViewerBlock::new, BlockBehaviour.Properties.of());
+
+
+    public static final DeferredHolder<Block, FarmBlock> FARM_BLOCK = BLOCK_REGISTER.registerBlock("farm_block", FarmBlock::new, BlockBehaviour.Properties.of());
+    public static final DeferredHolder<Block, TFarmBlock> TFARM_BLOCK = BLOCK_REGISTER.registerBlock("tfarm_block", TFarmBlock::new, BlockBehaviour.Properties.of());
+
 
     public static void init(IEventBus eventBus) {
         BLOCK_REGISTER.register(eventBus);

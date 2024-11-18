@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import org.jetbrains.annotations.NotNull;
 
 public class FakeWorldTileentity extends SyncableTileentity {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -28,7 +29,7 @@ public class FakeWorldTileentity extends SyncableTileentity {
     }
 
     @Override
-    public BlockState getBlockState() {
+    public @NotNull BlockState getBlockState() {
         if (fakeWorld) {
             return defaultState;
         }

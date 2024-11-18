@@ -38,6 +38,7 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> WHEAT_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.WHEAT_FARM);
     public static final DeferredHolder<Item, BlockItem> CARROT_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.CARROT_FARM);
+    public static final DeferredHolder<Item, BlockItem> GCARROT_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.GCARROT_FARM);
     public static final DeferredHolder<Item, BlockItem> POTATO_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.POTATO_FARM);
     public static final DeferredHolder<Item, BlockItem> BEETROOT_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.BEETROOT_FARM);
     public static final DeferredHolder<Item, BlockItem> PUMPKIN_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.PUMPKIN_FARM);
@@ -70,6 +71,18 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> WARPED_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.WARPED_FARM);
     public static final DeferredHolder<Item, BlockItem> WART_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.WART_FARM);
 
+    public static final DeferredHolder<Item, BlockItem> FARM_BLOCK = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.FARM_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TFARM_BLOCK = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.TFARM_BLOCK);
+
+    public static final DeferredHolder<Item, BlockItem> VINE_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.VINE_FARM);
+    public static final DeferredHolder<Item, BlockItem> MUSHROOM_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.MUSHROOM_FARM);
+
+
+    public static final DeferredHolder<Item, BlockItem> PAD_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.PAD_FARM);
+    public static final DeferredHolder<Item, BlockItem> LEAF_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.LEAF_FARM);
+    public static final DeferredHolder<Item, BlockItem> CGRASS_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.CGRASS_FARM);
+    public static final DeferredHolder<Item, BlockItem> KELP_FARM = ITEM_REGISTER.registerSimpleBlockItem(ModBlocks.KELP_FARM);
+    
 
     private static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPE_REGISTER = DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, Main.MODID);
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<VillagerData>> VILLAGER_DATA_COMPONENT = DATA_COMPONENT_TYPE_REGISTER.register("villager", () -> DataComponentType.<VillagerData>builder().persistent(VillagerData.CODEC).networkSynchronized(VillagerData.STREAM_CODEC).build());

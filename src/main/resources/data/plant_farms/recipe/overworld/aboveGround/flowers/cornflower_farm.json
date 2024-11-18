@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:cornflower",
+    "plant_farms:farm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:cornflower_farm",
+    "count": 1
+  }
+}

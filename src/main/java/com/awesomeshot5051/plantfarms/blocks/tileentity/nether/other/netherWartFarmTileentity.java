@@ -16,6 +16,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -55,34 +56,41 @@ public class netherWartFarmTileentity extends VillagerTileentity implements ITic
 
     @Override
     public void tick() {
-        // No villager entity is needed
+        assert level != null;
+        BlockState blockBelow = level.getBlockState(getBlockPos().below());
+        if (blockBelow.is(Blocks.SOUL_SAND) || blockBelow.is(Blocks.SOUL_SOIL)) {
+            // No villager entity is needed
 //        BlockBase.playRandomVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
 
-        timer++;
-        setChanged();
+            timer++;
+            setChanged();
 
-        if (timer == getWartSpawnTime()) {
+            if (timer == getWartSpawnTime()) {
 //            // Play acacia spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
-            sync();
+                sync();
 //        } else if (timer > getcrimsonSpawnTime() && timer < getcrimsonDeathTime()) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_HURT);
 //            }
-        } else if (timer >= getWartDeathTime()) {
-            // Play acacia death/explosion sound
+            } else if (timer >= getWartDeathTime()) {
+                // Play acacia death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_DEATH);
-            for (ItemStack drop : getDrops()) {
-                for (int i = 0; i < itemHandler.getSlots(); i++) {
-                    drop = itemHandler.insertItem(i, drop, false);
-                    if (drop.isEmpty()) {
-                        break;
+                for (ItemStack drop : getDrops()) {
+                    for (int i = 0; i < itemHandler.getSlots(); i++) {
+                        drop = itemHandler.insertItem(i, drop, false);
+                        if (drop.isEmpty()) {
+                            break;
+                        }
                     }
                 }
-            }
 
+                timer = 0L;
+                sync();
+            }
+        } else {
             timer = 0L;
-            sync();
+            setChanged();
         }
     }
 

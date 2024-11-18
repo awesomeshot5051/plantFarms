@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    "minecraft:brown_mushroom",
+    "plant_farms:farm_block",
+    "minecraft:mycelium"
+  ],
+  "result": {
+    "id": "plant_farms:mushroom_farm",
+    "count": 1
+  }
+}

@@ -1,7 +1,3 @@
-/weather clear
-/time set day
-/gamerule doWeatherCycle false
-/gamerule doDaylightCycle false
 /time set noon
 /tick rate 10000
 /clear Dev minecraft:crossbow
@@ -47,4 +43,8 @@
 /reload
 /time set noon
 /tick rate 2000
+/tick rate 20
+/random roll 10 minecraft:blocks/brown_mushroom
+/random roll 2 minecraft:blocks/brown_mushroom
+/tick rate 10000
 /tick rate 20

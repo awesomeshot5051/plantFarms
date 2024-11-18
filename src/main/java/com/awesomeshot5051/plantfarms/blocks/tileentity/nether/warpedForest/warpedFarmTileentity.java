@@ -16,6 +16,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -57,32 +58,33 @@ public class warpedFarmTileentity extends VillagerTileentity implements ITickabl
     public void tick() {
         // No villager entity is needed
 //        BlockBase.playRandomVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
+        assert level != null;
+        BlockState blockBelow = level.getBlockState(getBlockPos().below());
+        if (blockBelow.is(Blocks.WARPED_NYLIUM)) {
+            timer++;
+            setChanged();
 
-        timer++;
-        setChanged();
-
-        if (timer == getWarpedSpawnTime()) {
-//            // Play acacia spawn sound
-//            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
-            sync();
-//        } else if (timer > getwarpedSpawnTime() && timer < getwarpedDeathTime()) {
-//            if (timer % 20L == 0L) {
-//                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_HURT);
-//            }
-        } else if (timer >= getWarpedDeathTime()) {
-            // Play acacia death/explosion sound
+            if (timer == getWarpedSpawnTime()) {
+                sync();
+            } else if (timer >= getWarpedDeathTime()) {
+                // Play acacia death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_DEATH);
-            for (ItemStack drop : getDrops()) {
-                for (int i = 0; i < itemHandler.getSlots(); i++) {
-                    drop = itemHandler.insertItem(i, drop, false);
-                    if (drop.isEmpty()) {
-                        break;
+                for (ItemStack drop : getDrops()) {
+                    for (int i = 0; i < itemHandler.getSlots(); i++) {
+                        drop = itemHandler.insertItem(i, drop, false);
+                        if (drop.isEmpty()) {
+                            break;
+                        }
                     }
                 }
-            }
 
+                timer = 0L;
+                sync();
+            }
+        } else {
+            // If not on Crimson Nylium, reset the timer and do nothing
             timer = 0L;
-            sync();
+            setChanged();
         }
     }
 
@@ -100,16 +102,16 @@ public class warpedFarmTileentity extends VillagerTileentity implements ITickabl
             drops.add(new ItemStack(Items.WARPED_FUNGUS, dropCount)); // Drop 1 blaze rod
         }
         drops.add(new ItemStack(Items.WARPED_STEM));
-        if(serverWorld.random.nextDouble() < .005){
+        if (serverWorld.random.nextDouble() < .005) {
             drops.add(new ItemStack(Items.STRIPPED_WARPED_STEM));
         }
-        if(serverWorld.random.nextDouble() < .7){
-            int dropCount = serverWorld.random.nextIntBetweenInclusive(1,4);
-            drops.add(new ItemStack(Items.SHROOMLIGHT,dropCount));
+        if (serverWorld.random.nextDouble() < .7) {
+            int dropCount = serverWorld.random.nextIntBetweenInclusive(1, 4);
+            drops.add(new ItemStack(Items.SHROOMLIGHT, dropCount));
         }
-        if(serverWorld.random.nextDouble() < .2){
-            int dropCount = serverWorld.random.nextIntBetweenInclusive(1,4);
-            drops.add(new ItemStack(Items.TWISTING_VINES,dropCount));
+        if (serverWorld.random.nextDouble() < .2) {
+            int dropCount = serverWorld.random.nextIntBetweenInclusive(1, 4);
+            drops.add(new ItemStack(Items.TWISTING_VINES, dropCount));
         }
 
         drops.add(new ItemStack(Items.WARPED_HYPHAE));

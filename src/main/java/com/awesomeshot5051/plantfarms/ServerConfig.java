@@ -31,6 +31,7 @@ public class ServerConfig extends ConfigBase {
 
     public final ModConfigSpec.IntValue wheatSpawnTime;
     public final ModConfigSpec.IntValue carrotSpawnTime;
+    public final ModConfigSpec.IntValue gcarrotSpawnTime;
     public final ModConfigSpec.IntValue potatoSpawnTime;
     public final ModConfigSpec.IntValue beetrootSpawnTime;
     public final ModConfigSpec.IntValue pumpkinSpawnTime;
@@ -57,6 +58,17 @@ public class ServerConfig extends ConfigBase {
     public final ModConfigSpec.IntValue lilacSpawnTime;
     public final ModConfigSpec.IntValue roseSpawnTime;
     public final ModConfigSpec.IntValue peonySpawnTime;
+
+    //Overworld Miscellaneous
+    public final ModConfigSpec.IntValue vineSpawnTime;
+    public final ModConfigSpec.IntValue mushroomSpawnTime;
+
+    //Overworld Underwater
+    public final ModConfigSpec.IntValue kelpSpawnTime;
+    public final ModConfigSpec.IntValue cgrassSpawnTime;
+    public final ModConfigSpec.IntValue padSpawnTime;
+    public final ModConfigSpec.IntValue leafSpawnTime;
+
 
     public final ModConfigSpec.BooleanValue universalReputation;
 
@@ -125,6 +137,10 @@ public class ServerConfig extends ConfigBase {
         carrotSpawnTime = builder
                 .comment("The time in ticks the carrot farm takes to spawn carrots")
                 .defineInRange("carrot_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+
+        gcarrotSpawnTime = builder
+                .comment("The time in ticks the golden carrot farm takes to spawn golden carrots")
+                .defineInRange("gcarrot_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
 
         potatoSpawnTime = builder
                 .comment("The time in ticks the potato farm takes to spawn potatoes")
@@ -225,6 +241,25 @@ public class ServerConfig extends ConfigBase {
                 .comment("The time in ticks the peony farm takes to spawn peonies")
                 .defineInRange("peony_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
 
+        vineSpawnTime = builder
+                .comment("The time in ticks the vine farm takes to spawn vines")
+                .defineInRange("vine_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+        mushroomSpawnTime = builder
+                .comment("The time in ticks the mushroom farm takes to spawn mushrooms")
+                .defineInRange("mushroom_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+
+        kelpSpawnTime = builder
+                .comment("The time in ticks the Kelp farm takes to spawn Kelp")
+                .defineInRange("kelp_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+        leafSpawnTime = builder
+                .comment("The time in ticks the Drip Leaf farm takes to spawn Drip Leaves")
+                .defineInRange("leaf_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+        cgrassSpawnTime = builder
+                .comment("The time in ticks the seagrass farm takes to spawn seagrass")
+                .defineInRange("seagrass_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+        padSpawnTime = builder
+                .comment("The time in ticks the lily pad farm takes to spawn lily pads")
+                .defineInRange("pad_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
 
         universalReputation = builder
                 .comment(

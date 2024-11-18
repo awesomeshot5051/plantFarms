@@ -1,0 +1,7 @@
+{
+  "parent": "plant_farms:block/underwaterfarm",
+  "textures": {
+    "front": "plant_farms:block/waterstill",
+    "back": "plant_farms:block/waterstill"
+  }
+}

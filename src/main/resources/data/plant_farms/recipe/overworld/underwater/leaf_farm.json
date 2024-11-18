@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    [
+      "minecraft:small_dripleaf",
+      "minecraft:big_dripleaf"
+    ],
+    "plant_farms:farm_block",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "plant_farms:leaf_farm",
+    "count": 1
+  }
+}

@@ -21,7 +21,6 @@ public class ModInventorySlot extends Slot {
         if (v == null) {
             return false;
         }
-        //TODO Check if this causes a crash
         return super.mayPlace(stack) && v.wantsToPickUp(null, stack);
     }
 

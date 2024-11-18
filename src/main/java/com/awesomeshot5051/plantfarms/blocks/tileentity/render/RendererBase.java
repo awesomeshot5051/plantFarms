@@ -58,8 +58,8 @@ public class RendererBase<T extends FakeWorldTileentity> extends BlockRendererBa
 
 
     public Direction getDirection() {
-        if (tileEntity != null && tileEntity.getLevel() != null && tileEntity.getBlockPos() != null) {
-            // Get the block state at the tile entity's position
+        if (tileEntity != null && tileEntity.getLevel() != null) {
+            tileEntity.getBlockPos();// Get the block state at the tile entity's position
             BlockState blockState = tileEntity.getLevel().getBlockState(tileEntity.getBlockPos());
 
             // Check if the block state has the FACING property

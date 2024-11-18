@@ -19,6 +19,8 @@ public class ModCreativeTabs {
             .icon(() -> new ItemStack(ModItems.OAK_FARM.get())) // Use your custom item here
             .displayItems((features, output) -> {
 
+
+                output.accept(new ItemStack(ModBlocks.INVENTORY_VIEWER.get()));
                 ///The End
                 output.accept(new ItemStack(ModBlocks.CHORUS_FARM.get()));
 
@@ -40,6 +42,7 @@ public class ModCreativeTabs {
                 //Overworld Crops
                 output.accept(new ItemStack(ModBlocks.WHEAT_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.CARROT_FARM.get()));
+                output.accept(new ItemStack(ModBlocks.GCARROT_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.POTATO_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.BEETROOT_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.PUMPKIN_FARM.get()));
@@ -67,11 +70,25 @@ public class ModCreativeTabs {
                 output.accept(new ItemStack(ModBlocks.ROSE_FARM.get())); // Rose Bush
                 output.accept(new ItemStack(ModBlocks.PEONY_FARM.get()));
 
+                //Overworld Miscellaneous
+                output.accept(new ItemStack(ModBlocks.VINE_FARM.get()));
+                output.accept(new ItemStack(ModBlocks.MUSHROOM_FARM.get()));
+
+
+                //Overworld underwater
+
+                output.accept(new ItemStack(ModBlocks.PAD_FARM.get()));
+                output.accept(new ItemStack(ModBlocks.LEAF_FARM.get()));
+                output.accept(new ItemStack(ModBlocks.KELP_FARM.get()));
+                output.accept(new ItemStack(ModBlocks.CGRASS_FARM.get()));
 
                 /// Nether
                 output.accept(new ItemStack(ModBlocks.CRIMSON_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.WARPED_FARM.get()));
                 output.accept(new ItemStack(ModBlocks.WART_FARM.get()));
+
+                output.accept(new ItemStack(ModBlocks.FARM_BLOCK.get()));
+                output.accept(new ItemStack(ModBlocks.TFARM_BLOCK.get()));
 
             })
             .title(Component.translatable("itemGroup.plant_farms"))

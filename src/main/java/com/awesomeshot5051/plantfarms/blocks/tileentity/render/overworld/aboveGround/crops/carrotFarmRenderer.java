@@ -26,11 +26,11 @@ public class carrotFarmRenderer extends RendererBase<carrotFarmTileentity> {
         if (farm.getTimer() >= carrotFarmTileentity.getCarrotSpawnTime() && farm.getTimer() < carrotFarmTileentity.getCarrotDeathTime()) {
             renderSapling(matrixStack);
             // Render the carrot Sapling
+
             blockRenderDispatcher.renderSingleBlock(Blocks.CARROTS.defaultBlockState().setValue(CarrotBlock.AGE, 7), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
             matrixStack.popPose();
         }
         matrixStack.popPose();
     }
-
 
 }

@@ -5,7 +5,6 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.theend.ChorusFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
-import com.awesomeshot5051.plantfarms.items.render.theend.ChorusFarmItemRenderer;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -39,7 +38,7 @@ import java.util.List;
 public class ChorusFarmBlock extends BlockBase implements EntityBlock {
 
     public ChorusFarmBlock(Properties properties) {
-        super(properties);
+        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
     }
 
     /*
