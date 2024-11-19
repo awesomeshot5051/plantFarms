@@ -4,7 +4,11 @@ import com.awesomeshot5051.plantfarms.blocks.tileentity.InventoryViewerTileentit
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.entity.EasyVillagerEntity;
 import com.awesomeshot5051.plantfarms.gui.InventoryViewerContainer;
+import com.awesomeshot5051.plantfarms.items.render.InventoryViewerItemRenderer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import de.maxhenkel.corelib.client.CustomRendererBlockItem;
+import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -36,12 +40,22 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class InventoryViewerBlock extends BlockBase implements EntityBlock {
+public class InventoryViewerBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public InventoryViewerBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public InventoryViewerBlock() {
+        super(Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
     }
 
+    @Override
+    public Item toItem() {
+        return new CustomRendererBlockItem(this, new Item.Properties()) {
+            @OnlyIn(Dist.CLIENT)
+            @Override
+            public ItemRenderer createItemRenderer() {
+                return new InventoryViewerItemRenderer();
+            }
+        };
+    }
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {

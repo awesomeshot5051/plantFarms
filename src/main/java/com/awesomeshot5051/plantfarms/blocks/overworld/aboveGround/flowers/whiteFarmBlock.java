@@ -5,6 +5,7 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.whiteFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -35,10 +36,15 @@ import net.neoforged.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class whiteFarmBlock extends BlockBase implements EntityBlock {
+public class whiteFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public whiteFarmBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public whiteFarmBlock() {
+        super(Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    }
+
+    @Override
+    public Item toItem() {
+        return BlockBase.createItemWithDynamicRenderer(this);
     }
 
 

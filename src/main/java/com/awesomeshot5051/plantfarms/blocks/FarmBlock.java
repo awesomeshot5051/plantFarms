@@ -2,7 +2,11 @@ package com.awesomeshot5051.plantfarms.blocks;
 
 import com.awesomeshot5051.plantfarms.blocks.tileentity.farmBlockTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
+import com.awesomeshot5051.plantfarms.items.render.farmBlockItemRenderer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import de.maxhenkel.corelib.client.CustomRendererBlockItem;
+import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -25,12 +29,22 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class FarmBlock extends BlockBase implements EntityBlock {
+public class FarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public FarmBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public FarmBlock() {
+        super(Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
     }
 
+    @Override
+    public Item toItem() {
+        return new CustomRendererBlockItem(this, new Item.Properties()) {
+            @OnlyIn(Dist.CLIENT)
+            @Override
+            public ItemRenderer createItemRenderer() {
+                return new farmBlockItemRenderer(); // Custom creeper farm renderer
+            }
+        };
+    }
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {

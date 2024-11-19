@@ -6,7 +6,11 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.DarkOakFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
+import com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees.DarkOakFarmItemRenderer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import de.maxhenkel.corelib.client.CustomRendererBlockItem;
+import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -36,10 +40,21 @@ import net.neoforged.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class DarkOakFarmBlock extends BlockBase implements EntityBlock {
+public class DarkOakFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public DarkOakFarmBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public DarkOakFarmBlock() {
+        super(Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    }
+
+    @Override
+    public Item toItem() {
+        return new CustomRendererBlockItem(this, new Item.Properties()) {
+            @OnlyIn(Dist.CLIENT)
+            @Override
+            public ItemRenderer createItemRenderer() {
+                return new DarkOakFarmItemRenderer(); // Custom blaze farm renderer
+            }
+        };
     }
 
 

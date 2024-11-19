@@ -1,6 +1,12 @@
 {
   "advancements.plant_farms.recipe.unlimited_power.desc": "Discover the Crafting Recipe of the Wither Farm",
   "advancements.plant_farms.carts.unlimited_power.name": "UNLIMITED POWER!",
+  "tooltip.plantfarms.crimson_farm.shift": "Must be sitting on Crimson Nylium to work.",
+  "tooltip.plantfarms.crimson_farm.hint": "Hold \u00A74Shift\u00A7r for more info.",
+  "tooltip.plantfarms.warped_farm.shift": "Must be sitting on Warped Nylium to work.",
+  "tooltip.plantfarms.warped_farm.hint": "Hold \u00A74Shift\u00A7r for more info.",
+  "tooltip.plantfarms.wart_farm.shift": "Must be sitting on Netherrack to work.",
+  "tooltip.plantfarms.wart_farm.hint": "Hold \u00A74Shift\u00A7r for more info.",
   "block.plant_farms.chorus_farm": "Chorus Farm",
   "block.plant_farms.oak_farm": "Oak Farm",
   "block.plant_farms.spruce_farm": "Spruce Farm",

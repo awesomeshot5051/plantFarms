@@ -5,7 +5,11 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.OakFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
+import com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees.OakFarmItemRenderer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import de.maxhenkel.corelib.client.CustomRendererBlockItem;
+import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -26,6 +30,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
@@ -35,22 +40,22 @@ import net.neoforged.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class OakFarmBlock extends BlockBase implements EntityBlock {
+public class OakFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public OakFarmBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public OakFarmBlock() {
+        super(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion()); // Adjusted for blaze farm
     }
 
-//    @Override
-//    public Item toItem() {
-//        return new CustomRendererBlockItem(this, new Item.Properties()) {
-//            @OnlyIn(Dist.CLIENT)
-//            @Override
-//            public ItemRenderer createItemRenderer() {
-//                return new OakFarmItemRenderer(); // Custom blaze farm renderer
-//            }
-//        };
-//    }
+    @Override
+    public Item toItem() {
+        return new CustomRendererBlockItem(this, new Item.Properties()) {
+            @OnlyIn(Dist.CLIENT)
+            @Override
+            public ItemRenderer createItemRenderer() {
+                return new OakFarmItemRenderer(); // Custom blaze farm renderer
+            }
+        };
+    }
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {

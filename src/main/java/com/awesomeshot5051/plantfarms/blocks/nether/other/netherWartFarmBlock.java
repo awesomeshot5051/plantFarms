@@ -5,7 +5,10 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.other.netherWartFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
+import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -35,17 +38,28 @@ import net.neoforged.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class netherWartFarmBlock extends BlockBase implements EntityBlock {
+public class netherWartFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
-    public netherWartFarmBlock(Properties properties) {
-        super(properties.mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
+    public netherWartFarmBlock() {
+        super(Properties.of().mapColor(MapColor.METAL).strength(2.5F).sound(SoundType.METAL).noOcclusion());
     }
 
+    @Override
+    public Item toItem() {
+        return BlockBase.createItemWithDynamicRenderer(this);
+    }
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, components, tooltipFlag);
         netherWartFarmTileentity trader = VillagerBlockEntityData.getAndStoreBlockEntity(stack, context.registries(), context.level(), () -> new netherWartFarmTileentity(BlockPos.ZERO, ModBlocks.WART_FARM.get().defaultBlockState()));
+        if (Screen.hasShiftDown()) {
+            components.add(Component.translatable("tooltip.plantfarms.wart_farm.shift")
+                    .withStyle(ChatFormatting.GRAY));
+        } else {
+            components.add(Component.translatable("tooltip.plantfarms.wart_farm.hint")
+                    .withStyle(ChatFormatting.YELLOW));
+        }
         // Removed villager-related tooltip information
     }
 
