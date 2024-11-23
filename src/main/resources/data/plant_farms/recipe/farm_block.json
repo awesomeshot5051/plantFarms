@@ -4,11 +4,15 @@
   "pattern": [
     "###",
     "# #",
-    "#L#"
+    "#/#"
   ],
   "key": {
-    "#": "minecraft:glass_pane",
-    "L": "minecraft:dirt"
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "/": {
+      "item": "minecraft:dirt"
+    }
   },
   "result": {
     "id": "plant_farms:farm_block",

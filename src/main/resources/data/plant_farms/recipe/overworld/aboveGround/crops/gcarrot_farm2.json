@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:gold_nugget",
-    "plant_farms:carrot_farm"
+    {
+      "item": "plant_farms:carrot_farm"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
   ],
   "result": {
     "id": "plant_farms:gcarrot_farm",

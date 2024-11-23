@@ -2,9 +2,17 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:lily_pad",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    [
+      {
+        "item": "minecraft:lily_pad"
+      }
+    ],
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:pad_farm",

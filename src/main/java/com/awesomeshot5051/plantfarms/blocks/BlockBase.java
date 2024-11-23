@@ -52,7 +52,6 @@ public class BlockBase extends HorizontalRotatableBlock {
             String rendererPackage = blockPackage.replace(".blocks.", ".items.render.");
 //            rendererPackage += location;
             String fullyQualifiedRendererName = rendererPackage + "." + itemRendererName + "ItemRenderer";
-
             // Dynamically find the renderer class and create a new instance
             Class<?> rendererClass = Class.forName(fullyQualifiedRendererName);
             ItemRenderer itemRenderer = (ItemRenderer) rendererClass.getDeclaredConstructor().newInstance();

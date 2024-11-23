@@ -2,12 +2,18 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:mangrove_roots",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    {
+      "item": "minecraft:mangrove_roots"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
-    "id": "plant_farms:jungle_farm",
+    "id": "plant_farms:mangrove_farm",
     "count": 1
   }
 }

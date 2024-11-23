@@ -3,13 +3,19 @@
   "category": "blocks",
   "pattern": [
     "###",
-    "#H#",
-    "#L#"
+    "#T#",
+    "#/#"
   ],
   "key": {
-    "#": "minecraft:glass_pane",
-    "L": "minecraft:dirt",
-    "H": "#minecraft:hoes"
+    "#": {
+      "item": "minecraft:glass_pane"
+    },
+    "T": {
+      "tag": "minecraft:hoes"
+    },
+    "/": {
+      "item": "minecraft:dirt"
+    }
   },
   "result": {
     "id": "plant_farms:tfarm_block",

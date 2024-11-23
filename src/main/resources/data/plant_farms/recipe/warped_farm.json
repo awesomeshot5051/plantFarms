@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:warped_fungus",
-    "plant_farms:farm_block",
-    "minecraft:lava_bucket"
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:warped_farm",

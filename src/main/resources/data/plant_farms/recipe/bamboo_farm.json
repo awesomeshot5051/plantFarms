@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:bamboo",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    {
+      "item": "minecraft:bamboo"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:bamboo_farm",

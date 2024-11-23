@@ -1,19 +1,27 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "plant_farms:block/melon_farm"
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    [
+      {
+        "item": "minecraft:melon_slice"
+      },
+      {
+        "item": "minecraft:melon_seeds"
+      },
+      {
+        "item": "minecraft:melon"
+      }
+    ],
+    {
+      "item": "plant_farms:tfarm_block"
     },
-    "facing=south": {
-      "model": "plant_farms:block/melon_farm",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "plant_farms:block/melon_farm",
-      "y": 270
-    },
-    "facing=east": {
-      "model": "plant_farms:block/melon_farm",
-      "y": 90
+    {
+      "item": "minecraft:water_bucket"
     }
+  ],
+  "result": {
+    "id": "plant_farms:melon_farm",
+    "count": 1
   }
 }

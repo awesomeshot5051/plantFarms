@@ -2,9 +2,20 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:sugar_cane",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    [
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:sugar_cane"
+      }
+    ],
+    {
+      "item": "plant_farms:tfarm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:sugar_farm",

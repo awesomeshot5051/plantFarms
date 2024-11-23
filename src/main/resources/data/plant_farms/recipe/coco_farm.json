@@ -2,12 +2,18 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:melon",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
-    "id": "plant_farms:melon_farm",
+    "id": "plant_farms:carrot_farm",
     "count": 1
   }
 }

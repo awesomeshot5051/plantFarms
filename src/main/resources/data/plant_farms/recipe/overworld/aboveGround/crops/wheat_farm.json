@@ -2,9 +2,20 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:wheat",
-    "plant_farms:tfarm_block",
-    "minecraft:water_bucket"
+    [
+      {
+        "item": "minecraft:wheat_seeds"
+      },
+      {
+        "item": "minecraft:wheat"
+      }
+    ],
+    {
+      "item": "plant_farms:tfarm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:wheat_farm",

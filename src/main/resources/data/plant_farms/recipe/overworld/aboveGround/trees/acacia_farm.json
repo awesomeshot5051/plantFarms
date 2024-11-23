@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:acacia_sapling",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    {
+      "item": "minecraft:acacia_sapling"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:acacia_farm",
