@@ -2,9 +2,20 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:pumpkin",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    [
+      {
+        "item": "minecraft:pumpkin_seeds"
+      },
+      {
+        "item": "minecraft:pumpkin"
+      }
+    ],
+    {
+      "item": "plant_farms:tfarm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:pumpkin_farm",

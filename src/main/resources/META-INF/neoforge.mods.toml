@@ -38,6 +38,6 @@ side = "BOTH"
 [[dependencies.plant_farms]]
 modId = "jade"
 type = "optional"
-versionRange = "*"
+versionRange = "19.21.0.247"
 ordering = "NONE"
 side = "BOTH"

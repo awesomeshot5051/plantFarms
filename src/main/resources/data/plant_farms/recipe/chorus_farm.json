@@ -2,11 +2,23 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:end_stone",
-    "plant_farms:farm_block",
-    "minecraft:chorus_fruit"
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    [
+      {
+        "item": "minecraft:chorus_fruit"
+      },
+      {
+        "item": "minecraft:chorus_plant"
+      }
+    ]
   ],
   "result": {
-    "id": "plant_farms:chorus_farm"
+    "id": "plant_farms:chorus_farm",
+    "count": 1
   }
 }

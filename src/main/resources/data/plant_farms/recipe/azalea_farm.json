@@ -2,9 +2,23 @@
   "type": "minecraft:crafting_shapeless",
   "category": "blocks",
   "ingredients": [
-    "minecraft:azalea",
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    [
+      {
+        "item": "minecraft:azalea"
+      },
+      {
+        "item": "minecraft:azalea_leaves"
+      },
+      {
+        "item": "minecraft:flowering_azalea"
+      }
+    ],
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:azalea_farm",

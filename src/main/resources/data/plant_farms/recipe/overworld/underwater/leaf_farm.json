@@ -3,11 +3,19 @@
   "category": "blocks",
   "ingredients": [
     [
-      "minecraft:small_dripleaf",
-      "minecraft:big_dripleaf"
+      {
+        "item": "minecraft:small_dripleaf"
+      },
+      {
+        "item": "minecraft:big_dripleaf"
+      }
     ],
-    "plant_farms:farm_block",
-    "minecraft:water_bucket"
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
   ],
   "result": {
     "id": "plant_farms:leaf_farm",
