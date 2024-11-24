@@ -61,6 +61,7 @@ neoForge {
         client {
             client()
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            systemProperty 'user.name', 'Dev2'
         }
 
         server {

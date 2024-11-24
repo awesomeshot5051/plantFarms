@@ -5,8 +5,11 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.orangeFarmTileentity;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
+import com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers.orangeFarmItemRenderer;
 import de.maxhenkel.corelib.block.IItemBlock;
 import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
+import de.maxhenkel.corelib.client.CustomRendererBlockItem;
+import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -44,7 +47,13 @@ public class orangeFarmBlock extends BlockBase implements EntityBlock, IItemBloc
 
     @Override
     public Item toItem() {
-        return BlockBase.createItemWithDynamicRenderer(this);
+        return new CustomRendererBlockItem(this, new Item.Properties()) {
+            @OnlyIn(Dist.CLIENT)
+            @Override
+            public ItemRenderer createItemRenderer() {
+                return new orangeFarmItemRenderer(); // Custom blaze farm renderer
+            }
+        };
     }
 
 
