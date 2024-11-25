@@ -37,7 +37,6 @@ public class Main {
 //        eventBus.addListener(this::onRegisterPayloadHandler);
         eventBus.addListener(IMC::enqueueIMC);
         eventBus.addListener(ModTileEntities::onRegisterCapabilities);
-
         ModBlocks.init(eventBus);
         ModItems.init(eventBus);
         ModTileEntities.init(eventBus);
@@ -55,6 +54,7 @@ public class Main {
         }
     }
 
+
     public void commonSetup(FMLCommonSetupEvent event) {
 //        NeoForge.EVENT_BUS.register(new ModEvents());
 //        NeoForge.EVENT_BUS.register(new BlockEvents());
@@ -64,12 +64,11 @@ public class Main {
     @OnlyIn(Dist.CLIENT)
     public void clientSetup(FMLClientSetupEvent event) {
         ModTileEntities.clientSetup();
-
         NeoForge.EVENT_BUS.register(new ModSoundEvents());
         NeoForge.EVENT_BUS.register(new GuiEvents());
 
-    }
 
+    }
 //    public void onRegisterPayloadHandler(RegisterPayloadHandlersEvent event) {
 //        PayloadRegistrar registrar = event.registrar(MODID).versioned("0");
 //        CommonRegistry.registerMessage(registrar, MessageVillagerParticles.class);
@@ -151,3 +150,4 @@ public class Main {
 //        event.registerItem(new CustomRenderItemExtension(new tfarmBlockItemRenderer()), ModItems.TFARM_BLOCK);
 //    }
 }
+

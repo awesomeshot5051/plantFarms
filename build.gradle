@@ -118,6 +118,7 @@ dependencies {
         compileOnly "de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}:javadoc"
 //    implementation 'net.neoforged:JarJarSelector:0.4.2'
     }
+    implementation 'com.github.awesomeshot5051:mobFarms:d078b5e8'
 }
 
 //processResources {
@@ -162,4 +163,10 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+//repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+repositories {
+    mavenCentral()
+    maven { url 'https://www.jitpack.io' }
 }
