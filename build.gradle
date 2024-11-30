@@ -109,7 +109,7 @@ dependencies {
 //    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
 //    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
     implementation "curse.maven:jade-324717:${jade_id}"
-    implementation "https://maven.pkg.github.com/awesomeshot5051/plantFarms"
+//    implementation "https://maven.pkg.github.com/awesomeshot5051/plantFarms"
 //    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
     compileOnly "maven.modrinth:jei:${jei_version}"
     compileOnly "maven.modrinth:the-one-probe:${top_version}"
@@ -175,11 +175,23 @@ publishing {
         }
         maven {
             name = "PlantFarms"
-            url = "https://maven.pkg.github.com/awesomeshot5051/plantFarms"
+            url = uri("https://maven.pkg.github.com")
             credentials {
                 username = System.getenv("USERNAME")
                 password = System.getenv("GITHUB_TOKEN")
             }
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            groupId = "com.awesomeshot5051"  // Ensure this is the correct group ID (lowercase)
+            artifactId = "plantfarms"        // Use lowercase artifactId
+            version = "${mod_version}"       // Ensure you're using the correct version from your variables
+
+            // Optional: Adjust the packaging type if needed
+            artifactId = "plantfarms"
         }
     }
 }
