@@ -26,9 +26,8 @@ public class ModBlocks {
      * Custom Water Block For Plant Farm display ONLY
      *
      * */
-    public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(Main.MODID);
-    //    private static final DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(Main.MODID);
-//     End Plants
+    public static final DeferredRegister.Blocks EXTERNAL_BLOCKS_REGISTER = DeferredRegister.createBlocks(Main.MODID);
+    //     End Plants
     private static final DeferredRegister<Block> BLOCK_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK, Main.MODID);
     public static final DeferredHolder<Block, chorusFarmBlock> CHORUS_FARM = BLOCK_REGISTER.register("chorus_farm", chorusFarmBlock::new);
     /// Overworld

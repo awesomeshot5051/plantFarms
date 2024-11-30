@@ -13,9 +13,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
 
-    public static final DeferredRegister.Items ITEM_REGISTER = DeferredRegister.createItems(Main.MODID);
+    private static final DeferredRegister.Items ITEM_REGISTER = DeferredRegister.createItems(Main.MODID);
     public static final DeferredHolder<Item, Item> INVENTORY_VIEWER = ITEM_REGISTER.register("inventory_viewer", () -> ModBlocks.INVENTORY_VIEWER.get().toItem());
-
+    public static final DeferredRegister.Items EXTERNAL_ITEM_REGISTER = DeferredRegister.createItems(Main.MODID);
     // The End
     public static final DeferredHolder<Item, Item> CHORUS_FARM = ITEM_REGISTER.register("chorus_farm", () -> ModBlocks.CHORUS_FARM.get().toItem());
 

@@ -44,6 +44,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModTileEntities {
 
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Main.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> EXTERNAL_BLOCK_ENTITY_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Main.MODID);
 
     @OnlyIn(Dist.CLIENT)
     public static void clientSetup() {
@@ -197,6 +198,7 @@ public class ModTileEntities {
 
     public static void init(IEventBus eventBus) {
         BLOCK_ENTITY_REGISTER.register(eventBus);
+        EXTERNAL_BLOCK_ENTITY_REGISTER.register(eventBus);
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<farmBlockTileentity>> FARM_BLOCK = BLOCK_ENTITY_REGISTER.register("farm_block", () ->

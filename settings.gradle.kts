@@ -12,3 +12,8 @@ plugins {
 
 rootProject.name = "PlantFarms"
 include("app")
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//}
+include("api")
+include("api")

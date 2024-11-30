@@ -3,10 +3,42 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.39-beta'
 //    id 'net.neoforged.moddevgradle.tasks.JarJar' version '0.4.2' // Added JarJar plugin
+    id 'org.jreleaser' version '1.15.0'
 }
 
 version = mod_version
 group = mod_group_id
+//jreleaser {
+//    signing(({
+//        active = 'ALWAYS'
+//        armored = true
+//    } as Closure<Void>))
+//    project {
+//        name = mod_name
+//        description = mod_description
+//        version = mod_version
+//        group = mod_group_id
+//        license = mod_license
+//        // Assuming authors is a comma-separated string
+//        links(({
+//            homepage = "https://github.com/${githubusername}/${mod_id}"
+////            repository = "https://github.com/${githubusername}/${mod_id}.git"
+////            issueTracker = "https://github.com/${githubusername}/${mod_id}/issues"
+//        } as Closure<Void>))
+//    }
+//    deploy {
+//        maven {
+//            nexus2(({
+//                "maven-central" {
+//                    active = 'ALWAYS'
+//                    url = 'https://s01.oss.sonatype.org/service/local'
+//                    snapshotUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+//                    closeRepository = true
+//                }
+//            } as Closure<Void>))
+//        }
+//    }
+//}
 
 repositories {
     mavenLocal()
@@ -40,6 +72,13 @@ repositories {
     }
     maven {
         url "file://${project.projectDir}/repo"
+    }
+    maven {
+        url = uri("https://maven.pkg.github.com/awesomeshot5051/plantFarms")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+        }
     }
 }
 
@@ -104,7 +143,7 @@ dependencies {
     implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
     implementation "curse.maven:jade-324717:${jade_id}"
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-
+//    implementation 'com.awesomeshot5051:plantFarms:1.21.1-1.0.0'
     // JarJar dependency
     jarJar(implementation("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}")) {
 //        version {
@@ -118,7 +157,6 @@ dependencies {
         compileOnly "de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}:javadoc"
 //    implementation 'net.neoforged:JarJarSelector:0.4.2'
     }
-    implementation 'com.github.awesomeshot5051:mobFarms:d078b5e8'
 }
 
 //processResources {
@@ -151,12 +189,22 @@ tasks.register("generateModMetadata", ProcessResources) {
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
-neoForge.ideSyncTask generateModMetadata
+neoForge.ideSyncTask generateModMetadata as Task
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/awesomeshot5051/plantFarms")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
     publications {
-        register('mavenJava', MavenPublication) {
-            from components.java
+        gpr(MavenPublication) {
+            from(components.java)
         }
     }
 }
@@ -165,8 +213,3 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-//repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-repositories {
-    mavenCentral()
-    maven { url 'https://www.jitpack.io' }
-}
