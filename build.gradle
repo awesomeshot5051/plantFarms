@@ -162,8 +162,20 @@ sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
 publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/devopshint/publish-java-package-with-gradle"
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+
+
     publications {
-        register('mavenJava', MavenPublication) {
+        maven(MavenPublication) {
             from components.java
         }
     }
