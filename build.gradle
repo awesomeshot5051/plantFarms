@@ -161,50 +161,34 @@ tasks.register("generateModMetadata", ProcessResources) {
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
+//publishing {
+//    repositories {
+//        maven {
+//            name = "CustomRepo"
+//            url = uri("file://${project.projectDir}/Mods") // Custom directory
+//        }
+//    }
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = 'com.awesomeshot5051'
+//            artifactId = 'plant_farms'
+//            version = '1.21.3-1.1.0'
+//
+//            from components.java
+//        }
+//    }
+//}
 publishing {
     repositories {
         maven {
-            name = "CustomRepo"
-            url = uri("file://${project.projectDir}/Mods") // Custom directory
+            name = "PlantFarms"
+            url = "https://maven.pkg.github.com/awesomeshot5051/plantFarms"
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
     }
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.awesomeshot5051'
-            artifactId = 'plant_farms'
-            version = '1.21.3-1.1.0'
-
-            from components.java
-        }
-    }
-}
-tasks.register("triggerGitHubRelease") {
-    doLast {
-        def owner = "awesomeshot5051" // Replace with your GitHub username
-        def repo = "plantFarms"      // Replace with your repository name
-        def tagName = "1.21.3-1.1.0" // Update to match the release tag
-        def githubToken = System.getenv("GITHUB_TOKEN") // Ensure this is set
-
-        if (!githubToken) {
-            throw new GradleException("GITHUB_TOKEN is not set in environment variables!")
-        }
-
-        exec {
-            commandLine 'curl', '-X', 'POST', '-H', "Authorization: token ${githubToken}",
-                    '-H', 'Content-Type: application/json',
-                    'https://api.github.com/repos/' + owner + '/' + repo + '/releases',
-                    '-d', """{
-                        "tag_name": "${tagName}",
-                        "name": "${tagName}",
-                        "body": "Automated release triggered by Gradle task.",
-                        "draft": false,
-                        "prerelease": false
-                    }"""
-        }
-    }
-}
-tasks.named("publishMavenPublicationToCustomRepoRepository").configure {
-    finalizedBy("triggerGitHubRelease")
 }
 
 tasks.withType(JavaCompile).configureEach {
