@@ -19,5 +19,5 @@ jobs:
         with:
           arguments: publish
         env:
-          USERNAME: ${{awesomeshot5051}}
+          USERNAME: "awesomeshot5051"
           GITHUB_TOKEN: ${{ secrets.PLANT_FARMS }}
