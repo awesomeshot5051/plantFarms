@@ -9,8 +9,9 @@
 
 name: Publish package to GitHub Packages
 on:
-  check_run:
-    types: [ created ]
+  push:
+    branches:
+      - 'Mods/**'
 jobs:
   publish:
     runs-on: ubuntu-latest
