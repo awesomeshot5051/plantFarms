@@ -9,11 +9,7 @@
 
 name: Publish package to GitHub Packages
 on:
-  push:
-    branches:
-      - '1.21.3'  # Specify the branch to trigger the workflow
-    paths:
-      - 'build/libs/*.jar'  # This triggers when a .jar file is pushed to the `build/libs/` directory
+  push  # This triggers when a .jar file is pushed to the `build/libs/` directory
 jobs:
   publish:
     runs-on: ubuntu-latest
