@@ -7,7 +7,21 @@ plugins {
 
 version = mod_version
 group = mod_group_id
-
+repositories {
+    // Other repositories can go above or below Modrinth's. We don't need priority :)
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        // Only add this if you're using ForgeGradle, otherwise remove this line
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
 repositories {
     mavenLocal()
     maven {
@@ -45,6 +59,12 @@ repositories {
         url = 'https://api.modrinth.com/maven'
         content {
             includeGroup "maven.modrinth"
+        }
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
         }
     }
 }
@@ -114,6 +134,7 @@ dependencies {
     compileOnly "maven.modrinth:jei:${jei_version}"
     compileOnly "maven.modrinth:the-one-probe:${top_version}"
     compileOnly "maven.modrinth:jade:${jade_version}"
+    compileOnly "curse.maven:mfn-${mfn_id}:${mod_version_id}"
 
     // JarJar dependency
     jarJar(implementation("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}")) {
@@ -165,14 +186,14 @@ neoForge.ideSyncTask generateModMetadata
 
 publishing {
     repositories {
-        maven {
-            name = "OSSRH"
-            url = "https://central.sonatype.com/api/v1/publisher'"
-            credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
-            }
-        }
+//        maven {
+//            name = "OSSRH"
+//            url = "https://central.sonatype.com/api/v1/publisher'"
+//            credentials {
+//                username = System.getenv("MAVEN_USERNAME")
+//                password = System.getenv("MAVEN_PASSWORD")
+//            }
+//        }
         maven {
             name = "PlantFarms"
             url = uri("https://maven.pkg.github.com")
@@ -187,11 +208,11 @@ publishing {
             from components.java
 
             groupId = "com.awesomeshot5051"  // Ensure this is the correct group ID (lowercase)
-            artifactId = "plantfarms"        // Use lowercase artifactId
+            artifactId = "plantFarms"        // Use lowercase artifactId
             version = "${mod_version}"       // Ensure you're using the correct version from your variables
 
             // Optional: Adjust the packaging type if needed
-            artifactId = "plantfarms"
+            artifactId = "plantFarms"
         }
     }
 }
