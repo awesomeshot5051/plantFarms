@@ -7,38 +7,21 @@ plugins {
 
 version = mod_version
 group = mod_group_id
-//jreleaser {
-//    signing(({
-//        active = 'ALWAYS'
-//        armored = true
-//    } as Closure<Void>))
-//    project {
-//        name = mod_name
-//        description = mod_description
-//        version = mod_version
-//        group = mod_group_id
-//        license = mod_license
-//        // Assuming authors is a comma-separated string
-//        links(({
-//            homepage = "https://github.com/${githubusername}/${mod_id}"
-////            repository = "https://github.com/${githubusername}/${mod_id}.git"
-////            issueTracker = "https://github.com/${githubusername}/${mod_id}/issues"
-//        } as Closure<Void>))
-//    }
-//    deploy {
-//        maven {
-//            nexus2(({
-//                "maven-central" {
-//                    active = 'ALWAYS'
-//                    url = 'https://s01.oss.sonatype.org/service/local'
-//                    snapshotUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
-//                    closeRepository = true
-//                }
-//            } as Closure<Void>))
-//        }
-//    }
-//}
-
+repositories {
+    // Other repositories can go above or below Modrinth's. We don't need priority :)
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        // Only add this if you're using ForgeGradle, otherwise remove this line
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
 repositories {
     mavenLocal()
     maven {
@@ -73,10 +56,15 @@ repositories {
         url "file://${project.projectDir}/repo"
     }
     maven {
-        url = uri("https://maven.pkg.github.com/awesomeshot5051/plantFarms")
-        credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-            password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
         }
     }
 }
@@ -137,13 +125,18 @@ configurations {
 }
 
 dependencies {
-    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+//    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+//    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+//    implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
+    implementation "curse.maven:jade-324717:${jade_id}"
+//    implementation "https://maven.pkg.github.com/awesomeshot5051/plantFarms"
+//    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    compileOnly "maven.modrinth:jei:${jei_version}"
     implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
     implementation "curse.maven:jade-324717:${jade_id}"
-    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-//    implementation project(':api')
-//    implementation 'com.awesomeshot5051:plantFarms:1.21.1-1.0.0'
+    compileOnly "curse.maven:mfn-${mfn_id}:${mod_version_id}"
+    implementation(project(":plantFarms"))
+
     // JarJar dependency
     jarJar(implementation("de.maxhenkel.corelib:corelib:${minecraft_version}-${corelib_version}")) {
 //        version {
@@ -189,27 +182,42 @@ tasks.register("generateModMetadata", ProcessResources) {
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
-neoForge.ideSyncTask generateModMetadata as Task
+neoForge.ideSyncTask generateModMetadata
 
-//publishing {
-//    repositories {
+
+publishing {
+    repositories {
 //        maven {
-//            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/awesomeshot5051/plantFarms")
+//            name = "OSSRH"
+//            url = "https://central.sonatype.com/api/v1/publisher'"
 //            credentials {
-//                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-//                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+//                username = System.getenv("MAVEN_USERNAME")
+//                password = System.getenv("MAVEN_PASSWORD")
 //            }
 //        }
-//    }
-//    publications {
-//        gpr(MavenPublication) {
-//            from(components.java)
-//        }
-//    }
-//}
+        maven {
+            name = "PlantFarms"
+            url = uri("https://maven.pkg.github.com")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            groupId = "com.awesomeshot5051"  // Ensure this is the correct group ID (lowercase)
+            artifactId = "plantFarms"        // Use lowercase artifactId
+            version = "${mod_version}"       // Ensure you're using the correct version from your variables
+
+            // Optional: Adjust the packaging type if needed
+            artifactId = "plantFarms"
+        }
+    }
+}
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
-

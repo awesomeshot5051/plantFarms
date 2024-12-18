@@ -1,248 +1,168 @@
-[24Nov2024 18:31:20.052] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.1.65, --assetIndex, 17, --assetsDir, C:\\Users\\Traee\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.neoForgeVersion, 21.1.65, --fml.fmlVersion, 4.0.24, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
-[24Nov2024 18:31:20.054] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
-[24Nov2024 18:31:20.055] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.3 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
-[24Nov2024 18:31:20.163] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[24Nov2024 18:31:20.261] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[24Nov2024 18:31:20.490] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[24Nov2024 18:31:20.694] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Traee/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23131!/ Service=ModLauncher Env=CLIENT
-[24Nov2024 18:31:20.811] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) 760M GL version 4.6.0 Core Profile Context 24.10.27.01.240627, ATI Technologies Inc.
-[24Nov2024 18:31:21.050] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[24Nov2024 18:31:21.774] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.1.65, --gameDir, ., --assetsDir, C:\Users\Traee\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
-[24Nov2024 18:31:23.169] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 293 milliseconds
-[24Nov2024 18:31:23.272] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
-[24Nov2024 18:31:23.306] [pool-11-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[24Nov2024 18:31:27.389] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24Nov2024 18:31:27.392] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24Nov2024 18:31:27.397] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[24Nov2024 18:31:27.398] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[24Nov2024 18:31:27.400] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[24Nov2024 18:31:27.519] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/assets/.mcassetsroot' uses unexpected schema
-[24Nov2024 18:31:27.519] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/data/.mcassetsroot' uses unexpected schema
-[24Nov2024 18:31:27.549] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[24Nov2024 18:31:27.558] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[24Nov2024 18:31:27.651] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[24Nov2024 18:31:27.899] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.65, for MC 1.21.1
-[24Nov2024 18:31:27.985] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[24Nov2024 18:31:27.989] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.521 ms
-[24Nov2024 18:31:28.038] [modloading-worker-0/INFO] [plant_farms/]: Adding mod Minecraft
-[24Nov2024 18:31:28.038] [modloading-worker-0/INFO] [plant_farms/]: Adding mod The One Probe
-[24Nov2024 18:31:28.038] [modloading-worker-0/INFO] [plant_farms/]: Adding mod Jade
-[24Nov2024 18:31:28.038] [modloading-worker-0/INFO] [plant_farms/]: Adding mod Plant Farms
-[24Nov2024 18:31:28.039] [modloading-worker-0/INFO] [plant_farms/]: Adding mod NeoForge
-[24Nov2024 18:31:28.039] [modloading-worker-0/INFO] [plant_farms/]: Adding mod Corelib
-[24Nov2024 18:31:28.039] [modloading-worker-0/INFO] [plant_farms/]: Adding mod Just Enough Items
-[24Nov2024 18:31:47.401] [modloading-worker-0/INFO] [plant_farms/]: Block 'minecraft:wheat' is NOT part of the 'crops' tag.
-[24Nov2024 18:31:47.401] [modloading-worker-0/INFO] [plant_farms/]: Item corresponding to block 'minecraft:wheat' found: minecraft:wheat_seeds
-[24Nov2024 18:31:47.961] [Render thread/WARN] [net.minecraft.server.packs.repository.Pack/]: Missing metadata in pack file/DataPackStuff.zip
-[24Nov2024 18:31:47.992] [Render thread/INFO] [net.minecraft.client.Options/]: Removed resource pack file/Redstone.zip from incompatibility list because it's now compatible
-[24Nov2024 18:31:47.992] [Render thread/INFO] [net.minecraft.client.Options/]: Removed resource pack file/Fullbright-SP-1.21.zip from incompatibility list because it's now compatible
-[24Nov2024 18:31:48.518] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [plant_farms]
-[24Nov2024 18:31:48.697] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/theoneprobe, mod/jade, mod/plant_farms, mod/neoforge, mod/corelib, mod/jei
-[24Nov2024 18:31:48.826] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/crimsonForest/crimson_farm.json, ignoring
-[24Nov2024 18:31:48.827] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.828] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/warpedForest/warped_farm.json, ignoring
-[24Nov2024 18:31:48.828] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.829] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[24Nov2024 18:31:48.829] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/bamboo_farm.json, ignoring
-[24Nov2024 18:31:48.830] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.830] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/beetroot_farm.json, ignoring
-[24Nov2024 18:31:48.831] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.831] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/berry_farm.json, ignoring
-[24Nov2024 18:31:48.831] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.831] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/carrot_farm.json, ignoring
-[24Nov2024 18:31:48.831] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.832] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/coco_farm.json, ignoring
-[24Nov2024 18:31:48.832] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.832] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
-[24Nov2024 18:31:48.832] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.832] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/melon_farm.json, ignoring
-[24Nov2024 18:31:48.832] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.832] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/potato_farm.json, ignoring
-[24Nov2024 18:31:48.833] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.833] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
-[24Nov2024 18:31:48.833] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.834] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/sugar_farm.json, ignoring
-[24Nov2024 18:31:48.834] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.834] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/wheat_farm.json, ignoring
-[24Nov2024 18:31:48.834] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.834] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/allium_farm.json, ignoring
-[24Nov2024 18:31:48.834] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.834] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/azure_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/daisy_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lilac_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lily_farm.json, ignoring
-[24Nov2024 18:31:48.835] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.835] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orange_farm.json, ignoring
-[24Nov2024 18:31:48.836] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.836] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orchid_farm.json, ignoring
-[24Nov2024 18:31:48.836] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.836] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/peony_farm.json, ignoring
-[24Nov2024 18:31:48.836] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.836] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/pink_farm.json, ignoring
-[24Nov2024 18:31:48.836] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.837] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/poppy_farm.json, ignoring
-[24Nov2024 18:31:48.837] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.837] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/red_farm.json, ignoring
-[24Nov2024 18:31:48.837] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.837] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/rose_farm.json, ignoring
-[24Nov2024 18:31:48.838] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.839] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
-[24Nov2024 18:31:48.839] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.839] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/white_farm.json, ignoring
-[24Nov2024 18:31:48.839] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.839] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
-[24Nov2024 18:31:48.839] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.840] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
-[24Nov2024 18:31:48.841] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.841] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/acacia_farm.json, ignoring
-[24Nov2024 18:31:48.842] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.842] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/azalea_farm.json, ignoring
-[24Nov2024 18:31:48.842] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.843] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/birch_farm.json, ignoring
-[24Nov2024 18:31:48.845] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.845] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/cherry_farm.json, ignoring
-[24Nov2024 18:31:48.845] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.845] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/crimsonForest/crimson_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.846] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.846] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/jungle_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.846] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/mangrove_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.846] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/warpedForest/warped_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.846] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/oak_farm.json, ignoring
-[24Nov2024 18:31:48.846] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.847] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/spruce_farm.json, ignoring
-[24Nov2024 18:31:48.847] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.853] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/crimsonForest/crimson_farm.json, ignoring
-[24Nov2024 18:31:48.853] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.853] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/warpedForest/warped_farm.json, ignoring
-[24Nov2024 18:31:48.853] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.854] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/bamboo_farm.json, ignoring
-[24Nov2024 18:31:48.854] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.854] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/beetroot_farm.json, ignoring
-[24Nov2024 18:31:48.854] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.854] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/berry_farm.json, ignoring
-[24Nov2024 18:31:48.854] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.854] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/carrot_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.855] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/coco_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.855] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.855] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/melon_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.855] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/potato_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.855] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
-[24Nov2024 18:31:48.855] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.856] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/sugar_farm.json, ignoring
-[24Nov2024 18:31:48.856] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.856] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/wheat_farm.json, ignoring
-[24Nov2024 18:31:48.856] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.857] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/allium_farm.json, ignoring
-[24Nov2024 18:31:48.857] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.857] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/azure_farm.json, ignoring
-[24Nov2024 18:31:48.857] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.857] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
-[24Nov2024 18:31:48.857] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.857] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/daisy_farm.json, ignoring
-[24Nov2024 18:31:48.857] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lilac_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lily_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orange_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orchid_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.858] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/peony_farm.json, ignoring
-[24Nov2024 18:31:48.858] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.859] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/pink_farm.json, ignoring
-[24Nov2024 18:31:48.859] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.859] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/poppy_farm.json, ignoring
-[24Nov2024 18:31:48.859] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.859] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/red_farm.json, ignoring
-[24Nov2024 18:31:48.859] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.859] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/rose_farm.json, ignoring
-[24Nov2024 18:31:48.859] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.859] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
-[24Nov2024 18:31:48.859] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.860] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/white_farm.json, ignoring
-[24Nov2024 18:31:48.860] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.860] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
-[24Nov2024 18:31:48.860] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.860] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
-[24Nov2024 18:31:48.860] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.861] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/acacia_farm.json, ignoring
-[24Nov2024 18:31:48.861] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.861] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/azalea_farm.json, ignoring
-[24Nov2024 18:31:48.861] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.861] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/birch_farm.json, ignoring
-[24Nov2024 18:31:48.861] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.861] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/cherry_farm.json, ignoring
-[24Nov2024 18:31:48.861] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.861] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
-[24Nov2024 18:31:48.862] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.862] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/jungle_farm.json, ignoring
-[24Nov2024 18:31:48.862] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.862] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/mangrove_farm.json, ignoring
-[24Nov2024 18:31:48.863] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.863] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/oak_farm.json, ignoring
-[24Nov2024 18:31:48.863] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:48.863] [Worker-Main-11/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/spruce_farm.json, ignoring
-[24Nov2024 18:31:48.863] [Worker-Main-11/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[24Nov2024 18:31:49.258] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[24Nov2024 18:31:49.265] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture plant_farms:block/water_still with size 25x25 limits mip level from 4 to 0
-[24Nov2024 18:31:49.798] [Worker-Main-10/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'plant_farms:item/icon_item' referenced from: plant_farms:item/icon_item: java.io.FileNotFoundException: plant_farms:models/item/icon_item.json
-[24Nov2024 18:31:50.676] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.vanilla.VanillaPlugin
-[24Nov2024 18:31:50.724] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.vanilla.VanillaPlugin in 44.04 ms
-[24Nov2024 18:31:50.733] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.vanilla.VanillaPlugin in 53.71 ms
-[24Nov2024 18:31:50.734] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.universal.UniversalPlugin
-[24Nov2024 18:31:50.740] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.universal.UniversalPlugin in 5.297 ms
-[24Nov2024 18:31:50.740] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.universal.UniversalPlugin in 5.671 ms
-[24Nov2024 18:31:50.740] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.debug.DebugPlugin
-[24Nov2024 18:31:50.743] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.debug.DebugPlugin in 1.634 ms
-[24Nov2024 18:31:50.743] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.debug.DebugPlugin in 2.147 ms
-[24Nov2024 18:31:50.743] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.core.CorePlugin
-[24Nov2024 18:31:50.747] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.core.CorePlugin in 3.060 ms
-[24Nov2024 18:31:50.747] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.core.CorePlugin in 3.483 ms
-[24Nov2024 18:31:50.747] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.access.AccessibilityPlugin
-[24Nov2024 18:31:50.751] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.access.AccessibilityPlugin in 2.886 ms
-[24Nov2024 18:31:50.751] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.access.AccessibilityPlugin in 3.244 ms
-[24Nov2024 18:31:50.751] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Start loading plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers
-[24Nov2024 18:31:50.754] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 751.5 μs
-[24Nov2024 18:31:50.754] [Worker-Main-5/INFO] [snownee.jade.Jade/]: Loaded plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 1.227 ms
-[24Nov2024 18:31:50.887] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[24Nov2024 18:31:50.888] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[24Nov2024 18:31:51.553] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
-[24Nov2024 18:31:51.554] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[24Nov2024 18:31:51.638] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[24Nov2024 18:31:51.649] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[24Nov2024 18:31:51.649] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[24Nov2024 18:31:51.650] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[24Nov2024 18:31:51.650] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[24Nov2024 18:31:51.659] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[24Nov2024 18:31:51.659] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[24Nov2024 18:31:51.660] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[24Nov2024 18:31:51.660] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[24Nov2024 18:31:51.829] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[24Nov2024 18:31:51.832] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[24Nov2024 18:31:51.832] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[24Nov2024 18:31:51.834] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[24Nov2024 18:31:51.834] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[24Nov2024 18:31:51.879] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[24Nov2024 18:31:51.952] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[24Nov2024 18:31:51.952] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[24Nov2024 18:35:34.465] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[18Dec2024 18:34:33.702] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserveruserdev, --gameDir, ., --fml.neoForgeVersion, 21.1.65, --fml.fmlVersion, 4.0.24, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
+[18Dec2024 18:34:33.707] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
+[18Dec2024 18:34:33.709] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.3 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[18Dec2024 18:34:33.880] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserveruserdev
+[18Dec2024 18:34:33.963] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Traee/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2387!/ Service=ModLauncher Env=SERVER
+[18Dec2024 18:34:34.340] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[18Dec2024 18:34:35.234] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserveruserdev' with arguments [--gameDir, .]
+[18Dec2024 18:34:36.310] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[18Dec2024 18:34:36.600] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[18Dec2024 18:34:42.071] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Dec2024 18:34:42.073] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Dec2024 18:34:42.076] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Dec2024 18:34:42.077] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18Dec2024 18:34:42.078] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18Dec2024 18:34:42.182] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.65, for MC 1.21.1
+[18Dec2024 18:34:42.341] [modloading-sync-worker/ERROR] [net.neoforged.fml.common.asm.RuntimeDistCleaner/DISTXFORM]: Attempted to load class net/minecraft/client/multiplayer/ClientLevel for invalid dist DEDICATED_SERVER
+[18Dec2024 18:34:42.342] [modloading-sync-worker/ERROR] [net.neoforged.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Failed to create item renderer for: chorusFarm
+	Index: 1
+	Listeners:
+		0: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@39127d07
+		1: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@30c0db5d
+		2: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@4116bcad
+		3: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@2377b14d
+		4: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@317b399c
+		5: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@7c93ab6f
+		6: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@297a0cd0
+		7: net.neoforged.neoforge.registries.DeferredRegister$$Lambda/0x000002185dc65950@5e11d5a8
+java.lang.RuntimeException: Failed to create item renderer for: chorusFarm
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.BlockBase.createItemWithDynamicRenderer(BlockBase.java:69)
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.theend.chorusFarmBlock.toItem(chorusFarmBlock.java:47)
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.items.ModItems.lambda$static$1(ModItems.java:20)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister$Items.lambda$register$0(DeferredRegister.java:483)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375)
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:26)
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350)
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:329)
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177)
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:164)
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377)
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92)
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.RuntimeException: Attempted to load class net/minecraft/client/multiplayer/ClientLevel for invalid dist DEDICATED_SERVER
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:94)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:57)
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:190)
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:298)
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:311)
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:298)
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:214)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:421)
+	at java.base/java.lang.Class.forName(Class.java:412)
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.BlockBase.createItemWithDynamicRenderer(BlockBase.java:57)
+	... 22 more
+
+[18Dec2024 18:34:42.344] [modloading-sync-worker/ERROR] [net.neoforged.fml.ModContainer/LOADING]: Caught exception during event net.neoforged.neoforge.registries.RegisterEvent@1a3ee80d dispatch for modid plant_farms
+java.lang.RuntimeException: Failed to create item renderer for: chorusFarm
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.BlockBase.createItemWithDynamicRenderer(BlockBase.java:69) ~[%23121!/:?]
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.theend.chorusFarmBlock.toItem(chorusFarmBlock.java:47) ~[%23121!/:?]
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.items.ModItems.lambda$static$1(ModItems.java:20) ~[%23121!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister$Items.lambda$register$0(DeferredRegister.java:483) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.RegisterEvent.register(RegisterEvent.java:48) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.DeferredRegister.addEntries(DeferredRegister.java:375) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:26) ~[bus-8.0.2.jar%2399!/:?]
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.2.jar%2399!/:?]
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:329) ~[bus-8.0.2.jar%2399!/:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.24.jar%2395!/:4.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:164) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.24.jar%2395!/:4.0]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.RuntimeException: Attempted to load class net/minecraft/client/multiplayer/ClientLevel for invalid dist DEDICATED_SERVER
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.common.asm.RuntimeDistCleaner.processClassWithFlags(RuntimeDistCleaner.java:60) ~[loader-4.0.24.jar:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:94) ~[modlauncher-11.0.4.jar:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-11.0.4.jar:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:57) ~[modlauncher-11.0.4.jar:?]
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:190) ~[securejarhandler-3.0.8.jar:?]
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.lambda$findClass$20(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?]
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:311) ~[securejarhandler-3.0.8.jar:?]
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:298) ~[securejarhandler-3.0.8.jar:?]
+	at cpw.mods.securejarhandler/cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:214) ~[securejarhandler-3.0.8.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:421) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:412) ~[?:?]
+	at TRANSFORMER/plant_farms@1/com.awesomeshot5051.plantfarms.blocks.BlockBase.createItemWithDynamicRenderer(BlockBase.java:57) ~[%23121!/:?]
+	... 22 more
+[18Dec2024 18:34:42.427] [modloading-sync-worker/ERROR] [net.neoforged.neoforge.registries.GameData/]: Failed to register some entries, see suppressed exceptions for details
+java.lang.RuntimeException: null
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:83) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+	Suppressed: net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Plant Farms (plant_farms) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+	  java.lang.RuntimeException: Failed to create item renderer for: chorusFarm
+
+		at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:181) ~[loader-4.0.24.jar%2395!/:4.0]
+		at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.lambda$postEventWithWrapInModOrder$16(ModLoader.java:379) ~[loader-4.0.24.jar%2395!/:4.0]
+		at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+		at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModList.forEachModInOrder(ModList.java:164) ~[loader-4.0.24.jar%2395!/:4.0]
+		at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWithWrapInModOrder(ModLoader.java:377) ~[loader-4.0.24.jar%2395!/:4.0]
+		at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.postEventWrapContainerInModOrder(ModLoader.java:368) ~[loader-4.0.24.jar%2395!/:4.0]
+		at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.registries.GameData.postRegisterEvents(GameData.java:92) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+		at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.internal.CommonModLoader.lambda$begin$0(CommonModLoader.java:54) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+		at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+		at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[18Dec2024 18:34:42.437] [modloading-sync-worker/ERROR] [net.neoforged.neoforge.registries.GameData/]: Rolling back to VANILLA state
+[18Dec2024 18:34:42.925] [main/FATAL] [net.neoforged.fml.ModLoader/LOADING]: Failed to wait for future Registry initialization, 1 errors found
+[18Dec2024 18:34:43.051] [main/ERROR] [net.minecraft.CrashReport/]: Negative index in crash report handler (0/21)
+[18Dec2024 18:34:43.069] [main/FATAL] [net.neoforged.neoforge.common.NeoForgeMod/]: Preparing crash report with UUID 0fa71a57-aafd-4cd1-9c88-0091c6e06171
+[18Dec2024 18:34:43.070] [main/FATAL] [net.neoforged.neoforge.server.loading.ServerModLoader/]: Crash report saved to .\crash-reports\crash-2024-12-18_18.34.43-fml.txt
+[18Dec2024 18:34:43.071] [main/FATAL] [net.neoforged.neoforge.common.NeoForgeMod/]: Preparing crash report with UUID 651d40f2-9123-4c02-89f4-2cc3e85d3199
+[18Dec2024 18:34:43.072] [main/ERROR] [net.minecraft.server.Main/FATAL]: Failed to start the minecraft server
+net.neoforged.fml.ModLoadingException: Loading errors encountered:
+	- Plant Farms (plant_farms) encountered an error while dispatching the net.neoforged.neoforge.registries.RegisterEvent event
+	  java.lang.RuntimeException: Failed to create item renderer for: chorusFarm
+
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.waitForFuture(ModLoader.java:281) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.waitForTask(ModLoader.java:183) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.ModLoader.runInitTask(ModLoader.java:163) ~[loader-4.0.24.jar%2395!/:4.0]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.internal.CommonModLoader.begin(CommonModLoader.java:51) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/neoforge@21.1.65/net.neoforged.neoforge.server.loading.ServerModLoader.load(ServerModLoader.java:34) ~[neoforge-21.1.65-minecraft.jar%23120!/:?]
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:124) ~[neoforge-21.1.65-minecraft.jar%23119!/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.loading.targets.NeoForgeServerUserdevLaunchHandler.runService(NeoForgeServerUserdevLaunchHandler.java:23) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/fml_loader@4.0.24/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.24.jar%2395!/:4.0]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.4.jar%2375!/:?]
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.4/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.4.jar%2375!/:?]
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?]
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at DevLaunch@1.0.1/net.neoforged.devlaunch.Main.main(Main.java:55) [DevLaunch-1.0.1.jar:?]

@@ -10,10 +10,13 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
+// Define root project name
 rootProject.name = "PlantFarms"
-include("app")
-//dependencyResolutionManagement {
-//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-//}
-include("api")
-include("api")
+
+// Specify project directories
+//project(":plantFarms").projectDir = file("src/main/java/com/awesomeshot5051/plantfarms")
+//project(":api").projectDir = file("realapi/src/main/java/com/awesomeshot5051/api")
+
+// Include subprojects
+//include(":plantFarms")
+//include(":api")
