@@ -19,6 +19,7 @@ import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.neoforge.items.IItemHandler;
@@ -27,6 +28,9 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
+import static com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments.initializeAxeEnchantments;
 
 public class ChorusFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -35,8 +39,11 @@ public class ChorusFarmTileentity extends VillagerTileentity implements ITickabl
     protected NonNullList<ItemStack> inventory;
     protected long timer;
 
+    public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeAxeEnchantments();
+    public ItemStack axeType;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
+
 
     public ChorusFarmTileentity(BlockPos pos, BlockState state) {
         super(ModTileEntities.CHORUS_FARM.get(), ModBlocks.CHORUS_FARM.get().defaultBlockState(), pos, state);

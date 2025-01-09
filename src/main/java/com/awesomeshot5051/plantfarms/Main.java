@@ -3,6 +3,8 @@ package com.awesomeshot5051.plantfarms;
 
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
+import com.awesomeshot5051.plantfarms.data.providers.recipe.recipe.ModRecipes;
+import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
 import com.awesomeshot5051.plantfarms.events.GuiEvents;
 import com.awesomeshot5051.plantfarms.events.ModSoundEvents;
 import com.awesomeshot5051.plantfarms.gui.Containers;
@@ -44,7 +46,9 @@ public class Main {
         Containers.init(eventBus);
         ModCreativeTabs.init(eventBus);
         ModLootTables.init(eventBus);
-
+        ModRecipes.registerRecipes(eventBus);
+        ModRecipes.registerTypes(eventBus);
+        ModDataComponents.register(eventBus);
         SERVER_CONFIG = CommonRegistry.registerConfig(MODID, ModConfig.Type.SERVER, ServerConfig.class);
         CLIENT_CONFIG = CommonRegistry.registerConfig(MODID, ModConfig.Type.CLIENT, ClientConfig.class);
 

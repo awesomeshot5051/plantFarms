@@ -5,10 +5,16 @@ import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import de.maxhenkel.corelib.blockentity.IServerTickableBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
+
+import java.util.Map;
+
+import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.initializeHoeEnchantments;
 
 public class tfarmBlockTileentity extends VillagerTileentity implements IServerTickableBlockEntity {
     public tfarmBlockTileentity(BlockPos pos, BlockState state) {
@@ -18,6 +24,8 @@ public class tfarmBlockTileentity extends VillagerTileentity implements IServerT
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
+    public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
+    public ItemStack hoeType;
     protected OutputItemHandler outputItemHandler;
     protected NonNullList<ItemStack> inventory;
     protected ItemStackHandler itemHandler;

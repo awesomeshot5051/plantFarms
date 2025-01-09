@@ -35,7 +35,6 @@ public class ModBlocks {
 
     // Overworld Trees
     public static final DeferredHolder<Block, OakFarmBlock> OAK_FARM = BLOCK_REGISTER.register("oak_farm", OakFarmBlock::new);
-    //    public static final DeferredHolder<Block, OakFarmBlock> OAK_FARM = BLOCK_REGISTER.register("oak_farm", OakFarmBlock::new);
     public static final DeferredHolder<Block, SpruceFarmBlock> SPRUCE_FARM = BLOCK_REGISTER.register("spruce_farm", SpruceFarmBlock::new);
     public static final DeferredHolder<Block, BirchFarmBlock> BIRCH_FARM = BLOCK_REGISTER.register("birch_farm", BirchFarmBlock::new);
     public static final DeferredHolder<Block, JungleFarmBlock> JUNGLE_FARM = BLOCK_REGISTER.register("jungle_farm", JungleFarmBlock::new);
@@ -86,12 +85,10 @@ public class ModBlocks {
     public static final DeferredHolder<Block, leafFarmBlock> LEAF_FARM = BLOCK_REGISTER.register("leaf_farm", leafFarmBlock::new);
     public static final DeferredHolder<Block, kelpFarmBlock> KELP_FARM = BLOCK_REGISTER.register("kelp_farm", kelpFarmBlock::new);
 
-    //    public static final DeferredHolder<Block, ConverterBlock> CONVERTER = BLOCK_REGISTER.register("converter", ConverterBlock::new);
     //Nether Trees
     public static final DeferredHolder<Block, crimsonFarmBlock> CRIMSON_FARM = BLOCK_REGISTER.register("crimson_farm", crimsonFarmBlock::new);
     public static final DeferredHolder<Block, warpedFarmBlock> WARPED_FARM = BLOCK_REGISTER.register("warped_farm", warpedFarmBlock::new);
     public static final DeferredHolder<Block, netherWartFarmBlock> WART_FARM = BLOCK_REGISTER.register("wart_farm", netherWartFarmBlock::new);
-    //    public static final DeferredBlock<Block> WATER = REGISTRY.register("water", waterBlock::new,BlockBehaviour.Properties.of());
     public static final DeferredHolder<Block, InventoryViewerBlock> INVENTORY_VIEWER = BLOCK_REGISTER.register("inventory_viewer", InventoryViewerBlock::new);
 
 

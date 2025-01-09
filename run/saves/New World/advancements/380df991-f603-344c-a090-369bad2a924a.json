@@ -1507,5 +1507,95 @@
     },
     "done": true
   },
+  "plant_farms:recipes/misc/oak_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 11:13:06 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/oak_farm_recipe": {
+    "criteria": {
+      "has_oak_sapling": "2025-01-09 11:14:23 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/carrot_farm_recipe": {
+    "criteria": {
+      "has_carrot": "2025-01-09 11:15:27 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_alternate_recipe": {
+    "criteria": {
+      "has_golden_carrot": "2025-01-09 11:15:28 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_recipe": {
+    "criteria": {
+      "has_golden_carrot": "2025-01-09 11:15:28 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/carrot_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 11:16:08 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 11:18:10 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/farm_block_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 11:18:44 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/block.plant_farms.farm_block_recipe": {
+    "criteria": {
+      "has_dirt": "2025-01-09 11:29:08 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/tfarm_block_recipe": {
+    "criteria": {
+      "has_farm_block": "2025-01-09 11:31:02 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/tfarm_block_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 11:33:12 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/oak_farm_enchant_upgrade_recipe": {
+    "criteria": {
+      "has_the_recipe": "2025-01-09 11:45:05 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_enchant_upgrade_recipe": {
+    "criteria": {
+      "has_the_recipe": "2025-01-09 11:52:10 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/oak_farm_alternate_recipe": {
+    "criteria": {
+      "has_oak_sapling": "2025-01-09 14:29:49 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pad_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-09 14:30:12 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

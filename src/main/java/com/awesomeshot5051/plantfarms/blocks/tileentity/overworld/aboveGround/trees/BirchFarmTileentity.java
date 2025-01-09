@@ -11,20 +11,23 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
-
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.state.BlockState;
-
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
+import static com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments.initializeAxeEnchantments;
 
 public class BirchFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -33,8 +36,11 @@ public class BirchFarmTileentity extends VillagerTileentity implements ITickable
     protected NonNullList<ItemStack> inventory;
     protected long timer;
 
+    public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeAxeEnchantments();
+    public ItemStack axeType;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
+
 
     public BirchFarmTileentity(BlockPos pos, BlockState state) {
         super(ModTileEntities.BIRCH_FARM.get(), ModBlocks.BIRCH_FARM.get().defaultBlockState(), pos, state);
@@ -102,7 +108,7 @@ public class BirchFarmTileentity extends VillagerTileentity implements ITickable
             drops.add(new ItemStack(Items.BIRCH_SAPLING, dropCount)); // Drop 1 blaze rod
         }
         drops.add(new ItemStack(Items.BIRCH_LOG));
-        if(serverWorld.random.nextDouble() < .005){
+        if (serverWorld.random.nextDouble() < .005) {
             drops.add(new ItemStack(Items.STRIPPED_BIRCH_LOG));
         }
 

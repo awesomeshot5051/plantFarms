@@ -11,12 +11,13 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
-//import net.minecraft.world.entity.monster.mangrove.Mangrove;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -24,6 +25,9 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+
+import static com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments.initializeAxeEnchantments;
 
 public class MangroveFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -32,8 +36,11 @@ public class MangroveFarmTileentity extends VillagerTileentity implements ITicka
     protected NonNullList<ItemStack> inventory;
     protected long timer;
 
+    public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeAxeEnchantments();
+    public ItemStack axeType;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
+
 
     public MangroveFarmTileentity(BlockPos pos, BlockState state) {
         super(ModTileEntities.MANGROVE_FARM.get(), ModBlocks.MANGROVE_FARM.get().defaultBlockState(), pos, state);
@@ -101,7 +108,7 @@ public class MangroveFarmTileentity extends VillagerTileentity implements ITicka
             drops.add(new ItemStack(Items.MANGROVE_ROOTS, dropCount)); // Drop 1 blaze rod
         }
         drops.add(new ItemStack(Items.MANGROVE_LOG));
-        if(serverWorld.random.nextDouble() < .005){
+        if (serverWorld.random.nextDouble() < .005) {
             drops.add(new ItemStack(Items.STRIPPED_MANGROVE_LOG));
         }
 

@@ -3,6 +3,7 @@ package com.awesomeshot5051.plantfarms.blocks.overworld.underwater;
 import com.awesomeshot5051.plantfarms.blocks.BlockBase;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.underwaterPlants.kelpFarmTileentity;
+import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.gui.OutputContainer;
 import com.awesomeshot5051.plantfarms.items.render.overworld.underwater.kelpFarmItemRenderer;
@@ -15,6 +16,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -22,6 +24,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.EntityBlock;
@@ -38,6 +41,8 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
+
+import static net.minecraft.world.item.BlockItem.updateCustomBlockEntityTag;
 
 public class kelpFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
@@ -91,6 +96,21 @@ public class kelpFarmBlock extends BlockBase implements EntityBlock, IItemBlock 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level1, BlockState state, BlockEntityType<T> type) {
         return new SimpleBlockEntityTicker<>(); // Keeps default behavior
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+        super.setPlacedBy(level, pos, state, placer, stack);
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof kelpFarmTileentity farmTileEntity) {
+            ItemContainerContents hoeType = stack.get(ModDataComponents.HOE_TYPE);
+            if (hoeType != null) {
+                farmTileEntity.hoeType = hoeType.getStackInSlot(0);
+                farmTileEntity.setChanged();
+                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, hoeType.getStackInSlot(0));
+                level.sendBlockUpdated(pos, state, state, 3);
+            }
+        }
     }
 
     @Nullable

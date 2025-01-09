@@ -1,6 +1,7 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
 import com.awesomeshot5051.plantfarms.blocks.tileentity.farmBlockTileentity;
+import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
 import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
 import com.awesomeshot5051.plantfarms.items.render.farmBlockItemRenderer;
 import de.maxhenkel.corelib.block.IItemBlock;
@@ -9,9 +10,12 @@ import de.maxhenkel.corelib.client.CustomRendererBlockItem;
 import de.maxhenkel.corelib.client.ItemRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.EntityBlock;
@@ -28,6 +32,8 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
+
+import static net.minecraft.world.item.BlockItem.updateCustomBlockEntityTag;
 
 public class FarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
@@ -57,6 +63,21 @@ public class FarmBlock extends BlockBase implements EntityBlock, IItemBlock {
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level1, BlockState state, BlockEntityType<T> type) {
         return new SimpleBlockEntityTicker<>(); // Keeps default behavior
+    }
+
+    @Override
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+        super.setPlacedBy(level, pos, state, placer, stack);
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof farmBlockTileentity farmTileEntity) {
+            ItemContainerContents hoeType = stack.get(ModDataComponents.HOE_TYPE);
+            if (hoeType != null) {
+                farmTileEntity.hoeType = hoeType.getStackInSlot(0);
+                farmTileEntity.setChanged();
+                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, hoeType.getStackInSlot(0));
+                level.sendBlockUpdated(pos, state, state, 3);
+            }
+        }
     }
 
     @Nullable
