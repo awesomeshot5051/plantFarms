@@ -1,0 +1,24 @@
+{
+  "type": "plant_farms:shaped_serializer",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "c:glass_panes"
+    },
+    "A": {
+      "tag": "minecraft:axes"
+    },
+    "O": {
+      "item": "minecraft:oak_sapling"
+    }
+  },
+  "pattern": [
+    "###",
+    "#A#",
+    "#O#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:oak_farm"
+  }
+}

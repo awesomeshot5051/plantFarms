@@ -1,0 +1,16 @@
+{
+  "type": "plant_farms:shapeless_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "plant_farms:tfarm_block"
+    },
+    {
+      "item": "minecraft:golden_carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:gcarrot_farm"
+  }
+}

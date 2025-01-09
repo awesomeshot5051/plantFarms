@@ -1,0 +1,19 @@
+{
+  "type": "plant_farms:shapeless_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "plant_farms:tfarm_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:wheat_farm"
+  }
+}
