@@ -49,11 +49,12 @@ public class MangroveFarmTileentity extends VillagerTileentity implements ITicka
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getMangroveSpawnTime() {
-        return Main.SERVER_CONFIG.mangroveSpawnTime.get() - 20 * 4;
+    public static double getMangroveSpawnTime(farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.mangroveSpawnTime.get() - 20 * 4;
     }
 
-    public static int getMangroveDeathTime() {
+    public static double getMangroveDeathTime() {
         return getMangroveSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
@@ -69,15 +70,15 @@ public class MangroveFarmTileentity extends VillagerTileentity implements ITicka
         timer++;
         setChanged();
 
-        if (timer == getMangroveSpawnTime()) {
+        if (timer == getMangroveSpawnTime(this)) {
 //            // Play mangrove spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.MANGROVE_PRIMED);
             sync();
-//        } else if (timer > getMangroveSpawnTime() && timer < getMangroveDeathTime()) {
+//        } else if (timer > getMangroveSpawnTime() && timer < getMangroveDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.MANGROVE_HURT);
 //            }
-        } else if (timer >= getMangroveDeathTime()) {
+        } else if (timer >= getMangroveDeathTime(this)) {
             // Play mangrove death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.MANGROVE_DEATH);
             for (ItemStack drop : getDrops()) {

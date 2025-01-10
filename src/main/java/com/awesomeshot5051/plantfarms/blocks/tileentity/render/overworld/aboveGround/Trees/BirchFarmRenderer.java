@@ -23,7 +23,7 @@ public class BirchFarmRenderer extends RendererBase<BirchFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= BirchFarmTileentity.getBirchSpawnTime() && farm.getTimer() < BirchFarmTileentity.getBirchDeathTime()) {
+        if (farm.getTimer() >= BirchFarmTileentity.getBirchSpawnTime(farm) && farm.getTimer() < BirchFarmTileentity.getBirchDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Birch Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.BIRCH_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

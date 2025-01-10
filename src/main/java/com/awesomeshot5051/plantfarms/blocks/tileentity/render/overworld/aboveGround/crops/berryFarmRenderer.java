@@ -23,7 +23,7 @@ public class berryFarmRenderer extends RendererBase<berryFarmTileentity> {
     public void render(berryFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= berryFarmTileentity.getBerrySpawnTime() && farm.getTimer() < berryFarmTileentity.getBerryDeathTime()) {
+        if (farm.getTimer() >= berryFarmTileentity.getBerrySpawnTime(farm) && farm.getTimer() < berryFarmTileentity.getBerryDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the berry Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

@@ -23,7 +23,7 @@ public class DarkOakFarmRenderer extends RendererBase<DarkOakFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= DarkOakFarmTileentity.getDarkOakSpawnTime() && farm.getTimer() < DarkOakFarmTileentity.getDarkOakDeathTime()) {
+        if (farm.getTimer() >= DarkOakFarmTileentity.getDarkOakSpawnTime(farm) && farm.getTimer() < DarkOakFarmTileentity.getDarkOakDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the DarkOak Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.DARK_OAK_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

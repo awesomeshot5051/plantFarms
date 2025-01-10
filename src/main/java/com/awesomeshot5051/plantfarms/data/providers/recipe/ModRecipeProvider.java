@@ -484,10 +484,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         CustomShapedRecipeBuilder.shaped(RecipeCategory.MISC, BAMBOO_FARM.get())
                 .pattern("###")
-                .pattern("#B#")
+                .pattern("#A#")
                 .pattern("#C#")
                 .define('#', Tags.Items.GLASS_PANES)
-                .define('B', Items.BONE_MEAL)
+                .define('A', ItemTags.AXES)
                 .define('C', Items.BAMBOO)
                 .unlockedBy("has_bamboo", has(Items.BAMBOO))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(BAMBOO_FARM.get().getDescriptionId() + "_recipe")));
@@ -497,6 +497,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.GOLDEN_CARROT)
                 .unlockedBy("has_golden_carrot", has(Items.GOLDEN_CARROT))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(GCARROT_FARM.get().getDescriptionId() + "_alternate_recipe")));
+
         TFarmBlockRecipeBuilder.shapeless(RecipeCategory.MISC, TFARM_BLOCK.get())
                 .requires(FARM_BLOCK.get())
                 .requires(ItemTags.HOES)

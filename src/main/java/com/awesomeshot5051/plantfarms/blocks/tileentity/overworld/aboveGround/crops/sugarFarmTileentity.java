@@ -37,7 +37,7 @@ public class sugarFarmTileentity extends VillagerTileentity implements ITickable
     protected long timer;
 
     public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
-    public ItemStack hoeType;
+
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 
@@ -58,7 +58,7 @@ public class sugarFarmTileentity extends VillagerTileentity implements ITickable
     }
 
     public long getTimer() {
-        return timer;
+        return timer;//
     }
 
     @Override

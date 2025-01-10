@@ -23,31 +23,31 @@ public class HoeEnchantments {
     }
 
     // Helper method to set the value for a single enchantment
-    private static void setEnchantment(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
-        if (swordEnchantments.containsKey(enchantment)) {
-            swordEnchantments.put(enchantment, value);
+    private static void setHoeEnchantment(Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
+        if (hoeEnchantments.containsKey(enchantment)) {
+            hoeEnchantments.put(enchantment, value);
         } else {
             throw new IllegalArgumentException("Invalid enchantment: " + enchantment);
         }
     }
 
-    public static boolean getEnchantmentStatus(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment) {
-        if (swordEnchantments.containsKey(enchantment)) {
-            return swordEnchantments.get(enchantment);
+    public static boolean getHoeEnchantmentStatus(Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments, ResourceKey<Enchantment> enchantment) {
+        if (hoeEnchantments.containsKey(enchantment)) {
+            return hoeEnchantments.get(enchantment);
         } else {
             throw new IllegalArgumentException("Invalid enchantment: " + enchantment);
         }
     }
 
     // Method to toggle a single enchantment
-    public static void toggleEnchantment(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
-        setEnchantment(swordEnchantments, enchantment, value);
+    public static void toggleHoeEnchantment(Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
+        setHoeEnchantment(hoeEnchantments, enchantment, value);
     }
 
     // Method to toggle multiple enchantments
-    public static void toggleEnchantments(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, Map<ResourceKey<Enchantment>, Boolean> enchantmentsToToggle) {
+    public static void toggleHoeEnchantments(Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments, Map<ResourceKey<Enchantment>, Boolean> enchantmentsToToggle) {
         for (Map.Entry<ResourceKey<Enchantment>, Boolean> entry : enchantmentsToToggle.entrySet()) {
-            setEnchantment(swordEnchantments, entry.getKey(), entry.getValue());
+            setHoeEnchantment(hoeEnchantments, entry.getKey(), entry.getValue());
         }
     }
 }

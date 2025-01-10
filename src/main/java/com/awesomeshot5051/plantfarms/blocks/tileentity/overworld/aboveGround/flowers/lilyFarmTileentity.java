@@ -4,12 +4,14 @@ import com.awesomeshot5051.plantfarms.Main;
 import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.SyncableTileentity;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -104,7 +106,12 @@ public class lilyFarmTileentity extends VillagerTileentity implements ITickableB
     @Override
     protected void saveAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         super.saveAdditional(compound, provider);
-
+        if (hoeType != null) {
+            CompoundTag hoeTypeTag = new CompoundTag();
+            hoeTypeTag.putString("id", BuiltInRegistries.ITEM.getKey(hoeType.getItem()).toString()); // Save the item ID
+            hoeTypeTag.putInt("count", hoeType.getCount()); // Save the count
+            compound.put("HoeType", hoeTypeTag); // Add the tag to the main compound
+        }
         ContainerHelper.saveAllItems(compound, inventory, false, provider);
         compound.putLong("Timer", timer);
     }
@@ -112,6 +119,13 @@ public class lilyFarmTileentity extends VillagerTileentity implements ITickableB
     @Override
     protected void loadAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         ContainerHelper.loadAllItems(compound, inventory, provider);
+        if (compound.contains("HoeType")) {
+            SyncableTileentity.loadHoeType(compound, provider).ifPresent(stack -> this.hoeType = stack);
+        }
+        if (hoeType == null) {
+// If no pickType is saved, set a default one (e.g., Stone Pickaxe)
+            hoeType = new ItemStack(Items.WOODEN_HOE);
+        }
         timer = compound.getLong("Timer");
         super.loadAdditional(compound, provider);
     }

@@ -5,6 +5,8 @@ import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments;
+import com.awesomeshot5051.plantfarms.enums.AxeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
@@ -18,6 +20,7 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -49,12 +52,33 @@ public class AcaciaFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getAcaciaSpawnTime() {
-        return Main.SERVER_CONFIG.acaciaSpawnTime.get() - 20 * 4;
+    public static double getAcaciaSpawnTime(AcaciaFarmTileentity farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.acaciaSpawnTime.get() /
+                (axe.equals(AxeType.NETHERITE) ? 30 :
+                        axe.equals(AxeType.DIAMOND) ? 25 :
+                                axe.equals(AxeType.GOLDEN) ? 20 :
+                                        axe.equals(AxeType.IRON) ? 15 :
+                                                axe.equals(AxeType.STONE) ? 10
+                                                        : 1);
     }
 
-    public static int getAcaciaDeathTime() {
-        return getAcaciaSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getAcaciaDeathTime(AcaciaFarmTileentity farm) {
+        // Iterate through the enchantments
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        if (farm.getAxeType().isEnchanted()) {
+            farm.setAxeEnchantmentStatus(farm);
+        }
+        int baseValue = 20;
+        if (AxeEnchantments.getAxeEnchantmentStatus(farm.axeEnchantments, Enchantments.EFFICIENCY)) {
+            baseValue = 10;
+        }
+        return getAcaciaSpawnTime(farm) + (axe.equals(AxeType.NETHERITE) ? (baseValue * 3.2) :
+                axe.equals(AxeType.DIAMOND) ? (baseValue * 5.6) :
+                        axe.equals(AxeType.IRON) ? (baseValue * 4.8) :
+                                axe.equals(AxeType.STONE) ? (baseValue * 6.4) :
+                                        axe.equals(AxeType.WOODEN) ? (baseValue * 6.4) :
+                                                6.4);
     }
 
     public long getTimer() {
@@ -69,15 +93,15 @@ public class AcaciaFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getAcaciaSpawnTime()) {
+        if (timer == getAcaciaSpawnTime(this)) {
 //            // Play acacia spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
             sync();
-//        } else if (timer > getAcaciaSpawnTime() && timer < getAcaciaDeathTime()) {
+//        } else if (timer > getAcaciaSpawnTime() && timer < getAcaciaDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_HURT);
 //            }
-        } else if (timer >= getAcaciaDeathTime()) {
+        } else if (timer >= getAcaciaDeathTime(this)) {
             // Play acacia death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_DEATH);
             for (ItemStack drop : getDrops()) {

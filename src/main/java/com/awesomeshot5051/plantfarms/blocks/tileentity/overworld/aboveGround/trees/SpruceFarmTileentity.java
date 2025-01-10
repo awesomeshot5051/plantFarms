@@ -49,11 +49,12 @@ public class SpruceFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getSpruceSpawnTime() {
-        return Main.SERVER_CONFIG.spruceSpawnTime.get() - 20 * 4;
+    public static double getSpruceSpawnTime(farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.spruceSpawnTime.get() - 20 * 4;
     }
 
-    public static int getSpruceDeathTime() {
+    public static double getSpruceDeathTime() {
         return getSpruceSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
@@ -69,15 +70,15 @@ public class SpruceFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getSpruceSpawnTime()) {
+        if (timer == getSpruceSpawnTime(this)) {
 //            // Play spruce spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.SPRUCE_PRIMED);
             sync();
-//        } else if (timer > getSpruceSpawnTime() && timer < getSpruceDeathTime()) {
+//        } else if (timer > getSpruceSpawnTime() && timer < getSpruceDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.SPRUCE_HURT);
 //            }
-        } else if (timer >= getSpruceDeathTime()) {
+        } else if (timer >= getSpruceDeathTime(this)) {
             // Play spruce death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.SPRUCE_DEATH);
             for (ItemStack drop : getDrops()) {

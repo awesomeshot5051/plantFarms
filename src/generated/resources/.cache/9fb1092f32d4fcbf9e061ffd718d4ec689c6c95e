@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-09T15:13:39.1278336	Recipes
+// 1.21.1	2025-01-09T15:29:32.7350681	Recipes
 a91c557ca8f1ca43465f9aecc430d6d328599669 data/plant_farms/advancement/recipes/misc/acacia_farm_alternate_recipe.json
 b922470d7706649e88dc420313f91a75f251770f data/plant_farms/advancement/recipes/misc/acacia_farm_diamond_upgrade_recipe.json
 fdaf2335e4cfff7147ef820c138c07179ddca367 data/plant_farms/advancement/recipes/misc/acacia_farm_enchantment_removal_recipe.json
@@ -458,7 +458,7 @@ c399f9a4099fc0714df95f59592a823b5392f578 data/plant_farms/recipe/bamboo_farm_enc
 7820ad3744ed4c17295f95a45f8a007186d3b146 data/plant_farms/recipe/bamboo_farm_gold_upgrade_recipe.json
 9d295f3f575cf1f90650156d961eb09351349003 data/plant_farms/recipe/bamboo_farm_iron_upgrade_recipe.json
 e220ce425efe7229b2f83c1f25af1d0349871027 data/plant_farms/recipe/bamboo_farm_netherite_upgrade_recipe.json
-850320e0ef924c5973569a62c1e75924940f3028 data/plant_farms/recipe/bamboo_farm_recipe.json
+6f53c3fe5b24197db1eaf898acf26c6844d2d6c3 data/plant_farms/recipe/bamboo_farm_recipe.json
 b73cb5eb43927cc9794030cf060c32c93d26cd5b data/plant_farms/recipe/bamboo_farm_stone_upgrade_recipe.json
 c644e84eaef45de76e9652ff049d63400a46f036 data/plant_farms/recipe/beetroot_farm_alternate_recipe.json
 0087e3016aa2bacf671145d75a44515011ce430f data/plant_farms/recipe/beetroot_farm_diamond_upgrade_recipe.json

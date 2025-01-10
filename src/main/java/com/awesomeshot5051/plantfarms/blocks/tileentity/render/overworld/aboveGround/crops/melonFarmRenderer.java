@@ -24,7 +24,7 @@ public class melonFarmRenderer extends RendererBase<melonFarmTileentity> {
     public void render(melonFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= melonFarmTileentity.getMelonSpawnTime() && farm.getTimer() < melonFarmTileentity.getMelonDeathTime()) {
+        if (farm.getTimer() >= melonFarmTileentity.getMelonSpawnTime(farm) && farm.getTimer() < melonFarmTileentity.getMelonDeathTime(farm)) {
             // Push the pose stack to ensure transformations are applied correctly
             Direction direction = getDirection();
             matrixStack.pushPose();

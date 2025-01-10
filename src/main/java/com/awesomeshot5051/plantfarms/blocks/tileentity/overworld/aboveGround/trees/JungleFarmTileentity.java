@@ -49,11 +49,12 @@ public class JungleFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getJungleSpawnTime() {
-        return Main.SERVER_CONFIG.jungleSpawnTime.get() - 20 * 4;
+    public static double getJungleSpawnTime(farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.jungleSpawnTime.get() - 20 * 4;
     }
 
-    public static int getJungleDeathTime() {
+    public static double getJungleDeathTime() {
         return getJungleSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
@@ -69,15 +70,15 @@ public class JungleFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getJungleSpawnTime()) {
+        if (timer == getJungleSpawnTime(this)) {
 //            // Play jungle spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.JUNGLE_PRIMED);
             sync();
-//        } else if (timer > getJungleSpawnTime() && timer < getJungleDeathTime()) {
+//        } else if (timer > getJungleSpawnTime() && timer < getJungleDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.JUNGLE_HURT);
 //            }
-        } else if (timer >= getJungleDeathTime()) {
+        } else if (timer >= getJungleDeathTime(this)) {
             // Play jungle death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.JUNGLE_DEATH);
             for (ItemStack drop : getDrops()) {

@@ -5,6 +5,8 @@ import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments;
+import com.awesomeshot5051.plantfarms.enums.AxeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
@@ -18,6 +20,7 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -49,12 +52,26 @@ public class BirchFarmTileentity extends VillagerTileentity implements ITickable
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getBirchSpawnTime() {
+    public static double getBirchSpawnTime(BirchFarmTileentity farm) {
         return Main.SERVER_CONFIG.birchSpawnTime.get() - 20 * 4;
     }
 
-    public static int getBirchDeathTime() {
-        return getBirchSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getBirchDeathTime(BirchFarmTileentity farm) {
+        // Iterate through the enchantments
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        if (farm.getAxeType().isEnchanted()) {
+            farm.setAxeEnchantmentStatus(farm);
+        }
+        int baseValue = 20;
+        if (AxeEnchantments.getAxeEnchantmentStatus(farm.axeEnchantments, Enchantments.EFFICIENCY)) {
+            baseValue = 10;
+        }
+        return getBirchSpawnTime(farm) + (axe.equals(AxeType.NETHERITE) ? (baseValue * 3.2) :
+                axe.equals(AxeType.DIAMOND) ? (baseValue * 5.6) :
+                        axe.equals(AxeType.IRON) ? (baseValue * 4.8) :
+                                axe.equals(AxeType.STONE) ? (baseValue * 6.4) :
+                                        axe.equals(AxeType.WOODEN) ? (baseValue * 6.4) :
+                                                6.4);
     }
 
     public long getTimer() {
@@ -69,15 +86,15 @@ public class BirchFarmTileentity extends VillagerTileentity implements ITickable
         timer++;
         setChanged();
 
-        if (timer == getBirchSpawnTime()) {
+        if (timer == getBirchSpawnTime(this)) {
 //            // Play birch spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BIRCH_PRIMED);
             sync();
-//        } else if (timer > getBirchSpawnTime() && timer < getBirchDeathTime()) {
+//        } else if (timer > getBirchSpawnTime() && timer < getBirchDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BIRCH_HURT);
 //            }
-        } else if (timer >= getBirchDeathTime()) {
+        } else if (timer >= getBirchDeathTime(this)) {
             // Play birch death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BIRCH_DEATH);
             for (ItemStack drop : getDrops()) {

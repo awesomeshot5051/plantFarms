@@ -5,6 +5,7 @@ import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.enums.AxeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
@@ -49,12 +50,19 @@ public class AzaleaFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getAzaleaSpawnTime() {
-        return Main.SERVER_CONFIG.azaleaSpawnTime.get() - 20 * 4;
+    public static double getAzaleaSpawnTime(AzaleaFarmTileentity farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.azaleaSpawnTime.get() /
+                (axe.equals(AxeType.NETHERITE) ? 30 :
+                        axe.equals(AxeType.DIAMOND) ? 25 :
+                                axe.equals(AxeType.GOLDEN) ? 20 :
+                                        axe.equals(AxeType.IRON) ? 15 :
+                                                axe.equals(AxeType.STONE) ? 10
+                                                        : 1);
     }
 
-    public static int getAzaleaDeathTime() {
-        return getAzaleaSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getAzaleaDeathTime(AzaleaFarmTileentity farm) {
+        return getAzaleaSpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -69,15 +77,15 @@ public class AzaleaFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getAzaleaSpawnTime()) {
+        if (timer == getAzaleaSpawnTime(this)) {
 //            // Play azalea spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.AZALEA_PRIMED);
             sync();
-//        } else if (timer > getAzaleaSpawnTime() && timer < getAzaleaDeathTime()) {
+//        } else if (timer > getAzaleaSpawnTime() && timer < getAzaleaDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.AZALEA_HURT);
 //            }
-        } else if (timer >= getAzaleaDeathTime()) {
+        } else if (timer >= getAzaleaDeathTime(this)) {
             // Play azalea death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.AZALEA_DEATH);
             for (ItemStack drop : getDrops()) {

@@ -23,7 +23,7 @@ public class carrotFarmRenderer extends RendererBase<carrotFarmTileentity> {
     public void render(carrotFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= carrotFarmTileentity.getCarrotSpawnTime() && farm.getTimer() < carrotFarmTileentity.getCarrotDeathTime()) {
+        if (farm.getTimer() >= carrotFarmTileentity.getCarrotSpawnTime(farm) && farm.getTimer() < carrotFarmTileentity.getCarrotDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the carrot Sapling
 

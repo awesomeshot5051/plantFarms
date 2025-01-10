@@ -24,7 +24,7 @@ public class pumpkinFarmRenderer extends RendererBase<pumpkinFarmTileentity> {
     public void render(pumpkinFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= pumpkinFarmTileentity.getPumpkinSpawnTime() && farm.getTimer() < pumpkinFarmTileentity.getPumpkinDeathTime()) {
+        if (farm.getTimer() >= pumpkinFarmTileentity.getPumpkinSpawnTime(farm) && farm.getTimer() < pumpkinFarmTileentity.getPumpkinDeathTime(farm)) {
             // Push the pose stack to ensure transformations are applied correctly
             Direction direction = getDirection();
             matrixStack.pushPose();

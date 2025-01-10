@@ -22,7 +22,7 @@ public class bambooFarmRenderer extends RendererBase<bambooFarmTileentity> {
     public void render(bambooFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= bambooFarmTileentity.getBambooSpawnTime() && farm.getTimer() < bambooFarmTileentity.getBambooDeathTime()) {
+        if (farm.getTimer() >= bambooFarmTileentity.getBambooSpawnTime(farm) && farm.getTimer() < bambooFarmTileentity.getBambooDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the bamboo Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.BAMBOO.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

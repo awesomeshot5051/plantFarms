@@ -5,6 +5,7 @@ import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.enums.AxeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
@@ -49,12 +50,13 @@ public class CherryFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getCherrySpawnTime() {
-        return Main.SERVER_CONFIG.cherrySpawnTime.get() - 20 * 4;
+    public static double getCherrySpawnTime(CherryFarmTileentity farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.cherrySpawnTime.get() - 20 * 4;
     }
 
-    public static int getCherryDeathTime() {
-        return getCherrySpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getCherryDeathTime(CherryFarmTileentity farm) {
+        return getCherrySpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -69,15 +71,15 @@ public class CherryFarmTileentity extends VillagerTileentity implements ITickabl
         timer++;
         setChanged();
 
-        if (timer == getCherrySpawnTime()) {
+        if (timer == getCherrySpawnTime(this)) {
 //            // Play cherry spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.CHERRY_PRIMED);
             sync();
-//        } else if (timer > getCherrySpawnTime() && timer < getCherryDeathTime()) {
+//        } else if (timer > getCherrySpawnTime() && timer < getCherryDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.CHERRY_HURT);
 //            }
-        } else if (timer >= getCherryDeathTime()) {
+        } else if (timer >= getCherryDeathTime(this)) {
             // Play cherry death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.CHERRY_DEATH);
             for (ItemStack drop : getDrops()) {

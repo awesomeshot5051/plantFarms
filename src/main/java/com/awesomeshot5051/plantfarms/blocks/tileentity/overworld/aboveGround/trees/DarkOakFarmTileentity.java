@@ -5,6 +5,7 @@ import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.enums.AxeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
@@ -49,12 +50,13 @@ public class DarkOakFarmTileentity extends VillagerTileentity implements ITickab
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getDarkOakSpawnTime() {
-        return Main.SERVER_CONFIG.darkOakSpawnTime.get() - 20 * 4;
+    public static double getDarkOakSpawnTime(DarkOakFarmTileentity farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.darkOakSpawnTime.get() - 20 * 4;
     }
 
-    public static int getDarkOakDeathTime() {
-        return getDarkOakSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getDarkOakDeathTime(DarkOakFarmTileentity farm) {
+        return getDarkOakSpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -69,15 +71,15 @@ public class DarkOakFarmTileentity extends VillagerTileentity implements ITickab
         timer++;
         setChanged();
 
-        if (timer == getDarkOakSpawnTime()) {
+        if (timer == getDarkOakSpawnTime(this)) {
 //            // Play darkOak spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.DARKOAK_PRIMED);
             sync();
-//        } else if (timer > getDarkOakSpawnTime() && timer < getDarkOakDeathTime()) {
+//        } else if (timer > getDarkOakSpawnTime() && timer < getDarkOakDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.DARKOAK_HURT);
 //            }
-        } else if (timer >= getDarkOakDeathTime()) {
+        } else if (timer >= getDarkOakDeathTime(this)) {
             // Play darkOak death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.DARKOAK_DEATH);
             for (ItemStack drop : getDrops()) {

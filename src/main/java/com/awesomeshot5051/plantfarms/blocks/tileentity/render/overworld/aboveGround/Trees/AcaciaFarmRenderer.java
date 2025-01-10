@@ -1,7 +1,6 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
 
 
-
 import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.AcaciaFarmTileentity;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -23,7 +22,7 @@ public class AcaciaFarmRenderer extends RendererBase<AcaciaFarmTileentity> {
     public void render(AcaciaFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= AcaciaFarmTileentity.getAcaciaSpawnTime() && farm.getTimer() < AcaciaFarmTileentity.getAcaciaDeathTime()) {
+        if (farm.getTimer() >= AcaciaFarmTileentity.getAcaciaSpawnTime(farm) && farm.getTimer() < AcaciaFarmTileentity.getAcaciaDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Acacia Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.ACACIA_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

@@ -23,7 +23,7 @@ public class potatoFarmRenderer extends RendererBase<potatoFarmTileentity> {
     public void render(potatoFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= potatoFarmTileentity.getPotatoSpawnTime() && farm.getTimer() < potatoFarmTileentity.getPotatoDeathTime()) {
+        if (farm.getTimer() >= potatoFarmTileentity.getPotatoSpawnTime(farm) && farm.getTimer() < potatoFarmTileentity.getPotatoDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the potato Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.POTATOES.defaultBlockState().setValue(PotatoBlock.AGE, 7), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

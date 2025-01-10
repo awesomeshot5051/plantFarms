@@ -4,12 +4,16 @@ import com.awesomeshot5051.plantfarms.Main;
 import com.awesomeshot5051.plantfarms.OutputItemHandler;
 import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.SyncableTileentity;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
+import com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments;
+import com.awesomeshot5051.plantfarms.enums.HoeType;
 import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
 import de.maxhenkel.corelib.inventory.ItemListInventory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -18,6 +22,7 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
@@ -49,16 +54,42 @@ public class wheatFarmTileentity extends VillagerTileentity implements ITickable
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getWheatSpawnTime() {
-        return Main.SERVER_CONFIG.wheatSpawnTime.get() - 20 * 4;
+    public static double getWheatSpawnTime(wheatFarmTileentity farm) {
+        HoeType hoe = HoeType.fromItem(farm.getHoeType().getItem());
+        return (double) Main.SERVER_CONFIG.wheatSpawnTime.get() /
+                (hoe.equals(HoeType.NETHERITE) ? 30 :
+                        hoe.equals(HoeType.DIAMOND) ? 25 :
+                                hoe.equals(HoeType.GOLDEN) ? 20 :
+                                        hoe.equals(HoeType.IRON) ? 15 :
+                                                hoe.equals(HoeType.STONE) ? 10
+                                                        : 1);
     }
 
-    public static int getWheatDeathTime() {
-        return getWheatSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getWheatDeathTime(wheatFarmTileentity farm) {
+        // Iterate through the enchantments
+        HoeType hoe = HoeType.fromItem(farm.getHoeType().getItem());
+        if (farm.getHoeType().isEnchanted()) {
+            farm.setHoeEnchantmentStatus(farm);
+        }
+        int baseValue = 20;
+        if (HoeEnchantments.getHoeEnchantmentStatus(farm.hoeEnchantments, Enchantments.EFFICIENCY)) {
+            baseValue = 10;
+        }
+        return getWheatSpawnTime(farm) + (hoe.equals(HoeType.NETHERITE) ? (baseValue * 3.2) :
+                hoe.equals(HoeType.DIAMOND) ? (baseValue * 5.6) :
+                        hoe.equals(HoeType.IRON) ? (baseValue * 4.8) :
+                                hoe.equals(HoeType.STONE) ? (baseValue * 6.4) :
+                                        hoe.equals(HoeType.WOODEN) ? (baseValue * 6.4) :
+                                                6.4); // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
         return timer;
+    }
+
+    @Override
+    public ItemStack getHoeType() {
+        return hoeType;
     }
 
     @Override
@@ -67,9 +98,9 @@ public class wheatFarmTileentity extends VillagerTileentity implements ITickable
         timer++;
         setChanged();
 
-        if (timer == getWheatSpawnTime()) {
+        if (timer == getWheatSpawnTime(this)) {
             sync();
-        } else if (timer >= getWheatDeathTime()) {
+        } else if (timer >= getWheatDeathTime(this)) {
             for (ItemStack drop : getDrops()) {
                 for (int i = 0; i < itemHandler.getSlots(); i++) {
                     drop = itemHandler.insertItem(i, drop, false);
@@ -112,7 +143,12 @@ public class wheatFarmTileentity extends VillagerTileentity implements ITickable
     @Override
     protected void saveAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         super.saveAdditional(compound, provider);
-
+        if (hoeType != null) {
+            CompoundTag hoeTypeTag = new CompoundTag();
+            hoeTypeTag.putString("id", BuiltInRegistries.ITEM.getKey(hoeType.getItem()).toString()); // Save the item ID
+            hoeTypeTag.putInt("count", hoeType.getCount()); // Save the count
+            compound.put("HoeType", hoeTypeTag); // Add the tag to the main compound
+        }
         ContainerHelper.saveAllItems(compound, inventory, false, provider);
         compound.putLong("Timer", timer);
     }
@@ -120,6 +156,13 @@ public class wheatFarmTileentity extends VillagerTileentity implements ITickable
     @Override
     protected void loadAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         ContainerHelper.loadAllItems(compound, inventory, provider);
+        if (compound.contains("HoeType")) {
+            SyncableTileentity.loadHoeType(compound, provider).ifPresent(stack -> this.hoeType = stack);
+        }
+        if (hoeType == null) {
+// If no pickType is saved, set a default one (e.g., Stone Pickaxe)
+            hoeType = new ItemStack(Items.WOODEN_HOE);
+        }
         timer = compound.getLong("Timer");
         super.loadAdditional(compound, provider);
     }

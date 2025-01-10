@@ -49,11 +49,12 @@ public class OakFarmTileentity extends VillagerTileentity implements ITickableBl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getSaplingSpawnTime() {
-        return Main.SERVER_CONFIG.oakSpawnTime.get() - 20 * 4;
+    public static double getSaplingSpawnTime(farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.oakSpawnTime.get() - 20 * 4;
     }
 
-    public static int getSaplingDeathTime() {
+    public static double getSaplingDeathTime() {
         return getSaplingSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
@@ -69,15 +70,15 @@ public class OakFarmTileentity extends VillagerTileentity implements ITickableBl
         timer++;
         setChanged();
 
-        if (timer == getSaplingSpawnTime()) {
+        if (timer == getSaplingSpawnTime(this)) {
 //            // Play blaze spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_PRIMED);
             sync();
-//        } else if (timer > getSaplingSpawnTime() && timer < getSaplingDeathTime()) {
+//        } else if (timer > getSaplingSpawnTime() && timer < getSaplingDeathTime(this)) {
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_HURT);
 //            }
-        } else if (timer >= getSaplingDeathTime()) {
+        } else if (timer >= getSaplingDeathTime(this)) {
             // Play blaze death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.BLAZE_DEATH);
             for (ItemStack drop : getDrops()) {

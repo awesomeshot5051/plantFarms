@@ -23,7 +23,7 @@ public class wheatFarmRenderer extends RendererBase<wheatFarmTileentity> {
     public void render(wheatFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= wheatFarmTileentity.getWheatSpawnTime() && farm.getTimer() < wheatFarmTileentity.getWheatDeathTime()) {
+        if (farm.getTimer() >= wheatFarmTileentity.getWheatSpawnTime(farm) && farm.getTimer() < wheatFarmTileentity.getWheatDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the wheat Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.WHEAT.defaultBlockState().setValue(CropBlock.AGE, 7), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

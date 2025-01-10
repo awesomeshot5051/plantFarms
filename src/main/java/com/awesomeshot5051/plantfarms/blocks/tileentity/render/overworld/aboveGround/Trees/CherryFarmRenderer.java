@@ -23,7 +23,7 @@ public class CherryFarmRenderer extends RendererBase<CherryFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= CherryFarmTileentity.getCherrySpawnTime() && farm.getTimer() < CherryFarmTileentity.getCherryDeathTime()) {
+        if (farm.getTimer() >= CherryFarmTileentity.getCherrySpawnTime(farm) && farm.getTimer() < CherryFarmTileentity.getCherryDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Cherry Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.CHERRY_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

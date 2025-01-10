@@ -37,7 +37,6 @@ public class cocoFarmTileentity extends VillagerTileentity implements ITickableB
     protected long timer;
 
     public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
-    public ItemStack hoeType;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 
@@ -60,6 +59,7 @@ public class cocoFarmTileentity extends VillagerTileentity implements ITickableB
     public long getTimer() {
         return timer;
     }
+
 
     @Override
     public void tick() {

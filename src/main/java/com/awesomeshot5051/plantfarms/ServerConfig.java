@@ -78,188 +78,188 @@ public class ServerConfig extends ConfigBase {
         ///The End
         chorusSpawnTime = builder
                 .comment("The time in ticks the chorus plant takes to drop stuff")
-                .defineInRange("chorus_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("chorus_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         ///The Nether
         crimsonSpawnTime = builder
                 .comment("The time in ticks the crimson farm takes to drop stuff")
-                .defineInRange("crimson_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("crimson_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         warpedSpawnTime = builder
                 .comment("The time in ticks the warped farm takes to drop stuff")
-                .defineInRange("warped_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("warped_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         wartSpawnTime = builder
                 .comment("The time in ticks the nether wart farm takes to drop stuff")
-                .defineInRange("wart_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("wart_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         ///The Overworld
 
         //Overworld Trees
         oakSpawnTime = builder
                 .comment("The time in ticks the spruce farm takes to spawn a oak")
-                .defineInRange("oak_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("oak_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         spruceSpawnTime = builder
                 .comment("The time in ticks the spruce farm takes to spawn a spruce")
-                .defineInRange("spruce_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("spruce_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         birchSpawnTime = builder
                 .comment("The time in ticks the birch farm takes to spawn a birch")
-                .defineInRange("birch_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("birch_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         jungleSpawnTime = builder
                 .comment("The time in ticks the elder azalea farm takes to spawn an elder azalea")
-                .defineInRange("jungle_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("jungle_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         darkOakSpawnTime = builder
                 .comment("The time in ticks the darkOak farm takes to spawn an darkOak")
-                .defineInRange("dark_oak_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("dark_oak_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         acaciaSpawnTime = builder
                 .comment("The time in ticks the acacia farm takes to spawn a acacia")
-                .defineInRange("acacia_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("acacia_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         azaleaSpawnTime = builder
                 .comment("The time in ticks the azalea farm takes to spawn a azalea")
-                .defineInRange("azalea_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("azalea_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         mangroveSpawnTime = builder
                 .comment("The time in ticks the mangrove farm takes to spawn a mangrove")
-                .defineInRange("mangrove_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("mangrove_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         cherrySpawnTime = builder
                 .comment("The time in ticks the cherry farm takes to spawn an cherry")
-                .defineInRange("cherry_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("cherry_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         //Overworld Crops
         wheatSpawnTime = builder
                 .comment("The time in ticks the wheat farm takes to spawn wheat")
-                .defineInRange("wheat_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("wheat_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         carrotSpawnTime = builder
                 .comment("The time in ticks the carrot farm takes to spawn carrots")
-                .defineInRange("carrot_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("carrot_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         gcarrotSpawnTime = builder
                 .comment("The time in ticks the golden carrot farm takes to spawn golden carrots")
-                .defineInRange("gcarrot_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("gcarrot_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         potatoSpawnTime = builder
                 .comment("The time in ticks the potato farm takes to spawn potatoes")
-                .defineInRange("potato_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("potato_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         beetrootSpawnTime = builder
                 .comment("The time in ticks the beetroot farm takes to spawn beetroots")
-                .defineInRange("beetroot_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("beetroot_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         pumpkinSpawnTime = builder
                 .comment("The time in ticks the pumpkin farm takes to spawn pumpkins")
-                .defineInRange("pumpkin_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("pumpkin_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         melonSpawnTime = builder
                 .comment("The time in ticks the melon farm takes to spawn melons")
-                .defineInRange("melon_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("melon_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         sugarCaneSpawnTime = builder
                 .comment("The time in ticks the sugar cane farm takes to spawn sugar canes")
-                .defineInRange("sugar_cane_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("sugar_cane_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         cocoaBeanSpawnTime = builder
                 .comment("The time in ticks the cocoa bean farm takes to spawn cocoa beans")
-                .defineInRange("cocoa_bean_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("cocoa_bean_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         berrySpawnTime = builder
                 .comment("The time in ticks the sweet berry farm takes to spawn sweet berries")
-                .defineInRange("sweet_berry_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("sweet_berry_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         bambooSpawnTime = builder
                 .comment("The time in ticks the bamboo farm takes to spawn bamboo")
-                .defineInRange("bamboo_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("bamboo_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
 
         //Overworld Flowers
 
         dandelionSpawnTime = builder
                 .comment("The time in ticks the dandelion farm takes to spawn dandelions")
-                .defineInRange("dandelion_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("dandelion_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         poppySpawnTime = builder
                 .comment("The time in ticks the poppy farm takes to spawn poppies")
-                .defineInRange("poppy_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("poppy_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         orchidSpawnTime = builder
                 .comment("The time in ticks the blue orchid farm takes to spawn blue orchids")
-                .defineInRange("orchid_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("orchid_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         alliumSpawnTime = builder
                 .comment("The time in ticks the allium farm takes to spawn alliums")
-                .defineInRange("allium_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("allium_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         azureSpawnTime = builder
                 .comment("The time in ticks the azure bluet farm takes to spawn azure bluets")
-                .defineInRange("azure_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("azure_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         redSpawnTime = builder
                 .comment("The time in ticks the red tulip farm takes to spawn red tulips")
-                .defineInRange("red_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("red_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         orangeSpawnTime = builder
                 .comment("The time in ticks the orange tulip farm takes to spawn orange tulips")
-                .defineInRange("orange_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("orange_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         whiteSpawnTime = builder
                 .comment("The time in ticks the white tulip farm takes to spawn white tulips")
-                .defineInRange("white_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("white_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         pinkSpawnTime = builder
                 .comment("The time in ticks the pink tulip farm takes to spawn pink tulips")
-                .defineInRange("pink_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("pink_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         daisySpawnTime = builder
                 .comment("The time in ticks the oxeye daisy farm takes to spawn oxeye daisies")
-                .defineInRange("daisy_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("daisy_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         cornflowerSpawnTime = builder
                 .comment("The time in ticks the cornflower farm takes to spawn cornflowers")
-                .defineInRange("cornflower_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("cornflower_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         lilySpawnTime = builder
                 .comment("The time in ticks the lily of the valley farm takes to spawn lilies")
-                .defineInRange("lilly_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("lilly_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         sunflowerSpawnTime = builder
                 .comment("The time in ticks the sunflower farm takes to spawn sunflowers")
-                .defineInRange("sunflower_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("sunflower_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         lilacSpawnTime = builder
                 .comment("The time in ticks the lilac farm takes to spawn lilacs")
-                .defineInRange("lilac_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("lilac_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         roseSpawnTime = builder
                 .comment("The time in ticks the rose bush farm takes to spawn rose bushes")
-                .defineInRange("rose_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("rose_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         peonySpawnTime = builder
                 .comment("The time in ticks the peony farm takes to spawn peonies")
-                .defineInRange("peony_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("peony_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         vineSpawnTime = builder
                 .comment("The time in ticks the vine farm takes to spawn vines")
-                .defineInRange("vine_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("vine_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         mushroomSpawnTime = builder
                 .comment("The time in ticks the mushroom farm takes to spawn mushrooms")
-                .defineInRange("mushroom_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("mushroom_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         kelpSpawnTime = builder
                 .comment("The time in ticks the Kelp farm takes to spawn Kelp")
-                .defineInRange("kelp_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("kelp_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         leafSpawnTime = builder
                 .comment("The time in ticks the Drip Leaf farm takes to spawn Drip Leaves")
-                .defineInRange("leaf_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("leaf_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         cgrassSpawnTime = builder
                 .comment("The time in ticks the seagrass farm takes to spawn seagrass")
-                .defineInRange("seagrass_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("seagrass_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
         padSpawnTime = builder
                 .comment("The time in ticks the lily pad farm takes to spawn lily pads")
-                .defineInRange("pad_farm.spawn_time", 20 * 3, 20 * 3, 20 * 3);
+                .defineInRange("pad_farm.spawn_time", 20 * 30, 20 * 30, 20 * 30);
 
         universalReputation = builder
                 .comment(

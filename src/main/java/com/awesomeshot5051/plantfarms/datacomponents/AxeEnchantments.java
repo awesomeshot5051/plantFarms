@@ -23,31 +23,31 @@ public class AxeEnchantments {
 
 
     // Helper method to set the value for a single enchantment
-    private static void setEnchantment(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
-        if (swordEnchantments.containsKey(enchantment)) {
-            swordEnchantments.put(enchantment, value);
+    private static void setAxeEnchantment(Map<ResourceKey<Enchantment>, Boolean> axeEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
+        if (axeEnchantments.containsKey(enchantment)) {
+            axeEnchantments.put(enchantment, value);
         } else {
             throw new IllegalArgumentException("Invalid enchantment: " + enchantment);
         }
     }
 
-    public static boolean getEnchantmentStatus(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment) {
-        if (swordEnchantments.containsKey(enchantment)) {
-            return swordEnchantments.get(enchantment);
+    public static boolean getAxeEnchantmentStatus(Map<ResourceKey<Enchantment>, Boolean> axeEnchantments, ResourceKey<Enchantment> enchantment) {
+        if (axeEnchantments.containsKey(enchantment)) {
+            return axeEnchantments.get(enchantment);
         } else {
             throw new IllegalArgumentException("Invalid enchantment: " + enchantment);
         }
     }
 
     // Method to toggle a single enchantment
-    public static void toggleEnchantment(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
-        setEnchantment(swordEnchantments, enchantment, value);
+    public static void toggleAxeEnchantment(Map<ResourceKey<Enchantment>, Boolean> axeEnchantments, ResourceKey<Enchantment> enchantment, boolean value) {
+        setAxeEnchantment(axeEnchantments, enchantment, value);
     }
 
     // Method to toggle multiple enchantments
-    public static void toggleEnchantments(Map<ResourceKey<Enchantment>, Boolean> swordEnchantments, Map<ResourceKey<Enchantment>, Boolean> enchantmentsToToggle) {
+    public static void toggleAxeEnchantments(Map<ResourceKey<Enchantment>, Boolean> axeEnchantments, Map<ResourceKey<Enchantment>, Boolean> enchantmentsToToggle) {
         for (Map.Entry<ResourceKey<Enchantment>, Boolean> entry : enchantmentsToToggle.entrySet()) {
-            setEnchantment(swordEnchantments, entry.getKey(), entry.getValue());
+            setAxeEnchantment(axeEnchantments, entry.getKey(), entry.getValue());
         }
     }
 }

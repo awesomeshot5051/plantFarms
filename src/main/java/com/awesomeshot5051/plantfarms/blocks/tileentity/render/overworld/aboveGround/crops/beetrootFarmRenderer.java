@@ -27,7 +27,7 @@ public class beetrootFarmRenderer extends RendererBase<beetrootFarmTileentity> {
         RenderSystem.depthMask(true);
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
-        if (farm.getTimer() >= beetrootFarmTileentity.getBeetrootSpawnTime() && farm.getTimer() < beetrootFarmTileentity.getBeetrootDeathTime()) {
+        if (farm.getTimer() >= beetrootFarmTileentity.getBeetrootSpawnTime(farm) && farm.getTimer() < beetrootFarmTileentity.getBeetrootSpawnTime(farm)) {
             renderSapling(matrixStack);
             // Render the beetroot Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.BEETROOTS.defaultBlockState().setValue(BeetrootBlock.AGE, 3), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, RenderType.TRANSLUCENT);

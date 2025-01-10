@@ -5,8 +5,8 @@
     "#": {
       "tag": "c:glass_panes"
     },
-    "B": {
-      "item": "minecraft:bone_meal"
+    "A": {
+      "tag": "minecraft:axes"
     },
     "C": {
       "item": "minecraft:bamboo"
@@ -14,7 +14,7 @@
   },
   "pattern": [
     "###",
-    "#B#",
+    "#A#",
     "#C#"
   ],
   "result": {

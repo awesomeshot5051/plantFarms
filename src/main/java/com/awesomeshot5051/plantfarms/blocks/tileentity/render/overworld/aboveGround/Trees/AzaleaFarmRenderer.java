@@ -23,7 +23,7 @@ public class AzaleaFarmRenderer extends RendererBase<AzaleaFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= AzaleaFarmTileentity.getAzaleaSpawnTime() && farm.getTimer() < AzaleaFarmTileentity.getAzaleaDeathTime()) {
+        if (farm.getTimer() >= AzaleaFarmTileentity.getAzaleaSpawnTime(farm) && farm.getTimer() < AzaleaFarmTileentity.getAzaleaDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Azalea Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.AZALEA.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
