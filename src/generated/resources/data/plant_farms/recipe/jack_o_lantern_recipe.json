@@ -1,0 +1,16 @@
+{
+  "type": "plant_farms:shapeless_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "plant_farms:pumpkin_farm"
+    },
+    {
+      "tag": "c:tools/shear"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:pumpkin_farm"
+  }
+}
