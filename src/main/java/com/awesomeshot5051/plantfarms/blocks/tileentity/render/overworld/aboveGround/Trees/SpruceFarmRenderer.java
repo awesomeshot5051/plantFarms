@@ -1,13 +1,13 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.SpruceFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.client.model.data.ModelData;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.block.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.client.model.data.*;
 
 public class SpruceFarmRenderer extends RendererBase<SpruceFarmTileentity> {
     private final BlockRenderDispatcher blockRenderDispatcher;
@@ -23,7 +23,7 @@ public class SpruceFarmRenderer extends RendererBase<SpruceFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= SpruceFarmTileentity.getSpruceSpawnTime() && farm.getTimer() < SpruceFarmTileentity.getSpruceDeathTime()) {
+        if (farm.getTimer() >= SpruceFarmTileentity.getSpruceSpawnTime(farm) && farm.getTimer() < SpruceFarmTileentity.getSpruceDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Spruce Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.SPRUCE_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

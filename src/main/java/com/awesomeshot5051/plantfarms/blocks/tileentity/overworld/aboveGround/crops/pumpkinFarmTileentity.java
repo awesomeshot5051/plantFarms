@@ -1,38 +1,26 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.OutputItemHandler;
-import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.SyncableTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
-import com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments;
-import com.awesomeshot5051.plantfarms.enums.HoeType;
-import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
-import de.maxhenkel.corelib.inventory.ItemListInventory;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.Container;
-import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.blocks.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.awesomeshot5051.plantfarms.enums.*;
+import de.maxhenkel.corelib.blockentity.*;
+import de.maxhenkel.corelib.inventory.*;
+import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.nbt.*;
+import net.minecraft.resources.*;
+import net.minecraft.server.level.*;
+import net.minecraft.world.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.level.block.state.*;
+import net.neoforged.neoforge.items.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.initializeHoeEnchantments;
+import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.*;
 
 public class pumpkinFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -43,6 +31,7 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
 
     public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
     public ItemStack hoeType;
+    public ItemStack shears;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 
@@ -61,8 +50,8 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
                         hoe.equals(HoeType.DIAMOND) ? 25 :
                                 hoe.equals(HoeType.GOLDEN) ? 20 :
                                         hoe.equals(HoeType.IRON) ? 15 :
-                                                hoe.equals(HoeType.STONE) ? 10
-                                                        : 1);
+                                                hoe.equals(HoeType.STONE) ? 10 :
+                                                        1);
     }
 
     public static double getPumpkinDeathTime(pumpkinFarmTileentity farm) {
@@ -146,7 +135,11 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
         if (serverWorld.random.nextDouble() < .003) {
             drops.add(new ItemStack(Items.CARVED_PUMPKIN));
         }
-        // Optionally, you can add other items to drop here if needed
+        if (!shears.equals(ItemStack.EMPTY)) {
+            drops.clear();
+            drops.add(new ItemStack(Items.CARVED_PUMPKIN));
+        }
+// Optionally, you can add other items to drop here if needed
         // drops.add(new ItemStack(Items.SOME_OTHER_ITEM, 1));
 
         return drops;
@@ -165,6 +158,12 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
             hoeTypeTag.putInt("count", hoeType.getCount()); // Save the count
             compound.put("HoeType", hoeTypeTag); // Add the tag to the main compound
         }
+        if (shears != null) {
+            CompoundTag shearsTag = new CompoundTag();
+            shearsTag.putString("id", BuiltInRegistries.ITEM.getKey(shears.getItem()).toString());
+            shearsTag.putInt("count", shears.getCount());
+            compound.put("Shears", shearsTag);
+        }
         ContainerHelper.saveAllItems(compound, inventory, false, provider);
         compound.putLong("Timer", timer);
     }
@@ -174,6 +173,12 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
         ContainerHelper.loadAllItems(compound, inventory, provider);
         if (compound.contains("HoeType")) {
             SyncableTileentity.loadHoeType(compound, provider).ifPresent(stack -> this.hoeType = stack);
+        }
+        if (compound.contains("Shears")) {
+            SyncableTileentity.loadShears(compound, provider).ifPresent(stack -> this.shears = stack);
+        }
+        if (shears == null) {
+            shears = ItemStack.EMPTY;
         }
         if (hoeType == null) {
 // If no pickType is saved, set a default one (e.g., Stone Pickaxe)

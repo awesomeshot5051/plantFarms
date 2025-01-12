@@ -1,13 +1,13 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.JungleFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.client.model.data.ModelData;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.block.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.client.model.data.*;
 
 public class JungleFarmRenderer extends RendererBase<JungleFarmTileentity> {
     private final BlockRenderDispatcher blockRenderDispatcher;
@@ -23,7 +23,7 @@ public class JungleFarmRenderer extends RendererBase<JungleFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= JungleFarmTileentity.getJungleSpawnTime() && farm.getTimer() < JungleFarmTileentity.getJungleDeathTime()) {
+        if (farm.getTimer() >= JungleFarmTileentity.getJungleSpawnTime(farm) && farm.getTimer() < JungleFarmTileentity.getJungleDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Jungle Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.JUNGLE_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);

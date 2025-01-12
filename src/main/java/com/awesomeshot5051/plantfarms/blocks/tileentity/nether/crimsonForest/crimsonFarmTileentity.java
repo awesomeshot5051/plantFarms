@@ -1,34 +1,25 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.nether.crimsonForest;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.OutputItemHandler;
-import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
-import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
-import de.maxhenkel.corelib.inventory.ItemListInventory;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.Container;
-import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.blocks.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.enums.*;
+import de.maxhenkel.corelib.blockentity.*;
+import de.maxhenkel.corelib.inventory.*;
+import net.minecraft.core.*;
+import net.minecraft.nbt.*;
+import net.minecraft.resources.*;
+import net.minecraft.server.level.*;
+import net.minecraft.world.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.*;
+import net.neoforged.neoforge.items.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.initializeHoeEnchantments;
+import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.*;
 
 public class crimsonFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -49,12 +40,19 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static int getCrimsonSpawnTime() {
-        return Main.SERVER_CONFIG.crimsonSpawnTime.get() - 20 * 4;
+    public static double getCrimsonSpawnTime(crimsonFarmTileentity farm) {
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        return (double) Main.SERVER_CONFIG.acaciaSpawnTime.get() /
+                (axe.equals(AxeType.NETHERITE) ? 30 :
+                        axe.equals(AxeType.DIAMOND) ? 25 :
+                                axe.equals(AxeType.GOLDEN) ? 20 :
+                                        axe.equals(AxeType.IRON) ? 15 :
+                                                axe.equals(AxeType.STONE) ? 10
+                                                        : 1);
     }
 
-    public static int getCrimsonDeathTime() {
-        return getCrimsonSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getCrimsonDeathTime(crimsonFarmTileentity farm) {
+        return getCrimsonSpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -70,7 +68,7 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
             timer++;
             setChanged();
 
-            if (timer == getCrimsonSpawnTime()) {
+            if (timer == getCrimsonSpawnTime(this)) {
 //            // Play acacia spawn sound
 //            BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_PRIMED);
                 sync();
@@ -78,7 +76,7 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
 //            if (timer % 20L == 0L) {
 //                BlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_HURT);
 //            }
-            } else if (timer >= getCrimsonDeathTime()) {
+            } else if (timer >= getCrimsonDeathTime(this)) {
                 // Play acacia death/explosion sound
 //            // VillagerBlockBase.playVillagerSound(level, getBlockPos(), SoundEvents.ACACIA_DEATH);
                 for (ItemStack drop : getDrops()) {

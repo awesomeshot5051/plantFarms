@@ -1,49 +1,36 @@
 package com.awesomeshot5051.plantfarms.blocks.nether.crimsonForest;
 
-import com.awesomeshot5051.plantfarms.blocks.BlockBase;
-import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.crimsonForest.crimsonFarmTileentity;
-import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
-import com.awesomeshot5051.plantfarms.gui.OutputContainer;
-import com.awesomeshot5051.plantfarms.items.render.nether.crimsonForest.crimsonFarmItemRenderer;
-import de.maxhenkel.corelib.block.IItemBlock;
-import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
-import de.maxhenkel.corelib.client.CustomRendererBlockItem;
-import de.maxhenkel.corelib.client.ItemRenderer;
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.phys.BlockHitResult;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import com.awesomeshot5051.plantfarms.blocks.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.crimsonForest.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.awesomeshot5051.plantfarms.gui.*;
+import com.awesomeshot5051.plantfarms.items.render.nether.crimsonForest.*;
+import de.maxhenkel.corelib.block.*;
+import de.maxhenkel.corelib.blockentity.*;
+import de.maxhenkel.corelib.client.*;
+import net.minecraft.*;
+import net.minecraft.client.gui.screens.*;
+import net.minecraft.core.*;
+import net.minecraft.network.chat.*;
+import net.minecraft.world.*;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.player.*;
+import net.minecraft.world.inventory.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.*;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.*;
+import net.minecraft.world.level.block.state.*;
+import net.minecraft.world.level.material.*;
+import net.minecraft.world.phys.*;
+import net.neoforged.api.distmarker.*;
 
-import javax.annotation.Nullable;
-import java.util.List;
+import javax.annotation.*;
+import java.util.*;
+import java.util.stream.*;
 
-import static net.minecraft.world.item.BlockItem.updateCustomBlockEntityTag;
+import static net.minecraft.world.item.BlockItem.*;
 
 public class crimsonFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
@@ -66,14 +53,30 @@ public class crimsonFarmBlock extends BlockBase implements EntityBlock, IItemBlo
     public void appendHoverText(ItemStack stack, Item.TooltipContext tooltipContext, List<Component> components, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, tooltipContext, components, tooltipFlag);
 
+
         // Check if the player is holding Shift
         if (Screen.hasShiftDown()) {
             components.add(Component.translatable("tooltip.plantfarms.crimson_farm.shift")
                     .withStyle(ChatFormatting.GRAY));
+            if (stack.has(ModDataComponents.AXE_TYPE)) {
+                ItemStack axeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.get(ModDataComponents.AXE_TYPE)).getStackInSlot(0))).copyOne();
+                components.add(Component.literal("This farm has a " + convertToReadableName(axeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
+                        .withStyle(ChatFormatting.RED));
+            }
         } else {
+            components.add(Component.literal("Hold §4Shift§r to see tool").withStyle(ChatFormatting.YELLOW));
             components.add(Component.translatable("tooltip.plantfarms.crimson_farm.hint")
                     .withStyle(ChatFormatting.YELLOW));
         }
+    }
+
+    private String convertToReadableName(String block) {
+        // Remove "item.minecraft." and replace underscores with spaces
+        String readableName = block.replace("item.minecraft.", "").replace('_', ' ');
+        // Capitalize the first letter of each word
+        return Arrays.stream(readableName.split(" "))
+                .map(word -> word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase())
+                .collect(Collectors.joining(" "));
     }
 
     @Override

@@ -1,13 +1,13 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.OakFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.client.model.data.ModelData;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.block.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.client.model.data.*;
 
 public class OakFarmRenderer extends RendererBase<OakFarmTileentity> {
     private final BlockRenderDispatcher blockRenderDispatcher;
@@ -22,7 +22,7 @@ public class OakFarmRenderer extends RendererBase<OakFarmTileentity> {
         super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
         matrixStack.pushPose();
 
-        if (farm.getTimer() >= OakFarmTileentity.getSaplingSpawnTime() && farm.getTimer() < OakFarmTileentity.getSaplingDeathTime()) {
+        if (farm.getTimer() >= OakFarmTileentity.getSaplingSpawnTime(farm) && farm.getTimer() < OakFarmTileentity.getSaplingDeathTime(farm)) {
 //            matrixStack.pushPose();
 //            // Adjust the translation to center the sapling depending on the direction
 //            switch (direction) {

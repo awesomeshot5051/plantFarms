@@ -1,29 +1,25 @@
 package com.awesomeshot5051.plantfarms.data.providers.recipe.recipe;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.ItemContainerContents;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.mojang.serialization.*;
+import com.mojang.serialization.codecs.*;
+import net.minecraft.core.*;
+import net.minecraft.core.component.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.network.*;
+import net.minecraft.network.codec.*;
+import net.minecraft.resources.*;
+import net.minecraft.tags.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.item.enchantment.ItemEnchantments;
-import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.level.*;
+import org.jetbrains.annotations.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 public class UpgradeRecipe extends ShapedRecipe {
 
@@ -100,7 +96,7 @@ public class UpgradeRecipe extends ShapedRecipe {
                 Ingredient.of(Items.DIAMOND), Items.DIAMOND_HOE,
                 Ingredient.of(Items.NETHERITE_INGOT), Items.NETHERITE_HOE
         );
-        if (craftingInput.getItem(4).is(ItemTags.AXES)) {
+        if (craftingInput.getItem(4).has(ModDataComponents.AXE_TYPE)) {
             ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
             List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
             if (areAllModifiersEqual(modifer)) {
@@ -132,7 +128,7 @@ public class UpgradeRecipe extends ShapedRecipe {
                     return new ItemStack(Items.AIR);
                 }
             }
-        } else if (craftingInput.getItem(4).is(ItemTags.HOES)) {
+        } else if (craftingInput.getItem(4).has(ModDataComponents.HOE_TYPE)) {
             ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
             List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
             if (areAllModifiersEqual(modifer)) {

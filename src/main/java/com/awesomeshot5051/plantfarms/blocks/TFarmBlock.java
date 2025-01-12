@@ -1,39 +1,32 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.tfarmBlockTileentity;
-import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
-import com.awesomeshot5051.plantfarms.datacomponents.VillagerBlockEntityData;
-import com.awesomeshot5051.plantfarms.items.render.tfarmBlockItemRenderer;
-import de.maxhenkel.corelib.block.IItemBlock;
-import de.maxhenkel.corelib.blockentity.SimpleBlockEntityTicker;
-import de.maxhenkel.corelib.client.CustomRendererBlockItem;
-import de.maxhenkel.corelib.client.ItemRenderer;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import org.jetbrains.annotations.NotNull;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.awesomeshot5051.plantfarms.items.render.*;
+import de.maxhenkel.corelib.block.*;
+import de.maxhenkel.corelib.blockentity.*;
+import de.maxhenkel.corelib.client.*;
+import net.minecraft.*;
+import net.minecraft.client.gui.screens.*;
+import net.minecraft.core.*;
+import net.minecraft.network.chat.*;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.player.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.*;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.*;
+import net.minecraft.world.level.block.state.*;
+import net.minecraft.world.level.material.*;
+import net.neoforged.api.distmarker.*;
+import org.jetbrains.annotations.*;
 
 import javax.annotation.Nullable;
-import java.util.List;
+import java.util.*;
+import java.util.stream.*;
 
-import static net.minecraft.world.item.BlockItem.updateCustomBlockEntityTag;
+import static net.minecraft.world.item.BlockItem.*;
 
 public class TFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
 
@@ -56,7 +49,26 @@ public class TFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, components, tooltipFlag);
         tfarmBlockTileentity trader = VillagerBlockEntityData.getAndStoreBlockEntity(stack, context.registries(), context.level(), () -> new tfarmBlockTileentity(BlockPos.ZERO, ModBlocks.TFARM_BLOCK.get().defaultBlockState()));
+        if (Screen.hasShiftDown()) {
+            if (stack.has(ModDataComponents.HOE_TYPE)) {
+                ItemStack hoeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.get(ModDataComponents.HOE_TYPE)).getStackInSlot(0))).copyOne();
+                components.add(Component.literal("This farm has a " + convertToReadableName(hoeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
+                        .withStyle(ChatFormatting.RED));
+            }
+        } else {
+            components.add(Component.literal("Hold shift to see tool").withStyle(ChatFormatting.YELLOW));
+        }
         // Removed villager-related tooltip information
+
+    }
+
+    private String convertToReadableName(String block) {
+        // Remove "item.minecraft." and replace underscores with spaces
+        String readableName = block.replace("item.minecraft.", "").replace('_', ' ');
+        // Capitalize the first letter of each word
+        return Arrays.stream(readableName.split(" "))
+                .map(word -> word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase())
+                .collect(Collectors.joining(" "));
     }
 
     @Nullable

@@ -1597,5 +1597,803 @@
     },
     "done": true
   },
+  "plant_farms:recipes/misc/beetroot_farm_recipe": {
+    "criteria": {
+      "has_beetroot": "2025-01-10 17:27:45 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/beetroot_soup": {
+    "criteria": {
+      "has_beetroot": "2025-01-10 17:27:45 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_beetroot": {
+    "criteria": {
+      "has_beetroot": "2025-01-10 17:27:45 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/beetroot_farm_alternate_recipe": {
+    "criteria": {
+      "has_beetroot": "2025-01-10 17:27:45 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/crimson_farm_alternate_recipe": {
+    "criteria": {
+      "has_crimson_fungus": "2025-01-11 13:25:54 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_axe": "2025-01-12 12:52:11 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_axe": "2025-01-12 12:52:11 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/crimson_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-12 12:54:50 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/orange_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_leggings": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pad_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/bamboo_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/lilac_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/sunflower_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/allium_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_sword": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jukebox": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/wart_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/acacia_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/poppy_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/potato_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/vine_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/melon_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/daisy_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/leaf_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/mangrove_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/mushroom_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/carrot_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/beetroot_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/spruce_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/lily_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/red_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/rose_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/crimson_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/birch_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/dandelion_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cgrass_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/berry_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pink_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/azalea_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/jungle_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/dark_oak_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/orchid_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/peony_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/coco_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/oak_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/kelp_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/chorus_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pumpkin_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/azure_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/wheat_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/sugar_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/tfarm_block_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/warped_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/farm_block_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cherry_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/white_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cornflower_farm_diamond_upgrade_recipe": {
+    "criteria": {
+      "has_diamond": "2025-01-12 12:54:58 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/orchid_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/white_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/wart_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/dark_oak_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_chestplate_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cornflower_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/jungle_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/azalea_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_sword_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/beetroot_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/acacia_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/carrot_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_leggings_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/birch_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_hoe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/melon_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pink_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cherry_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/azure_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/mushroom_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lodestone": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/daisy_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_helmet_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/wheat_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/netherite_block": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/netherite_boots_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pumpkin_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/gcarrot_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/bamboo_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_shovel_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/lilac_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/vine_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/peony_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/chorus_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/poppy_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/kelp_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_axe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/dandelion_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/tfarm_block_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/lily_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/crimson_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/sugar_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/red_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/warped_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/mangrove_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/leaf_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/orange_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/netherite_pickaxe_smithing": {
+    "criteria": {
+      "has_netherite_ingot": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pad_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/sunflower_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/spruce_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/potato_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/oak_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/farm_block_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/cgrass_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/allium_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/rose_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/coco_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/berry_farm_netherite_upgrade_recipe": {
+    "criteria": {
+      "has_netherite": "2025-01-12 12:58:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/pumpkin_seeds": {
+    "criteria": {
+      "has_pumpkin": "2025-01-12 13:21:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/pumpkin_pie": {
+    "criteria": {
+      "has_pumpkin": "2025-01-12 13:21:19 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pumpkin_farm_recipe": {
+    "criteria": {
+      "has_pumpkin": "2025-01-12 13:21:19 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pumpkin_farm_alternate_recipe": {
+    "criteria": {
+      "has_pumpkin": "2025-01-12 13:21:19 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/pumpkin_farm_enchantment_removal_recipe": {
+    "criteria": {
+      "has_farm": "2025-01-12 13:21:27 -0500"
+    },
+    "done": true
+  },
+  "plant_farms:recipes/misc/jack_o_lantern_recipe": {
+    "criteria": {
+      "has_shears": "2025-01-12 13:25:42 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 3955
 }

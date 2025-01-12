@@ -2,25 +2,22 @@ package com.awesomeshot5051.plantfarms.data.providers.recipe;
 
 import com.awesomeshot5051.plantfarms.Main;
 import com.awesomeshot5051.plantfarms.data.providers.recipe.recipe.*;
-import com.awesomeshot5051.plantfarms.items.ModItems;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import org.jetbrains.annotations.NotNull;
+import com.awesomeshot5051.plantfarms.items.*;
+import net.minecraft.core.*;
+import net.minecraft.data.*;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.*;
+import net.minecraft.tags.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.common.*;
+import net.neoforged.neoforge.common.conditions.*;
+import net.neoforged.neoforge.registries.*;
+import org.jetbrains.annotations.*;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.*;
+import java.util.concurrent.*;
 
 import static com.awesomeshot5051.plantfarms.blocks.ModBlocks.*;
 
@@ -798,6 +795,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(FARM_BLOCK.get())
                 .unlockedBy("has_lily_of_the_valley", has(Items.LILY_OF_THE_VALLEY))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(LILY_FARM.get().getDescriptionId() + "_alternate_recipe")));
+
+        CustomShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, PUMPKIN_FARM.get())
+                .requires(PUMPKIN_FARM.get())
+                .requires(Tags.Items.TOOLS_SHEAR)
+                .unlockedBy("has_shears", has(Items.SHEARS))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, "jack_o_lantern_recipe"));
 
 
         ALL_FARMS.forEach(farmBlockSupplier -> {

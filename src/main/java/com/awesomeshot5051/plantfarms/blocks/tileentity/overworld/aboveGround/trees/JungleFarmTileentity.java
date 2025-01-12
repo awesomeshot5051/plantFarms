@@ -1,33 +1,25 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.OutputItemHandler;
-import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
-import de.maxhenkel.corelib.blockentity.ITickableBlockEntity;
-import de.maxhenkel.corelib.inventory.ItemListInventory;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.Container;
-import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.blocks.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.enums.*;
+import de.maxhenkel.corelib.blockentity.*;
+import de.maxhenkel.corelib.inventory.*;
+import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.nbt.*;
+import net.minecraft.resources.*;
+import net.minecraft.server.level.*;
+import net.minecraft.world.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.level.block.state.*;
+import net.neoforged.neoforge.items.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-import static com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments.initializeAxeEnchantments;
+import static com.awesomeshot5051.plantfarms.datacomponents.AxeEnchantments.*;
 
 public class JungleFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
 
@@ -49,13 +41,13 @@ public class JungleFarmTileentity extends VillagerTileentity implements ITickabl
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
-    public static double getJungleSpawnTime(farm) {
+    public static double getJungleSpawnTime(JungleFarmTileentity farm) {
         AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
         return (double) Main.SERVER_CONFIG.jungleSpawnTime.get() - 20 * 4;
     }
 
-    public static double getJungleDeathTime() {
-        return getJungleSpawnTime() + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+    public static double getJungleDeathTime(JungleFarmTileentity farm) {
+        return getJungleSpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
     }
 
     public long getTimer() {
@@ -127,14 +119,30 @@ public class JungleFarmTileentity extends VillagerTileentity implements ITickabl
     @Override
     protected void saveAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         super.saveAdditional(compound, provider);
-
+        if (axeType != null) {
+            CompoundTag axeTypeTag = new CompoundTag();
+            axeTypeTag.putString("id", BuiltInRegistries.ITEM.getKey(axeType.getItem()).toString()); // Save the item ID
+            axeTypeTag.putInt("count", axeType.getCount()); // Save the count
+            compound.put("AxeType", axeTypeTag); // Add the tag to the main compound
+        }
         ContainerHelper.saveAllItems(compound, inventory, false, provider);
         compound.putLong("Timer", timer);
+    }
+
+    public ItemStack getAxeType() {
+        return axeType;
     }
 
     @Override
     protected void loadAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         ContainerHelper.loadAllItems(compound, inventory, provider);
+        if (compound.contains("AxeType")) {
+            SyncableTileentity.loadAxeType(compound, provider).ifPresent(stack -> this.axeType = stack);
+        }
+        if (axeType == null) {
+// If no pickType is saved, set a default one (e.g., Stone Pickaxe)
+            axeType = new ItemStack(Items.WOODEN_AXE);
+        }
         timer = compound.getLong("Timer");
         super.loadAdditional(compound, provider);
     }

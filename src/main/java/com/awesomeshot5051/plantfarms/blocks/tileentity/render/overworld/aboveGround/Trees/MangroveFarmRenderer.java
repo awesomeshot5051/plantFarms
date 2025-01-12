@@ -1,13 +1,13 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.MangroveFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.client.model.data.ModelData;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.block.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.client.model.data.*;
 
 public class MangroveFarmRenderer extends RendererBase<MangroveFarmTileentity> {
     private final BlockRenderDispatcher blockRenderDispatcher;
@@ -23,7 +23,7 @@ public class MangroveFarmRenderer extends RendererBase<MangroveFarmTileentity> {
         matrixStack.pushPose();
 
 
-        if (farm.getTimer() >= MangroveFarmTileentity.getMangroveSpawnTime() && farm.getTimer() < MangroveFarmTileentity.getMangroveDeathTime()) {
+        if (farm.getTimer() >= MangroveFarmTileentity.getMangroveSpawnTime(farm) && farm.getTimer() < MangroveFarmTileentity.getMangroveDeathTime(farm)) {
             renderSapling(matrixStack);
             // Render the Mangrove Sapling
             blockRenderDispatcher.renderSingleBlock(Blocks.MANGROVE_ROOTS.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
