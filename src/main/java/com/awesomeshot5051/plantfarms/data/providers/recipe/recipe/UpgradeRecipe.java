@@ -280,10 +280,6 @@ public class UpgradeRecipe extends ShapedRecipe {
         return result;
     }
 
-    @Override
-    public @NotNull RecipeType<?> getType() {
-        return super.getType();
-    }
 
     @Override
     public CraftingBookCategory category() {

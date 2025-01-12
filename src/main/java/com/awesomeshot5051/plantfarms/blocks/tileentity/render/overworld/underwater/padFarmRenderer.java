@@ -1,27 +1,22 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.underwater;
 
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.underwaterPlants.padFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.entity.ItemRenderer;
-import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.underwaterPlants.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import com.mojang.math.*;
+import net.minecraft.client.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.client.renderer.entity.*;
+import net.minecraft.client.resources.model.*;
+import net.minecraft.core.*;
+import net.minecraft.world.item.*;
 
 public class padFarmRenderer extends RendererBase<padFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
 
     public padFarmRenderer(BlockEntityRendererProvider.Context renderer) {
         super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
     }
 
     @Override

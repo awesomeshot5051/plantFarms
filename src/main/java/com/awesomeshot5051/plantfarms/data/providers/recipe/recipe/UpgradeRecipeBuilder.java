@@ -1,40 +1,27 @@
 package com.awesomeshot5051.plantfarms.data.providers.recipe.recipe;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import net.minecraft.advancements.Advancement;
-import net.minecraft.advancements.AdvancementRequirements;
-import net.minecraft.advancements.AdvancementRewards;
-import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
-import net.minecraft.data.recipes.RecipeBuilder;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.ShapedRecipePattern;
-import net.minecraft.world.level.ItemLike;
-import org.jetbrains.annotations.NotNull;
+import com.google.common.collect.*;
+import net.minecraft.advancements.*;
+import net.minecraft.advancements.critereon.*;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.*;
+import net.minecraft.tags.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.level.*;
+import org.jetbrains.annotations.*;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import javax.annotation.*;
+import java.util.*;
 
 public class UpgradeRecipeBuilder implements RecipeBuilder {
     private final RecipeCategory category;
     private final Item result;
-    private final int count;
     private final ItemStack resultStack; // Neo: add stack result support
     private final List<String> rows = Lists.newArrayList();
     private final Map<Character, Ingredient> key = Maps.newLinkedHashMap();
     private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
-    private final boolean showNotification = true;
     @Nullable
     private String group;
 
@@ -46,7 +33,7 @@ public class UpgradeRecipeBuilder implements RecipeBuilder {
 //        this(p_249996_, result);
         this.category = p_249996_;
         this.result = result.getItem();
-        this.count = result.getCount();
+        int count = result.getCount();
         this.resultStack = result;
     }
 
@@ -124,12 +111,13 @@ public class UpgradeRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(id))
                 .requirements(AdvancementRequirements.Strategy.OR);
         this.criteria.forEach(advancement$builder::addCriterion);
+        boolean showNotification = true;
         UpgradeRecipe shapedrecipe = new UpgradeRecipe(
                 Objects.requireNonNullElse(this.group, ""),
                 RecipeBuilder.determineBookCategory(this.category),
                 shapedrecipepattern,
                 this.resultStack,
-                this.showNotification
+                showNotification
         );
 
         recipeOutput.accept(id, shapedrecipe, advancement$builder.build(id.withPrefix("recipes/" + this.category.getFolderName() + "/")));

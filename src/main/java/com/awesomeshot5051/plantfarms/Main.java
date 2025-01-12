@@ -1,28 +1,25 @@
 package com.awesomeshot5051.plantfarms;
 
 
-import com.awesomeshot5051.plantfarms.blocks.ModBlocks;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.ModTileEntities;
-import com.awesomeshot5051.plantfarms.data.providers.recipe.recipe.ModRecipes;
-import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
-import com.awesomeshot5051.plantfarms.events.GuiEvents;
-import com.awesomeshot5051.plantfarms.events.ModSoundEvents;
-import com.awesomeshot5051.plantfarms.gui.Containers;
-import com.awesomeshot5051.plantfarms.integration.IMC;
-import com.awesomeshot5051.plantfarms.items.ModItems;
-import com.awesomeshot5051.plantfarms.loottable.ModLootTables;
-import de.maxhenkel.corelib.CommonRegistry;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.common.NeoForge;
-import org.apache.logging.log4j.LogManager;
+import com.awesomeshot5051.plantfarms.blocks.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.data.providers.recipe.recipe.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.awesomeshot5051.plantfarms.events.*;
+import com.awesomeshot5051.plantfarms.gui.*;
+import com.awesomeshot5051.plantfarms.integration.*;
+import com.awesomeshot5051.plantfarms.items.*;
+import com.awesomeshot5051.plantfarms.loottable.*;
+import de.maxhenkel.corelib.*;
+import net.neoforged.api.distmarker.*;
+import net.neoforged.bus.api.*;
+import net.neoforged.fml.common.*;
+import net.neoforged.fml.config.*;
+import net.neoforged.fml.event.lifecycle.*;
+import net.neoforged.fml.loading.*;
+import net.neoforged.neoforge.common.*;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 @Mod(Main.MODID)
 public class Main {
@@ -35,7 +32,7 @@ public class Main {
     public static ClientConfig CLIENT_CONFIG;
 
     public Main(IEventBus eventBus) {
-        eventBus.addListener(this::commonSetup);
+//        eventBus.addListener(this::commonSetup);
 //        eventBus.addListener(this::onRegisterPayloadHandler);
         eventBus.addListener(IMC::enqueueIMC);
         eventBus.addListener(ModTileEntities::onRegisterCapabilities);
@@ -59,12 +56,12 @@ public class Main {
         }
     }
 
-    public void commonSetup(FMLCommonSetupEvent event) {
-//        NeoForge.EVENT_BUS.register(new ModEvents());
-//        NeoForge.EVENT_BUS.register(new BlockEvents());
-        // Register your custom dispenser behavior for dye items
-    }
+//    public void commonSetup(FMLCommonSetupEvent event) {
 
+    /// /        NeoForge.EVENT_BUS.register(new ModEvents());
+    /// /        NeoForge.EVENT_BUS.register(new BlockEvents());
+//        // Register your custom dispenser behavior for dye items
+//    }
     @OnlyIn(Dist.CLIENT)
     public void clientSetup(FMLClientSetupEvent event) {
         ModTileEntities.clientSetup();

@@ -20,7 +20,6 @@ public class TFarmBlockRecipe extends ShapelessRecipe {
     final CraftingBookCategory category;
     final ItemStack result;
     final NonNullList<Ingredient> ingredients;
-    private final boolean isSimple;
 
     public TFarmBlockRecipe(String group, CraftingBookCategory category, ItemStack result, NonNullList<Ingredient> ingredients) {
         super(group, category, result, ingredients);
@@ -28,7 +27,7 @@ public class TFarmBlockRecipe extends ShapelessRecipe {
         this.category = category;
         this.result = result;
         this.ingredients = ingredients;
-        this.isSimple = ingredients.stream().allMatch(Ingredient::isSimple);
+        boolean isSimple = ingredients.stream().allMatch(Ingredient::isSimple);
     }
 
     @Override

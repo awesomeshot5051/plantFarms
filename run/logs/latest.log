@@ -1,432 +1,414 @@
-[12Jan2025 14:47:02.728] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.1.65, --assetIndex, 17, --assetsDir, C:\\Users\\Traee\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.neoForgeVersion, 21.1.65, --fml.fmlVersion, 4.0.24, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
-[12Jan2025 14:47:02.731] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
-[12Jan2025 14:47:02.733] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.3 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
-[12Jan2025 14:47:02.842] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[12Jan2025 14:47:02.955] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[12Jan2025 14:47:03.238] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[12Jan2025 14:47:03.440] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Traee/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23131!/ Service=ModLauncher Env=CLIENT
-[12Jan2025 14:47:03.545] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) 760M GL version 4.6.0 Core Profile Context 24.30.13.02.241202, ATI Technologies Inc.
-[12Jan2025 14:47:03.776] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[12Jan2025 14:47:04.726] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.1.65, --gameDir, ., --assetsDir, C:\Users\Traee\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
-[12Jan2025 14:47:06.723] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 320 milliseconds
-[12Jan2025 14:47:06.885] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
-[12Jan2025 14:47:06.921] [pool-11-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[12Jan2025 14:47:11.226] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[12Jan2025 14:47:11.229] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[12Jan2025 14:47:11.232] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[12Jan2025 14:47:11.233] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[12Jan2025 14:47:11.234] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[12Jan2025 14:47:11.351] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/assets/.mcassetsroot' uses unexpected schema
-[12Jan2025 14:47:11.351] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/data/.mcassetsroot' uses unexpected schema
-[12Jan2025 14:47:11.378] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[12Jan2025 14:47:11.387] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[12Jan2025 14:47:11.485] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[12Jan2025 14:47:11.729] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.65, for MC 1.21.1
-[12Jan2025 14:47:11.798] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[12Jan2025 14:47:11.803] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 1.931 ms
-[12Jan2025 14:47:12.265] [Render thread/WARN] [net.minecraft.server.packs.repository.Pack/]: Missing metadata in pack file/DataPackStuff.zip
-[12Jan2025 14:47:12.713] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [plant_farms]
-[12Jan2025 14:47:12.852] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/theoneprobe, mod/jade, mod/plant_farms, mod/neoforge, mod/corelib, mod/jei, file/Redstone.zip, file/Fullbright-SP-1.21.zip
-[12Jan2025 14:47:12.953] [Worker-Main-5/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[12Jan2025 14:47:12.953] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/crimsonForest/crimson_farm.json, ignoring
-[12Jan2025 14:47:12.953] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.954] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/warpedForest/warped_farm.json, ignoring
-[12Jan2025 14:47:12.954] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/bamboo_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/beetroot_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/berry_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/carrot_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/coco_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.955] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
-[12Jan2025 14:47:12.955] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.957] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/melon_farm.json, ignoring
-[12Jan2025 14:47:12.957] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.957] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/potato_farm.json, ignoring
-[12Jan2025 14:47:12.957] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.958] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
-[12Jan2025 14:47:12.958] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.958] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/sugar_farm.json, ignoring
-[12Jan2025 14:47:12.958] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.959] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/wheat_farm.json, ignoring
-[12Jan2025 14:47:12.959] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.959] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/allium_farm.json, ignoring
-[12Jan2025 14:47:12.959] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.959] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/azure_farm.json, ignoring
-[12Jan2025 14:47:12.959] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.959] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
-[12Jan2025 14:47:12.959] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.959] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/daisy_farm.json, ignoring
-[12Jan2025 14:47:12.960] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.960] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
-[12Jan2025 14:47:12.960] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.960] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lilac_farm.json, ignoring
-[12Jan2025 14:47:12.961] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.961] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lily_farm.json, ignoring
-[12Jan2025 14:47:12.961] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.961] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orange_farm.json, ignoring
-[12Jan2025 14:47:12.961] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.961] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orchid_farm.json, ignoring
-[12Jan2025 14:47:12.961] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.962] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/peony_farm.json, ignoring
-[12Jan2025 14:47:12.962] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.962] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/pink_farm.json, ignoring
-[12Jan2025 14:47:12.962] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.962] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/poppy_farm.json, ignoring
-[12Jan2025 14:47:12.962] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.962] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/red_farm.json, ignoring
-[12Jan2025 14:47:12.962] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.963] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/rose_farm.json, ignoring
-[12Jan2025 14:47:12.963] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.963] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
-[12Jan2025 14:47:12.963] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.963] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/white_farm.json, ignoring
-[12Jan2025 14:47:12.963] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.964] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
-[12Jan2025 14:47:12.964] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.964] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
-[12Jan2025 14:47:12.964] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.964] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/acacia_farm.json, ignoring
-[12Jan2025 14:47:12.965] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.965] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/azalea_farm.json, ignoring
-[12Jan2025 14:47:12.965] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.965] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/birch_farm.json, ignoring
-[12Jan2025 14:47:12.965] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.966] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/cherry_farm.json, ignoring
-[12Jan2025 14:47:12.966] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.966] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
-[12Jan2025 14:47:12.966] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.966] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/jungle_farm.json, ignoring
-[12Jan2025 14:47:12.966] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.966] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/mangrove_farm.json, ignoring
-[12Jan2025 14:47:12.966] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.966] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/oak_farm.json, ignoring
-[12Jan2025 14:47:12.966] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.968] [Worker-Main-8/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/spruce_farm.json, ignoring
-[12Jan2025 14:47:12.968] [Worker-Main-8/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.993] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/crimsonForest/crimson_farm.json, ignoring
-[12Jan2025 14:47:12.994] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:12.996] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/warpedForest/warped_farm.json, ignoring
-[12Jan2025 14:47:12.997] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.021] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/crimsonForest/crimson_farm.json, ignoring
-[12Jan2025 14:47:13.022] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.022] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/warpedForest/warped_farm.json, ignoring
-[12Jan2025 14:47:13.022] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.023] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/bamboo_farm.json, ignoring
-[12Jan2025 14:47:13.023] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.024] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/beetroot_farm.json, ignoring
-[12Jan2025 14:47:13.024] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.024] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/berry_farm.json, ignoring
-[12Jan2025 14:47:13.024] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.024] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/carrot_farm.json, ignoring
-[12Jan2025 14:47:13.024] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.030] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/coco_farm.json, ignoring
-[12Jan2025 14:47:13.030] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.031] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
-[12Jan2025 14:47:13.031] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.032] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/melon_farm.json, ignoring
-[12Jan2025 14:47:13.032] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.033] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/potato_farm.json, ignoring
-[12Jan2025 14:47:13.033] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.033] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
-[12Jan2025 14:47:13.033] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.033] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/sugar_farm.json, ignoring
-[12Jan2025 14:47:13.033] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.033] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/wheat_farm.json, ignoring
-[12Jan2025 14:47:13.033] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.034] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/allium_farm.json, ignoring
-[12Jan2025 14:47:13.034] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.034] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/azure_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.035] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.035] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/daisy_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.035] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.035] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lilac_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.035] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lily_farm.json, ignoring
-[12Jan2025 14:47:13.035] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.036] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orange_farm.json, ignoring
-[12Jan2025 14:47:13.036] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.036] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orchid_farm.json, ignoring
-[12Jan2025 14:47:13.036] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.036] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/peony_farm.json, ignoring
-[12Jan2025 14:47:13.037] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.037] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/pink_farm.json, ignoring
-[12Jan2025 14:47:13.037] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.037] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/poppy_farm.json, ignoring
-[12Jan2025 14:47:13.037] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.037] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/red_farm.json, ignoring
-[12Jan2025 14:47:13.037] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.038] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/rose_farm.json, ignoring
-[12Jan2025 14:47:13.038] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.038] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
-[12Jan2025 14:47:13.038] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.039] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/white_farm.json, ignoring
-[12Jan2025 14:47:13.039] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.041] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
-[12Jan2025 14:47:13.041] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.041] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
-[12Jan2025 14:47:13.041] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/acacia_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/azalea_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/birch_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/cherry_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.042] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/jungle_farm.json, ignoring
-[12Jan2025 14:47:13.042] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.043] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/mangrove_farm.json, ignoring
-[12Jan2025 14:47:13.043] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.043] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/oak_farm.json, ignoring
-[12Jan2025 14:47:13.043] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.043] [Worker-Main-9/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/spruce_farm.json, ignoring
-[12Jan2025 14:47:13.043] [Worker-Main-9/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:13.080] [Worker-Main-11/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[12Jan2025 14:47:13.225] [Worker-Main-3/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture plant_farms:block/water_still with size 25x25 limits mip level from 4 to 0
-[12Jan2025 14:47:13.867] [Worker-Main-1/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'plant_farms:item/icon_item' referenced from: plant_farms:item/icon_item: java.io.FileNotFoundException: plant_farms:models/item/icon_item.json
-[12Jan2025 14:47:14.486] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.vanilla.VanillaPlugin
-[12Jan2025 14:47:14.537] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.vanilla.VanillaPlugin in 47.25 ms
-[12Jan2025 14:47:14.543] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.vanilla.VanillaPlugin in 53.01 ms
-[12Jan2025 14:47:14.543] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.universal.UniversalPlugin
-[12Jan2025 14:47:14.548] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.universal.UniversalPlugin in 3.595 ms
-[12Jan2025 14:47:14.548] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.universal.UniversalPlugin in 4.090 ms
-[12Jan2025 14:47:14.548] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.debug.DebugPlugin
-[12Jan2025 14:47:14.551] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.debug.DebugPlugin in 2.259 ms
-[12Jan2025 14:47:14.551] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.debug.DebugPlugin in 2.623 ms
-[12Jan2025 14:47:14.551] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.core.CorePlugin
-[12Jan2025 14:47:14.555] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.core.CorePlugin in 3.467 ms
-[12Jan2025 14:47:14.556] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.core.CorePlugin in 3.822 ms
-[12Jan2025 14:47:14.556] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.access.AccessibilityPlugin
-[12Jan2025 14:47:14.559] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.access.AccessibilityPlugin in 2.721 ms
-[12Jan2025 14:47:14.559] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.access.AccessibilityPlugin in 3.069 ms
-[12Jan2025 14:47:14.559] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Start loading plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers
-[12Jan2025 14:47:14.561] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 532.7 μs
-[12Jan2025 14:47:14.561] [Worker-Main-3/INFO] [snownee.jade.Jade/]: Loaded plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 1.160 ms
-[12Jan2025 14:47:14.717] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[12Jan2025 14:47:14.717] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[12Jan2025 14:47:15.587] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
-[12Jan2025 14:47:15.588] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[12Jan2025 14:47:15.699] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[12Jan2025 14:47:15.709] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[12Jan2025 14:47:15.710] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[12Jan2025 14:47:15.710] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[12Jan2025 14:47:15.710] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[12Jan2025 14:47:15.718] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[12Jan2025 14:47:15.718] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[12Jan2025 14:47:15.719] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[12Jan2025 14:47:15.719] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[12Jan2025 14:47:15.873] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[12Jan2025 14:47:15.875] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[12Jan2025 14:47:15.875] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[12Jan2025 14:47:15.875] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[12Jan2025 14:47:15.875] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[12Jan2025 14:47:15.916] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[12Jan2025 14:47:15.988] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[12Jan2025 14:47:15.988] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[12Jan2025 14:47:52.587] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/nether/crimsonForest/crimson_farm.json, ignoring
-[12Jan2025 14:47:52.587] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.587] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/nether/warpedForest/warped_farm.json, ignoring
-[12Jan2025 14:47:52.587] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/bamboo_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/beetroot_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/berry_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/carrot_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/coco_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.588] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
-[12Jan2025 14:47:52.588] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/melon_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/potato_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/sugar_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/wheat_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.589] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/allium_farm.json, ignoring
-[12Jan2025 14:47:52.589] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/azure_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/daisy_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/lilac_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/lily_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/orange_farm.json, ignoring
-[12Jan2025 14:47:52.590] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.590] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/orchid_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/peony_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/pink_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/poppy_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/red_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/rose_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/white_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
-[12Jan2025 14:47:52.591] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.591] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/acacia_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/azalea_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/birch_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/cherry_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/jungle_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/mangrove_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/oak_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.592] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/spruce_farm.json, ignoring
-[12Jan2025 14:47:52.592] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
-[12Jan2025 14:47:52.768] [Worker-Main-4/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:replaceable as it is missing following references: 
+[12Jan2025 15:14:06.912] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.1.65, --assetIndex, 17, --assetsDir, C:\\Users\\Traee\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.neoForgeVersion, 21.1.65, --fml.fmlVersion, 4.0.24, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
+[12Jan2025 15:14:06.916] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
+[12Jan2025 15:14:06.918] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.3 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[12Jan2025 15:14:07.042] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[12Jan2025 15:14:07.154] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[12Jan2025 15:14:07.575] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[12Jan2025 15:14:07.757] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Traee/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23131!/ Service=ModLauncher Env=CLIENT
+[12Jan2025 15:14:07.844] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: AMD Radeon(TM) 760M GL version 4.6.0 Core Profile Context 24.30.13.02.241202, ATI Technologies Inc.
+[12Jan2025 15:14:08.166] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[12Jan2025 15:14:09.033] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.1.65, --gameDir, ., --assetsDir, C:\Users\Traee\.gradle\caches\neoformruntime\assets, --assetIndex, 17]
+[12Jan2025 15:14:10.530] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 351 milliseconds
+[12Jan2025 15:14:10.648] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[12Jan2025 15:14:10.684] [pool-11-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[12Jan2025 15:14:14.848] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12Jan2025 15:14:14.852] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12Jan2025 15:14:14.854] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12Jan2025 15:14:14.855] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[12Jan2025 15:14:14.856] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[12Jan2025 15:14:14.953] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/assets/.mcassetsroot' uses unexpected schema
+[12Jan2025 15:14:14.953] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/MCreatorWorkspaces/plantFarms/build/moddev/artifacts/neoforge-21.1.65-minecraft.jar%23183!/data/.mcassetsroot' uses unexpected schema
+[12Jan2025 15:14:14.977] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[12Jan2025 15:14:14.988] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[12Jan2025 15:14:15.066] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[12Jan2025 15:14:15.305] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.65, for MC 1.21.1
+[12Jan2025 15:14:15.373] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[12Jan2025 15:14:15.377] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.011 ms
+[12Jan2025 15:14:15.861] [Render thread/WARN] [net.minecraft.server.packs.repository.Pack/]: Missing metadata in pack file/DataPackStuff.zip
+[12Jan2025 15:14:16.283] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [plant_farms]
+[12Jan2025 15:14:16.439] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/theoneprobe, mod/jade, mod/plant_farms, mod/neoforge, mod/corelib, mod/jei, file/Redstone.zip, file/Fullbright-SP-1.21.zip
+[12Jan2025 15:14:16.519] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[12Jan2025 15:14:16.534] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/crimsonForest/crimson_farm.json, ignoring
+[12Jan2025 15:14:16.534] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.534] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/nether/warpedForest/warped_farm.json, ignoring
+[12Jan2025 15:14:16.534] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.535] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/bamboo_farm.json, ignoring
+[12Jan2025 15:14:16.535] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.535] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/beetroot_farm.json, ignoring
+[12Jan2025 15:14:16.535] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.536] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/berry_farm.json, ignoring
+[12Jan2025 15:14:16.536] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.536] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/carrot_farm.json, ignoring
+[12Jan2025 15:14:16.536] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.536] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/coco_farm.json, ignoring
+[12Jan2025 15:14:16.536] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.536] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
+[12Jan2025 15:14:16.536] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.536] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/melon_farm.json, ignoring
+[12Jan2025 15:14:16.536] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.538] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/potato_farm.json, ignoring
+[12Jan2025 15:14:16.538] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.538] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
+[12Jan2025 15:14:16.538] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.538] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/sugar_farm.json, ignoring
+[12Jan2025 15:14:16.538] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.538] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/crops/wheat_farm.json, ignoring
+[12Jan2025 15:14:16.538] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/allium_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/azure_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/daisy_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lilac_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.539] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/lily_farm.json, ignoring
+[12Jan2025 15:14:16.539] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orange_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/orchid_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/peony_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/pink_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/poppy_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/red_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/rose_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.540] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
+[12Jan2025 15:14:16.540] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.541] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/flowers/white_farm.json, ignoring
+[12Jan2025 15:14:16.541] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.541] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
+[12Jan2025 15:14:16.541] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.541] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
+[12Jan2025 15:14:16.541] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.541] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/acacia_farm.json, ignoring
+[12Jan2025 15:14:16.541] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.541] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/azalea_farm.json, ignoring
+[12Jan2025 15:14:16.541] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/birch_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/cherry_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/jungle_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/mangrove_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/oak_farm.json, ignoring
+[12Jan2025 15:14:16.542] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.542] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:blockstates/overworld/aboveGround/trees/spruce_farm.json, ignoring
+[12Jan2025 15:14:16.543] [Worker-Main-2/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.578] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/crimsonForest/crimson_farm.json, ignoring
+[12Jan2025 15:14:16.578] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.579] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/block/nether/warpedForest/warped_farm.json, ignoring
+[12Jan2025 15:14:16.579] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.598] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/crimsonForest/crimson_farm.json, ignoring
+[12Jan2025 15:14:16.599] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.599] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/nether/warpedForest/warped_farm.json, ignoring
+[12Jan2025 15:14:16.599] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.602] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/bamboo_farm.json, ignoring
+[12Jan2025 15:14:16.603] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.603] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/beetroot_farm.json, ignoring
+[12Jan2025 15:14:16.603] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.604] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/berry_farm.json, ignoring
+[12Jan2025 15:14:16.604] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.604] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/carrot_farm.json, ignoring
+[12Jan2025 15:14:16.604] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.604] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/coco_farm.json, ignoring
+[12Jan2025 15:14:16.604] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.604] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
+[12Jan2025 15:14:16.604] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.604] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/melon_farm.json, ignoring
+[12Jan2025 15:14:16.604] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.606] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/potato_farm.json, ignoring
+[12Jan2025 15:14:16.606] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.606] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
+[12Jan2025 15:14:16.606] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.606] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/sugar_farm.json, ignoring
+[12Jan2025 15:14:16.606] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.607] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/crops/wheat_farm.json, ignoring
+[12Jan2025 15:14:16.607] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.609] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/allium_farm.json, ignoring
+[12Jan2025 15:14:16.609] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.609] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/azure_farm.json, ignoring
+[12Jan2025 15:14:16.609] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.609] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
+[12Jan2025 15:14:16.609] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.609] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/daisy_farm.json, ignoring
+[12Jan2025 15:14:16.609] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.609] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
+[12Jan2025 15:14:16.610] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.610] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lilac_farm.json, ignoring
+[12Jan2025 15:14:16.610] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.610] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/lily_farm.json, ignoring
+[12Jan2025 15:14:16.610] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.610] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orange_farm.json, ignoring
+[12Jan2025 15:14:16.610] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.611] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/orchid_farm.json, ignoring
+[12Jan2025 15:14:16.611] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.611] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/peony_farm.json, ignoring
+[12Jan2025 15:14:16.611] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.611] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/pink_farm.json, ignoring
+[12Jan2025 15:14:16.611] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.612] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/poppy_farm.json, ignoring
+[12Jan2025 15:14:16.612] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.612] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/red_farm.json, ignoring
+[12Jan2025 15:14:16.612] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.612] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/rose_farm.json, ignoring
+[12Jan2025 15:14:16.613] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.613] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
+[12Jan2025 15:14:16.613] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.613] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/flowers/white_farm.json, ignoring
+[12Jan2025 15:14:16.613] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.614] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
+[12Jan2025 15:14:16.614] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.614] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
+[12Jan2025 15:14:16.614] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.614] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/acacia_farm.json, ignoring
+[12Jan2025 15:14:16.615] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.616] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/azalea_farm.json, ignoring
+[12Jan2025 15:14:16.616] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.617] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/birch_farm.json, ignoring
+[12Jan2025 15:14:16.617] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.617] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/cherry_farm.json, ignoring
+[12Jan2025 15:14:16.617] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.617] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
+[12Jan2025 15:14:16.617] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.617] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/jungle_farm.json, ignoring
+[12Jan2025 15:14:16.617] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.618] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/mangrove_farm.json, ignoring
+[12Jan2025 15:14:16.618] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.618] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/oak_farm.json, ignoring
+[12Jan2025 15:14:16.619] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.620] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:models/item/overworld/aboveGround/trees/spruce_farm.json, ignoring
+[12Jan2025 15:14:16.620] [Worker-Main-1/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:16.735] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[12Jan2025 15:14:16.783] [Worker-Main-5/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture plant_farms:block/water_still with size 25x25 limits mip level from 4 to 0
+[12Jan2025 15:14:17.411] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'plant_farms:item/icon_item' referenced from: plant_farms:item/icon_item: java.io.FileNotFoundException: plant_farms:models/item/icon_item.json
+[12Jan2025 15:14:18.056] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.vanilla.VanillaPlugin
+[12Jan2025 15:14:18.094] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.vanilla.VanillaPlugin in 34.97 ms
+[12Jan2025 15:14:18.099] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.vanilla.VanillaPlugin in 40.41 ms
+[12Jan2025 15:14:18.099] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.universal.UniversalPlugin
+[12Jan2025 15:14:18.103] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.universal.UniversalPlugin in 3.176 ms
+[12Jan2025 15:14:18.103] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.universal.UniversalPlugin in 3.524 ms
+[12Jan2025 15:14:18.103] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.debug.DebugPlugin
+[12Jan2025 15:14:18.106] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.debug.DebugPlugin in 1.756 ms
+[12Jan2025 15:14:18.106] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.debug.DebugPlugin in 2.220 ms
+[12Jan2025 15:14:18.106] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.core.CorePlugin
+[12Jan2025 15:14:18.110] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.core.CorePlugin in 2.471 ms
+[12Jan2025 15:14:18.110] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.core.CorePlugin in 2.782 ms
+[12Jan2025 15:14:18.110] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.access.AccessibilityPlugin
+[12Jan2025 15:14:18.113] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.access.AccessibilityPlugin in 2.627 ms
+[12Jan2025 15:14:18.113] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.access.AccessibilityPlugin in 2.895 ms
+[12Jan2025 15:14:18.113] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Start loading plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers
+[12Jan2025 15:14:18.114] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 401.9 μs
+[12Jan2025 15:14:18.115] [Worker-Main-10/INFO] [snownee.jade.Jade/]: Loaded plugin from com.awesomeshot5051.plantfarms.integration.waila.PluginEasyVillagers in 992.8 μs
+[12Jan2025 15:14:18.236] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[12Jan2025 15:14:18.237] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[12Jan2025 15:14:19.177] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[12Jan2025 15:14:19.179] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[12Jan2025 15:14:19.297] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[12Jan2025 15:14:19.308] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[12Jan2025 15:14:19.308] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[12Jan2025 15:14:19.308] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[12Jan2025 15:14:19.309] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[12Jan2025 15:14:19.314] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[12Jan2025 15:14:19.314] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[12Jan2025 15:14:19.314] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[12Jan2025 15:14:19.315] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[12Jan2025 15:14:19.467] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[12Jan2025 15:14:19.468] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[12Jan2025 15:14:19.469] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[12Jan2025 15:14:19.469] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[12Jan2025 15:14:19.469] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[12Jan2025 15:14:19.505] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[12Jan2025 15:14:19.574] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[12Jan2025 15:14:19.574] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[12Jan2025 15:14:23.167] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/nether/crimsonForest/crimson_farm.json, ignoring
+[12Jan2025 15:14:23.167] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/nether/warpedForest/warped_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/bamboo_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/beetroot_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/berry_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/carrot_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/coco_farm.json, ignoring
+[12Jan2025 15:14:23.168] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.168] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/gcarrot_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/melon_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/potato_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/pumpkin_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/sugar_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/crops/wheat_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/allium_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/azure_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/cornflower_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/daisy_farm.json, ignoring
+[12Jan2025 15:14:23.169] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.169] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/dandelion_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/lilac_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/lily_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/orange_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/orchid_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/peony_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/pink_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/poppy_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/red_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/rose_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/sunflower_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/flowers/white_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/miscellaneous/mushroom_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.170] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/miscellaneous/vine_farm.json, ignoring
+[12Jan2025 15:14:23.170] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/acacia_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/azalea_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/birch_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/cherry_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/dark_oak_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/jungle_farm.json, ignoring
+[12Jan2025 15:14:23.171] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.171] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/mangrove_farm.json, ignoring
+[12Jan2025 15:14:23.172] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.172] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/oak_farm.json, ignoring
+[12Jan2025 15:14:23.172] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.172] [Worker-Main-3/ERROR] [net.minecraft.Util/]: Invalid path in pack: plant_farms:loot_table/blocks/overworld/aboveGround/trees/spruce_farm.json, ignoring
+[12Jan2025 15:14:23.172] [Worker-Main-3/WARN] [net.minecraft.Util/]: Did you remember to set a breakpoint here?
+[12Jan2025 15:14:23.412] [Worker-Main-7/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:replaceable as it is missing following references: 
 	waterblock:water (from mod/plant_farms)
-[12Jan2025 14:47:52.770] [Worker-Main-4/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:enchantment_power_transmitter as it is missing following references: 
+[12Jan2025 15:14:23.412] [Worker-Main-7/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag minecraft:enchantment_power_transmitter as it is missing following references: 
 	#minecraft:replaceable (from vanilla)
-[12Jan2025 14:47:52.997] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1727 recipes
-[12Jan2025 14:47:53.132] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement plant_farms:unlimited_power: Unknown registry key in ResourceKey[minecraft:root / minecraft:trigger_type]: mobfarms:wither_farm_trigger missed input: {"wither_farm_crafted":{"trigger":"mobfarms:wither_farm_trigger","conditions":{"item":{"items":["mobfarms:wither_farm"]}}}}; Advancement criteria cannot be empty; No key id in MapLike[{"item":"minecraft:nether_star"}]
-[12Jan2025 14:47:53.153] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement plant_farms:recipe/unlimited_power: Unknown registry key in ResourceKey[minecraft:root / minecraft:trigger_type]: mobfarms:wither_farm_trigger missed input: {"wither_farm_crafted":{"trigger":"mobfarms:wither_farm_trigger","conditions":{"item":{"items":["mobfarms:wither_farm"]}}}}; Advancement criteria cannot be empty; No key id in MapLike[{"item":"minecraft:nether_star"}]
-[12Jan2025 14:47:53.172] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1818 advancements
-[12Jan2025 14:47:53.447] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent too early, ignoring
-[12Jan2025 14:47:53.452] [Render thread/INFO] [snownee.jade.Jade/]: LootTableMineableCollector took 4.234 ms
-[12Jan2025 14:47:54.019] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
-[12Jan2025 14:47:54.019] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[12Jan2025 14:47:54.914] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[12Jan2025 14:47:55.265] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[12Jan2025 14:47:55.364] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[12Jan2025 14:47:55.372] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 451 ms
-[12Jan2025 14:47:55.486] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[12Jan2025 14:47:55.486] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[12Jan2025 14:47:56.087] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent
-[12Jan2025 14:47:56.276] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:feeb1389] logged in with entity id 41 at (127.20155499797204, 69.0, -43.43657190844196)
-[12Jan2025 14:47:56.318] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[12Jan2025 14:47:56.473] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.RecipesUpdatedEvent
-[12Jan2025 14:47:56.473] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from LISTENING to JEI_STARTED
-[12Jan2025 14:47:56.474] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[12Jan2025 14:47:56.481] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[12Jan2025 14:47:56.486] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 4.167 ms
-[12Jan2025 14:47:56.487] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[12Jan2025 14:47:56.488] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.501 ms
-[12Jan2025 14:47:56.489] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[12Jan2025 14:47:56.575] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 84.80 milliseconds
-[12Jan2025 14:47:56.576] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 85.67 ms
-[12Jan2025 14:47:56.576] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
-[12Jan2025 14:47:56.576] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 529.6 μs
-[12Jan2025 14:47:56.576] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
-[12Jan2025 14:47:56.577] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 960.6 μs
-[12Jan2025 14:47:56.590] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
-[12Jan2025 14:47:56.591] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 464.3 μs
-[12Jan2025 14:47:56.602] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[12Jan2025 14:47:56.614] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 11.01 milliseconds
-[12Jan2025 14:47:56.619] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 15.65 ms
-[12Jan2025 14:47:56.620] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[12Jan2025 14:47:56.622] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 2.407 ms
-[12Jan2025 14:47:56.623] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[12Jan2025 14:47:56.624] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 903.6 μs
-[12Jan2025 14:47:56.624] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[12Jan2025 14:47:56.632] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 6.853 ms
-[12Jan2025 14:47:56.632] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[12Jan2025 14:47:56.633] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 579.1 μs
-[12Jan2025 14:47:56.634] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[12Jan2025 14:47:56.775] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 140.9 milliseconds
-[12Jan2025 14:47:56.805] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 30.11 milliseconds
-[12Jan2025 14:47:56.805] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 172.0 ms
-[12Jan2025 14:47:56.811] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[12Jan2025 14:47:56.813] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 2.163 ms
-[12Jan2025 14:47:56.838] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[12Jan2025 14:47:56.843] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[12Jan2025 14:47:56.848] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 5.913 ms
-[12Jan2025 14:47:56.851] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[12Jan2025 14:47:56.853] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[12Jan2025 14:47:56.853] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[12Jan2025 14:47:56.875] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 21.69 ms
-[12Jan2025 14:47:56.875] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[12Jan2025 14:47:56.907] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1772 ingredients
-[12Jan2025 14:47:57.112] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1772 ingredients
-[12Jan2025 14:47:57.112] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 236.9 ms
-[12Jan2025 14:47:57.177] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 326.4 milliseconds
-[12Jan2025 14:47:57.179] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 327.3 ms
-[12Jan2025 14:47:57.179] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 340.2 ms
-[12Jan2025 14:47:57.179] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[12Jan2025 14:47:57.180] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 503.6 μs
-[12Jan2025 14:47:57.180] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 705.3 ms
-[12Jan2025 14:47:57.197] [Render thread/INFO] [snownee.jade.Jade/]: Received config from the server: 
-[12Jan2025 14:47:57.199] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 477 advancements
-[12Jan2025 14:48:11.609] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gave 1 [Tilled Farm Block] to Dev]
-[12Jan2025 14:48:11.619] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Gave 1 [Tilled Farm Block] to Dev
-[12Jan2025 14:48:22.024] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gave 1 [Water Bucket] to Dev]
-[12Jan2025 14:48:22.032] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Gave 1 [Water Bucket] to Dev
-[12Jan2025 14:48:32.618] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[12Jan2025 14:48:32.659] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[12Jan2025 14:48:32.682] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[12Jan2025 14:48:32.690] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[12Jan2025 14:49:05.726] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 5159ms or 103 ticks behind
-[12Jan2025 14:49:34.138] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 13421ms or 268 ticks behind
-[12Jan2025 14:52:17.717] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[12Jan2025 14:52:17.739] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[12Jan2025 14:52:17.759] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[12Jan2025 14:52:17.768] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[12Jan2025 14:52:22.311] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3393ms or 67 ticks behind
-[12Jan2025 14:52:43.642] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gave 1 [Shears] to Dev]
-[12Jan2025 14:52:43.648] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Gave 1 [Shears] to Dev
-[12Jan2025 14:52:55.381] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 10014ms or 200 ticks behind
-[12Jan2025 14:53:51.636] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 11319ms or 226 ticks behind
-[12Jan2025 14:54:01.217] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[12Jan2025 14:54:01.238] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[12Jan2025 14:54:01.253] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[12Jan2025 14:54:01.260] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[12Jan2025 14:54:01.587] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent$LoggingOut
-[12Jan2025 14:54:01.587] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to LISTENING
-[12Jan2025 14:54:01.587] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
-[12Jan2025 14:54:01.587] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
-[12Jan2025 14:54:01.588] [Render thread/INFO] [mezz.jei.neoforge.plugins.neoforge.NeoForgeGuiPlugin/]: Stopping JEI GUI
-[12Jan2025 14:54:01.592] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 4.232 ms
-[12Jan2025 14:54:01.627] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[12Jan2025 14:54:01.627] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[12Jan2025 14:54:01.647] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
-[12Jan2025 14:54:01.700] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[12Jan2025 14:54:01.700] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[12Jan2025 14:54:01.701] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[12Jan2025 14:54:01.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[12Jan2025 14:54:02.022] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[12Jan2025 14:54:02.027] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[12Jan2025 14:54:02.037] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[12Jan2025 14:54:02.037] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[12Jan2025 14:54:02.037] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[12Jan2025 14:54:02.037] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[12Jan2025 14:54:03.138] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[12Jan2025 15:14:23.596] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1727 recipes
+[12Jan2025 15:14:23.700] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement plant_farms:unlimited_power: Unknown registry key in ResourceKey[minecraft:root / minecraft:trigger_type]: mobfarms:wither_farm_trigger missed input: {"wither_farm_crafted":{"trigger":"mobfarms:wither_farm_trigger","conditions":{"item":{"items":["mobfarms:wither_farm"]}}}}; Advancement criteria cannot be empty; No key id in MapLike[{"item":"minecraft:nether_star"}]
+[12Jan2025 15:14:23.714] [Render thread/ERROR] [net.minecraft.server.ServerAdvancementManager/]: Parsing error loading custom advancement plant_farms:recipe/unlimited_power: Unknown registry key in ResourceKey[minecraft:root / minecraft:trigger_type]: mobfarms:wither_farm_trigger missed input: {"wither_farm_crafted":{"trigger":"mobfarms:wither_farm_trigger","conditions":{"item":{"items":["mobfarms:wither_farm"]}}}}; Advancement criteria cannot be empty; No key id in MapLike[{"item":"minecraft:nether_star"}]
+[12Jan2025 15:14:23.732] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1818 advancements
+[12Jan2025 15:14:24.034] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent too early, ignoring
+[12Jan2025 15:14:24.043] [Render thread/INFO] [snownee.jade.Jade/]: LootTableMineableCollector took 7.183 ms
+[12Jan2025 15:14:24.791] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
+[12Jan2025 15:14:24.791] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[12Jan2025 15:14:25.703] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[12Jan2025 15:14:25.921] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[12Jan2025 15:14:26.023] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 300 ms
+[12Jan2025 15:14:26.023] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[12Jan2025 15:14:26.118] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[12Jan2025 15:14:26.118] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[12Jan2025 15:14:26.551] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent
+[12Jan2025 15:14:26.742] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:b9514ba7] logged in with entity id 51 at (126.92443315471066, 69.0, -42.21878172527654)
+[12Jan2025 15:14:26.784] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[12Jan2025 15:14:26.924] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.RecipesUpdatedEvent
+[12Jan2025 15:14:26.924] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from LISTENING to JEI_STARTED
+[12Jan2025 15:14:26.925] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[12Jan2025 15:14:26.932] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[12Jan2025 15:14:26.936] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 3.932 ms
+[12Jan2025 15:14:26.936] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[12Jan2025 15:14:26.960] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering fluid subtypes: jei:debug took 22.75 milliseconds
+[12Jan2025 15:14:26.960] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 23.68 ms
+[12Jan2025 15:14:26.963] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[12Jan2025 15:14:27.051] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 87.51 milliseconds
+[12Jan2025 15:14:27.051] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 88.34 ms
+[12Jan2025 15:14:27.051] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients...
+[12Jan2025 15:14:27.052] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering extra ingredients took 498.5 μs
+[12Jan2025 15:14:27.052] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases...
+[12Jan2025 15:14:27.054] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering search ingredient aliases took 1.190 ms
+[12Jan2025 15:14:27.067] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
+[12Jan2025 15:14:27.068] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 715.4 μs
+[12Jan2025 15:14:27.087] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[12Jan2025 15:14:27.101] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 14.02 milliseconds
+[12Jan2025 15:14:27.105] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 19.08 ms
+[12Jan2025 15:14:27.106] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[12Jan2025 15:14:27.110] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.160 ms
+[12Jan2025 15:14:27.111] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[12Jan2025 15:14:27.112] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.068 ms
+[12Jan2025 15:14:27.113] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[12Jan2025 15:14:27.124] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 11.67 ms
+[12Jan2025 15:14:27.126] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[12Jan2025 15:14:27.127] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 562.7 μs
+[12Jan2025 15:14:27.128] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[12Jan2025 15:14:27.265] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 138.1 milliseconds
+[12Jan2025 15:14:27.302] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 36.14 milliseconds
+[12Jan2025 15:14:27.302] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 175.3 ms
+[12Jan2025 15:14:27.309] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[12Jan2025 15:14:27.312] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 3.285 ms
+[12Jan2025 15:14:27.323] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[12Jan2025 15:14:27.327] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[12Jan2025 15:14:27.336] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 7.728 ms
+[12Jan2025 15:14:27.338] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[12Jan2025 15:14:27.340] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[12Jan2025 15:14:27.340] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[12Jan2025 15:14:27.365] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 24.35 ms
+[12Jan2025 15:14:27.365] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[12Jan2025 15:14:27.399] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1772 ingredients
+[12Jan2025 15:14:27.631] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1772 ingredients
+[12Jan2025 15:14:27.632] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 266.5 ms
+[12Jan2025 15:14:27.685] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 346.4 milliseconds
+[12Jan2025 15:14:27.686] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 347.4 ms
+[12Jan2025 15:14:27.686] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 362.1 ms
+[12Jan2025 15:14:27.686] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[12Jan2025 15:14:27.686] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 442.4 μs
+[12Jan2025 15:14:27.688] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 762.2 ms
+[12Jan2025 15:14:27.704] [Render thread/INFO] [snownee.jade.Jade/]: Received config from the server: 
+[12Jan2025 15:14:27.705] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 477 advancements
+[12Jan2025 15:14:39.326] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[12Jan2025 15:14:39.355] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[12Jan2025 15:14:39.377] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[12Jan2025 15:14:39.383] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[12Jan2025 15:14:41.036] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent$LoggingOut
+[12Jan2025 15:14:41.036] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to LISTENING
+[12Jan2025 15:14:41.036] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
+[12Jan2025 15:14:41.036] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
+[12Jan2025 15:14:41.036] [Render thread/INFO] [mezz.jei.neoforge.plugins.neoforge.NeoForgeGuiPlugin/]: Stopping JEI GUI
+[12Jan2025 15:14:41.038] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 2.213 ms
+[12Jan2025 15:14:41.090] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[12Jan2025 15:14:41.090] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[12Jan2025 15:14:41.107] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[12Jan2025 15:14:41.146] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[12Jan2025 15:14:41.148] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[12Jan2025 15:14:41.148] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[12Jan2025 15:14:41.288] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[12Jan2025 15:14:41.362] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[12Jan2025 15:14:41.367] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[12Jan2025 15:14:41.375] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[12Jan2025 15:14:41.375] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12Jan2025 15:14:41.375] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12Jan2025 15:14:41.376] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12Jan2025 15:14:42.039] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

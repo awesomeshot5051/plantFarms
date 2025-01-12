@@ -206,10 +206,6 @@ public class CustomShapelessBlockRecipe extends ShapelessRecipe {
         return width * height >= this.ingredients.size();
     }
 
-    @Override
-    public RecipeType<?> getType() {
-        return super.getType();
-    }
 
     @Override
     public CraftingBookCategory category() {
