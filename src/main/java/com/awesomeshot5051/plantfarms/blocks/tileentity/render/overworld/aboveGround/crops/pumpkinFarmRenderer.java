@@ -1,16 +1,17 @@
 package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops;
 
 
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.pumpkinFarmTileentity;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.RendererBase;
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.core.Direction;
-import net.minecraft.world.level.block.Blocks;
-import net.neoforged.neoforge.client.model.data.ModelData;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
+import com.mojang.blaze3d.vertex.*;
+import com.mojang.math.*;
+import net.minecraft.client.renderer.*;
+import net.minecraft.client.renderer.block.*;
+import net.minecraft.client.renderer.blockentity.*;
+import net.minecraft.core.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.client.model.data.*;
 
 public class pumpkinFarmRenderer extends RendererBase<pumpkinFarmTileentity> {
     private final BlockRenderDispatcher blockRenderDispatcher;
@@ -40,7 +41,10 @@ public class pumpkinFarmRenderer extends RendererBase<pumpkinFarmTileentity> {
             matrixStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));
             matrixStack.scale(0.7F, 0.7F, 0.7F);
             // Render the pumpkin Sapling
-            blockRenderDispatcher.renderSingleBlock(Blocks.PUMPKIN.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
+            if (farm.shears != ItemStack.EMPTY) {
+                blockRenderDispatcher.renderSingleBlock(Blocks.CARVED_PUMPKIN.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
+            } else
+                blockRenderDispatcher.renderSingleBlock(Blocks.PUMPKIN.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
             matrixStack.popPose();
         }
         matrixStack.popPose();
