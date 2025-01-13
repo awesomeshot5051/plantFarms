@@ -109,7 +109,7 @@ public class EnchantmentAdditionRecipe extends ShapelessRecipe {
 
     private boolean isCompatible(ItemEnchantments.Mutable storedEnchantments, ItemStack swordStack) {
         if (storedEnchantments.keySet().stream().toList().getFirst().getDelegate().value().definition().supportedItems().unwrapKey().stream().findFirst().isPresent()) {
-            return storedEnchantments.keySet().stream().toList().getFirst().getDelegate().value().definition().supportedItems().unwrapKey().stream().findFirst().get().equals(ItemTags.SWORD_ENCHANTABLE) || storedEnchantments.keySet().stream().toList().getFirst().getDelegate().is(EnchantmentTags.DAMAGE_EXCLUSIVE) || storedEnchantments.keySet().stream().toList().getFirst().getDelegate().value().definition().supportedItems().stream().toList().contains(swordStack.getItemHolder());
+            return storedEnchantments.keySet().stream().toList().getFirst().getDelegate().value().definition().supportedItems().unwrapKey().stream().findFirst().get().equals(ItemTags.MINING_ENCHANTABLE) || storedEnchantments.keySet().stream().toList().getFirst().getDelegate().is(EnchantmentTags.DAMAGE_EXCLUSIVE) || storedEnchantments.keySet().stream().toList().getFirst().getDelegate().value().definition().supportedItems().stream().toList().contains(swordStack.getItemHolder());
         }
         return false;
     }

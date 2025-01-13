@@ -3,10 +3,12 @@ package com.awesomeshot5051.plantfarms.blocks.tileentity.nether.crimsonForest;
 import com.awesomeshot5051.plantfarms.*;
 import com.awesomeshot5051.plantfarms.blocks.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
 import com.awesomeshot5051.plantfarms.enums.*;
 import de.maxhenkel.corelib.blockentity.*;
 import de.maxhenkel.corelib.inventory.*;
 import net.minecraft.core.*;
+import net.minecraft.core.registries.*;
 import net.minecraft.nbt.*;
 import net.minecraft.resources.*;
 import net.minecraft.server.level.*;
@@ -52,8 +54,23 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
     }
 
     public static double getCrimsonDeathTime(crimsonFarmTileentity farm) {
-        return getCrimsonSpawnTime(farm) + 20 * 4; // 30 seconds spawn time + 10 seconds kill time
+        // Iterate through the enchantments
+        AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
+        if (farm.getAxeType().isEnchanted()) {
+            farm.setAxeEnchantmentStatus(farm);
+        }
+        int baseValue = 20;
+        if (AxeEnchantments.getAxeEnchantmentStatus(farm.axeEnchantments, Enchantments.EFFICIENCY)) {
+            baseValue = 10;
+        }
+        return getCrimsonSpawnTime(farm) + (axe.equals(AxeType.NETHERITE) ? (baseValue * 3.2) :
+                axe.equals(AxeType.DIAMOND) ? (baseValue * 5.6) :
+                        axe.equals(AxeType.IRON) ? (baseValue * 4.8) :
+                                axe.equals(AxeType.STONE) ? (baseValue * 6.4) :
+                                        axe.equals(AxeType.WOODEN) ? (baseValue * 6.4) :
+                                                6.4);
     }
+
 
     public long getTimer() {
         return timer;
@@ -137,7 +154,12 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
     @Override
     protected void saveAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         super.saveAdditional(compound, provider);
-
+        if (axeType != null) {
+            CompoundTag axeTypeTag = new CompoundTag();
+            axeTypeTag.putString("id", BuiltInRegistries.ITEM.getKey(axeType.getItem()).toString()); // Save the item ID
+            axeTypeTag.putInt("count", axeType.getCount()); // Save the count
+            compound.put("AxeType", axeTypeTag); // Add the tag to the main compound
+        }
         ContainerHelper.saveAllItems(compound, inventory, false, provider);
         compound.putLong("Timer", timer);
     }
@@ -145,6 +167,13 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
     @Override
     protected void loadAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         ContainerHelper.loadAllItems(compound, inventory, provider);
+        if (compound.contains("AxeType")) {
+            SyncableTileentity.loadAxeType(compound, provider).ifPresent(stack -> this.axeType = stack);
+        }
+        if (axeType == null) {
+// If no pickType is saved, set a default one (e.g., Stone Pickaxe)
+            axeType = new ItemStack(Items.WOODEN_AXE);
+        }
         timer = compound.getLong("Timer");
         super.loadAdditional(compound, provider);
     }
