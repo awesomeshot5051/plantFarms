@@ -1,21 +1,23 @@
 package com.awesomeshot5051.plantfarms.integration.waila;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.VillagerTileentity;
-import com.awesomeshot5051.plantfarms.entity.EasyVillagerEntity;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.CustomData;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import org.jetbrains.annotations.Nullable;
-import snownee.jade.api.BlockAccessor;
-import snownee.jade.api.IBlockComponentProvider;
-import snownee.jade.api.ITooltip;
-import snownee.jade.api.config.IPluginConfig;
-import snownee.jade.api.ui.IElement;
-import snownee.jade.impl.ui.ItemStackElement;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import net.minecraft.*;
+import net.minecraft.core.component.*;
+import net.minecraft.nbt.*;
+import net.minecraft.network.chat.*;
+import net.minecraft.resources.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.*;
+import net.minecraft.world.level.block.entity.*;
+import org.jetbrains.annotations.*;
+import snownee.jade.api.*;
+import snownee.jade.api.config.*;
+import snownee.jade.api.ui.*;
+import snownee.jade.impl.ui.*;
+
+import java.util.*;
+import java.util.stream.*;
 
 public class HUDHandlerVillager implements IBlockComponentProvider {
 
@@ -26,22 +28,38 @@ public class HUDHandlerVillager implements IBlockComponentProvider {
     @Override
     public void appendTooltip(ITooltip iTooltip, BlockAccessor blockAccessor, IPluginConfig iPluginConfig) {
         if (blockAccessor.getBlockEntity() instanceof VillagerTileentity blockEntity) {
-            EasyVillagerEntity villager = blockEntity.getVillagerEntity();
-            if (villager != null) {
-                iTooltip.add(villager.getAdvancedName());
+            ItemStack axeType = blockEntity.getAxeType();
+            ItemStack hoeType = blockEntity.getHoeType();
+            if (hoeType != ItemStack.EMPTY || axeType != ItemStack.EMPTY) {
+                iTooltip.add(Component.translatable(convertToReadableName(axeOrHoe(axeType, hoeType).getDescriptionId())).withStyle(ChatFormatting.RED));
             }
         }
+
+    }
+
+    private ItemStack axeOrHoe(ItemStack axeType, ItemStack hoeType) {
+        return axeType != ItemStack.EMPTY ? axeType : hoeType;
+    }
+
+    private String convertToReadableName(String block) {
+        // Remove "item.minecraft." and replace underscores with spaces
+        String readableName = block.replace("item.minecraft.", "").replace('_', ' ');
+        // Capitalize the first letter of each word
+        return Arrays.stream(readableName.split(" "))
+                .map(word -> word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase())
+                .collect(Collectors.joining(" "));
     }
 
     @Override
     public @Nullable IElement getIcon(BlockAccessor accessor, IPluginConfig config, IElement currentIcon) {
         BlockEntity te = accessor.getBlockEntity();
-        ItemStack stack = new ItemStack(te.getBlockState().getBlock().asItem());
+        ItemStack stack2 = new ItemStack(te.getBlockState().getBlock().asItem());
+
         if (te.getLevel() != null) {
             CompoundTag blockEntityTag = te.saveWithoutMetadata(te.getLevel().registryAccess());
-            stack.set(DataComponents.BLOCK_ENTITY_DATA, CustomData.of(blockEntityTag));
+            stack2.set(DataComponents.BLOCK_ENTITY_DATA, CustomData.of(blockEntityTag));
         }
-        return ItemStackElement.of(stack);
+        return ItemStackElement.of(stack2);
     }
 
     @Override

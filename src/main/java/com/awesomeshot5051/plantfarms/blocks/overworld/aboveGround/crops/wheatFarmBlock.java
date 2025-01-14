@@ -56,13 +56,12 @@ public class wheatFarmBlock extends BlockBase implements EntityBlock, IItemBlock
         wheatFarmTileentity trader = VillagerBlockEntityData.getAndStoreBlockEntity(stack, context.registries(), context.level(), () -> new wheatFarmTileentity(BlockPos.ZERO, ModBlocks.WHEAT_FARM.get().defaultBlockState()));
         // Updated component generation
         if (Screen.hasShiftDown()) {
-            if (stack.has(ModDataComponents.HOE_TYPE)) {
-                ItemStack hoeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.get(ModDataComponents.HOE_TYPE)).getStackInSlot(0))).copyOne();
-                components.add(Component.literal("This farm has a " + convertToReadableName(hoeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
-                        .withStyle(ChatFormatting.RED));
-            }
+            ItemContainerContents defaultType = ItemContainerContents.fromItems(Collections.singletonList(new ItemStack(Items.WOODEN_HOE)));
+            ItemStack hoeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.getOrDefault(ModDataComponents.HOE_TYPE, defaultType)).copyOne())).copyOne();
+            components.add(Component.literal("This farm has a " + convertToReadableName(hoeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
+                    .withStyle(ChatFormatting.RED));
         } else {
-            components.add(Component.literal("Hold shift to see tool").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.literal("Hold §4shift§r to see tool").withStyle(ChatFormatting.YELLOW));
         }
 
         // Removed villager-related tooltip information

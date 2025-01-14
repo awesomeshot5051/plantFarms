@@ -30,7 +30,7 @@ public class BirchFarmTileentity extends VillagerTileentity implements ITickable
     protected long timer;
 
     public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeAxeEnchantments();
-    public ItemStack axeType;
+    public ItemStack axeType = new ItemStack(Items.WOODEN_AXE);
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 

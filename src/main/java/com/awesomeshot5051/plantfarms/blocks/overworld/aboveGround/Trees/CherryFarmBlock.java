@@ -56,11 +56,10 @@ public class CherryFarmBlock extends BlockBase implements EntityBlock, IItemBloc
         super.appendHoverText(stack, context, components, tooltipFlag);
         CherryFarmTileentity trader = VillagerBlockEntityData.getAndStoreBlockEntity(stack, context.registries(), context.level(), () -> new CherryFarmTileentity(BlockPos.ZERO, ModBlocks.CHERRY_FARM.get().defaultBlockState()));
         if (Screen.hasShiftDown()) {
-            if (stack.has(ModDataComponents.AXE_TYPE)) {
-                ItemStack axeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.get(ModDataComponents.AXE_TYPE)).getStackInSlot(0))).copyOne();
-                components.add(Component.literal("This farm has a " + convertToReadableName(axeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
-                        .withStyle(ChatFormatting.RED));
-            }
+            ItemContainerContents defaultType = ItemContainerContents.fromItems(Collections.singletonList(new ItemStack(Items.WOODEN_AXE)));
+            ItemStack axeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.getOrDefault(ModDataComponents.AXE_TYPE, defaultType)).copyOne())).copyOne();
+            components.add(Component.literal("This farm has a " + convertToReadableName(axeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
+                    .withStyle(ChatFormatting.RED));
         } else {
             components.add(Component.literal("Hold §4Shift§r to see tool").withStyle(ChatFormatting.YELLOW));
         }

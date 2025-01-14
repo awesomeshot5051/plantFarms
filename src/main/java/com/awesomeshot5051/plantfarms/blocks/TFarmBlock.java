@@ -56,7 +56,7 @@ public class TFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
                         .withStyle(ChatFormatting.RED));
             }
         } else {
-            components.add(Component.literal("Hold shift to see tool").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.literal("§4Hold shift to see tool§r").withStyle(ChatFormatting.YELLOW));
         }
         // Removed villager-related tooltip information
 

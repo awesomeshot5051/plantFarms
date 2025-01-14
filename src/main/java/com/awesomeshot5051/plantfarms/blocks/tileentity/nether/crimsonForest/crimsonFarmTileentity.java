@@ -30,7 +30,7 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
     protected NonNullList<ItemStack> inventory;
     protected long timer;
     public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeHoeEnchantments();
-    public ItemStack axeType;
+    public ItemStack axeType = new ItemStack(Items.WOODEN_AXE);
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 

@@ -1,6 +1,4 @@
 /summon minecraft:zombie
-/difficulty easy
-/summon minecraft:zombie
 /time set night
 /summon minecraft:zombie
 /clear
@@ -48,3 +46,5 @@
 /enchant Dev minecraft:looting 5
 /enchant Dev minecraft:looting 4
 /enchant Dev minecraft:looting 3
+/give Dev plant_farms:birch_farm[plant_farms:axe_type=wooden_axe]
+/give Dev plant_farms:birch_farm[plant_farms:axe_type=[wooden_axe]]

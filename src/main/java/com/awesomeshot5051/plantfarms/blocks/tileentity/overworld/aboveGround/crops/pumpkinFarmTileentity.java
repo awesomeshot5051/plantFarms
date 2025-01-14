@@ -30,7 +30,7 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
     protected long timer;
 
     public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
-    public ItemStack hoeType;
+    public ItemStack hoeType = new ItemStack(Items.WOODEN_HOE);
     public ItemStack shears;
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;

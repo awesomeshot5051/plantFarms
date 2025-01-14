@@ -29,7 +29,7 @@ public class JungleFarmTileentity extends VillagerTileentity implements ITickabl
     protected long timer;
 
     public Map<ResourceKey<Enchantment>, Boolean> axeEnchantments = initializeAxeEnchantments();
-    public ItemStack axeType;
+    public ItemStack axeType = new ItemStack(Items.WOODEN_AXE);
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 

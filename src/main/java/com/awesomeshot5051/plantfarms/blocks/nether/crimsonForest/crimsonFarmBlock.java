@@ -58,11 +58,10 @@ public class crimsonFarmBlock extends BlockBase implements EntityBlock, IItemBlo
         if (Screen.hasShiftDown()) {
             components.add(Component.translatable("tooltip.plantfarms.crimson_farm.shift")
                     .withStyle(ChatFormatting.GRAY));
-            if (stack.has(ModDataComponents.AXE_TYPE)) {
-                ItemStack axeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.get(ModDataComponents.AXE_TYPE)).getStackInSlot(0))).copyOne();
-                components.add(Component.literal("This farm has a " + convertToReadableName(axeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
-                        .withStyle(ChatFormatting.RED));
-            }
+            ItemContainerContents defaultType = ItemContainerContents.fromItems(Collections.singletonList(new ItemStack(Items.WOODEN_AXE)));
+            ItemStack axeType = ItemContainerContents.fromItems(Collections.singletonList(Objects.requireNonNull(stack.getOrDefault(ModDataComponents.AXE_TYPE, defaultType)).copyOne())).copyOne();
+            components.add(Component.literal("This farm has a " + convertToReadableName(axeType.getItem().getDefaultInstance().getDescriptionId()) + " on it.")
+                    .withStyle(ChatFormatting.RED));
         } else {
             components.add(Component.literal("Hold §4Shift§r to see tool").withStyle(ChatFormatting.YELLOW));
             components.add(Component.translatable("tooltip.plantfarms.crimson_farm.hint")
