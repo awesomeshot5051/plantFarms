@@ -1,27 +1,31 @@
 package com.awesomeshot5051.plantfarms.data.providers.recipe.recipe;
 
-import com.awesomeshot5051.plantfarms.*;
-import com.awesomeshot5051.plantfarms.datacomponents.*;
-import com.mojang.serialization.*;
-import com.mojang.serialization.codecs.*;
-import net.minecraft.core.*;
-import net.minecraft.core.component.*;
-import net.minecraft.core.registries.*;
-import net.minecraft.network.*;
-import net.minecraft.network.codec.*;
-import net.minecraft.resources.*;
-import net.minecraft.tags.*;
-import net.minecraft.world.item.*;
-import net.minecraft.world.item.component.*;
+import com.awesomeshot5051.plantfarms.Main;
+import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.item.enchantment.*;
-import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.registries.*;
-import org.jetbrains.annotations.*;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
-import java.util.stream.*;
+import java.util.stream.Collectors;
 
 import static com.awesomeshot5051.plantfarms.blocks.ModBlocks.*;
 
@@ -94,9 +98,11 @@ public class UpgradeRecipe extends ShapedRecipe {
             ACACIA_FARM,
             AZALEA_FARM,
             MANGROVE_FARM,
-
-            // Overworld Crops
             CHERRY_FARM,
+            CRIMSON_FARM,
+            WARPED_FARM,
+            // Overworld Crops
+
             WHEAT_FARM,
             CARROT_FARM,
             GCARROT_FARM,
@@ -134,16 +140,32 @@ public class UpgradeRecipe extends ShapedRecipe {
             PAD_FARM,
             LEAF_FARM,
             KELP_FARM,
-
-            // Nether Trees
-            CRIMSON_FARM,
-            WARPED_FARM,
             WART_FARM,
+            // Nether Trees
+
 
             // Miscellaneous Farms
             FARM_BLOCK,
             TFARM_BLOCK
     );
+    public static List<DeferredHolder<Block, ?>> CROP_FARMS = List.of(WHEAT_FARM,
+            CARROT_FARM,
+            GCARROT_FARM,
+            POTATO_FARM,
+            BEETROOT_FARM,
+            PUMPKIN_FARM);
+    public static List<DeferredHolder<Block, ?>> LOG_FARMS = List.of(OAK_FARM,
+            SPRUCE_FARM,
+            BIRCH_FARM,
+            JUNGLE_FARM,
+            DARK_OAK_FARM,
+            ACACIA_FARM,
+            AZALEA_FARM,
+            MANGROVE_FARM,
+            CHERRY_FARM,
+            CRIMSON_FARM,
+            WARPED_FARM,
+            BAMBOO_FARM);
 
     @Override
     public @NotNull ItemStack assemble(CraftingInput craftingInput, HolderLookup.Provider registries) {
@@ -165,75 +187,78 @@ public class UpgradeRecipe extends ShapedRecipe {
         );
         boolean isInList = ALL_FARMS.stream()
                 .anyMatch(holder -> holder.get().asItem() == craftingInput.getItem(4).getItem());
-        if (isInList) {
-            // Check for AXE_TYPE or HOE_TYPE
-            boolean hasAxeType = craftingInput.getItem(4).has(ModDataComponents.AXE_TYPE);
-            boolean hasHoeType = craftingInput.getItem(4).has(ModDataComponents.HOE_TYPE);
-            if (hasAxeType) {
-                ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
-                List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
-                if (areAllModifiersEqual(modifer)) {
-                    List<ItemStack> itemStacks = new ArrayList<>();
-                    ItemStack axeStack;
-                    if (craftingInput.getItem(4).get(ModDataComponents.AXE_TYPE) != null) {
-                        axeStack = Objects.requireNonNull(craftingInput.getItem(4).get(ModDataComponents.AXE_TYPE)).copyOne();
-                    } else {
-                        axeStack = new ItemStack(Items.STONE_AXE);
-                    }
-                    if (isHigherAxeType(axeStack, modifer.getFirst())) {
-                        itemStacks.add(getResultItem(registries));
-                        for (Map.Entry<Ingredient, Item> entry : materialToAxeMap.entrySet()) {
-                            if (entry.getKey().test(modifer.getFirst())) {
-                                // Convert the modifier into its corresponding SWORD
-                                itemenchantments = axeStack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
-                                axeStack = new ItemStack(entry.getValue());
-                                axeStack.set(DataComponents.ENCHANTMENTS, itemenchantments);
-                                break; // Break since we found the corresponding SWORD
-                            }
-                        }
-                        // Set the pick type in the result item's data
-                        ItemContainerContents axeContents = ItemContainerContents.fromItems(Collections.singletonList(axeStack));
-                        result2 = getResultItem(registries).copy();
-                        result2.set(ModDataComponents.AXE_TYPE, axeContents);
-                        result2.set(DataComponents.STORED_ENCHANTMENTS, itemenchantments);// Copy the result item to avoid modifying the original
-                    } else {
-                        return new ItemStack(Items.AIR);
-                    }
-                }
-            } else if (hasHoeType) {
-                ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
-                List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
-                if (areAllModifiersEqual(modifer)) {
-                    List<ItemStack> itemStacks = new ArrayList<>();
-                    ItemStack hoeStack;
+        ItemStack farm = ItemStack.EMPTY;
 
-                    if (craftingInput.getItem(4).get(ModDataComponents.HOE_TYPE) != null) {
-                        hoeStack = Objects.requireNonNull(craftingInput.getItem(4).get(ModDataComponents.HOE_TYPE)).copyOne();
-                    } else {
-                        hoeStack = new ItemStack(Items.STONE_HOE);
-                    }
-                    if (isHigherHoeType(hoeStack, modifer.getFirst())) {
-                        itemStacks.add(getResultItem(registries));
-                        for (Map.Entry<Ingredient, Item> entry : materialToHoeMap.entrySet()) {
-                            if (entry.getKey().test(modifer.getFirst())) {
-                                // Convert the modifier into its corresponding SWORD
-                                itemenchantments = hoeStack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
-                                hoeStack = new ItemStack(entry.getValue());
-                                hoeStack.set(DataComponents.ENCHANTMENTS, itemenchantments);
-                                break; // Break since we found the corresponding SWORD
-                            }
+        // Check for AXE_TYPE or HOE_TYPE
+        for (ItemStack ingredient : craftingInput.items()) {
+            if (ALL_FARMS.stream()
+                    .anyMatch(holder -> holder.get().asItem() == ingredient.getItem())) {
+                farm = ingredient.getItem().getDefaultInstance();
+            }
+        }
+        ItemStack finalFarm = farm;
+        if (LOG_FARMS.stream().anyMatch(blockDeferredHolder -> blockDeferredHolder.get().asItem() == finalFarm.getItem())) {
+//            ItemContainerContents AxeType = farm.getOrDefault(ModDataComponents.AXE_TYPE, ItemContainerContents.fromItems(Collections.singletonList(new ItemStack(Items.WOODEN_AXE))));
+            ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
+            List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
+            if (areAllModifiersEqual(modifer)) {
+                List<ItemStack> itemStacks = new ArrayList<>();
+                ItemStack axeStack;
+                axeStack = farm.getOrDefault(ModDataComponents.AXE_TYPE, ItemContainerContents.fromItems(Collections.singletonList(new ItemStack(Items.WOODEN_AXE)))).copyOne();
+                if (isHigherAxeType(axeStack, modifer.getFirst())) {
+                    itemStacks.add(getResultItem(registries));
+                    for (Map.Entry<Ingredient, Item> entry : materialToAxeMap.entrySet()) {
+                        if (entry.getKey().test(modifer.getFirst())) {
+                            // Convert the modifier into its corresponding SWORD
+                            itemenchantments = axeStack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+                            axeStack = new ItemStack(entry.getValue());
+                            axeStack.set(DataComponents.ENCHANTMENTS, itemenchantments);
+                            break; // Break since we found the corresponding SWORD
                         }
-                        // Set the pick type in the result item's data
-                        ItemContainerContents hoeContents = ItemContainerContents.fromItems(Collections.singletonList(hoeStack));
-                        result2 = getResultItem(registries).copy();
-                        result2.set(ModDataComponents.HOE_TYPE, hoeContents);
-                        result2.set(DataComponents.STORED_ENCHANTMENTS, itemenchantments);// Copy the result item to avoid modifying the original
-                    } else {
-                        return new ItemStack(Items.AIR);
                     }
+                    // Set the pick type in the result item's data
+                    ItemContainerContents axeContents = ItemContainerContents.fromItems(Collections.singletonList(axeStack));
+                    result2 = getResultItem(registries).copy();
+                    result2.set(ModDataComponents.AXE_TYPE, axeContents);
+                    result2.set(DataComponents.STORED_ENCHANTMENTS, itemenchantments);// Copy the result item to avoid modifying the original
+                } else {
+                    return new ItemStack(Items.AIR);
+                }
+            }
+        } else if (CROP_FARMS.stream().anyMatch(blockDeferredHolder -> blockDeferredHolder.get().asItem() == finalFarm.getItem())) {
+            ItemEnchantments itemenchantments = ItemEnchantments.EMPTY;
+            List<ItemStack> modifer = new ArrayList<>(List.of(craftingInput.getItem(1), craftingInput.getItem(3), craftingInput.getItem(5), craftingInput.getItem(7)));
+            if (areAllModifiersEqual(modifer)) {
+                List<ItemStack> itemStacks = new ArrayList<>();
+                ItemStack hoeStack;
+
+                if (craftingInput.getItem(4).get(ModDataComponents.HOE_TYPE) != null) {
+                    hoeStack = Objects.requireNonNull(craftingInput.getItem(4).get(ModDataComponents.HOE_TYPE)).copyOne();
+                } else {
+                    hoeStack = new ItemStack(Items.STONE_HOE);
+                }
+                if (isHigherHoeType(hoeStack, modifer.getFirst())) {
+                    itemStacks.add(getResultItem(registries));
+                    for (Map.Entry<Ingredient, Item> entry : materialToHoeMap.entrySet()) {
+                        if (entry.getKey().test(modifer.getFirst())) {
+                            // Convert the modifier into its corresponding SWORD
+                            itemenchantments = hoeStack.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+                            hoeStack = new ItemStack(entry.getValue());
+                            hoeStack.set(DataComponents.ENCHANTMENTS, itemenchantments);
+                            break; // Break since we found the corresponding SWORD
+                        }
+                    }
+                    // Set the pick type in the result item's data
+                    ItemContainerContents hoeContents = ItemContainerContents.fromItems(Collections.singletonList(hoeStack));
+                    result2 = getResultItem(registries).copy();
+                    result2.set(ModDataComponents.HOE_TYPE, hoeContents);
+                    result2.set(DataComponents.STORED_ENCHANTMENTS, itemenchantments);// Copy the result item to avoid modifying the original
+                } else {
+                    return new ItemStack(Items.AIR);
                 }
             }
         }
+
 
         super.assemble(craftingInput, registries);
         return result2;

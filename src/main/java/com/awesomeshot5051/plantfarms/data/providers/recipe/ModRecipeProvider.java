@@ -2,22 +2,25 @@ package com.awesomeshot5051.plantfarms.data.providers.recipe;
 
 import com.awesomeshot5051.plantfarms.Main;
 import com.awesomeshot5051.plantfarms.data.providers.recipe.recipe.*;
-import com.awesomeshot5051.plantfarms.items.*;
-import net.minecraft.core.*;
-import net.minecraft.data.*;
-import net.minecraft.data.recipes.*;
-import net.minecraft.resources.*;
-import net.minecraft.tags.*;
-import net.minecraft.world.item.*;
-import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.common.*;
-import net.neoforged.neoforge.common.conditions.*;
-import net.neoforged.neoforge.registries.*;
-import org.jetbrains.annotations.*;
+import com.awesomeshot5051.plantfarms.items.ModItems;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import static com.awesomeshot5051.plantfarms.blocks.ModBlocks.*;
 
@@ -434,7 +437,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#B#")
                 .pattern("#C#")
                 .define('#', Tags.Items.GLASS_PANES)
-                .define('B', Items.BONE_MEAL)
+                .define('B', ItemTags.HOES)
                 .define('C', Items.PUMPKIN)
                 .unlockedBy("has_pumpkin", has(Items.PUMPKIN))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(PUMPKIN_FARM.get().getDescriptionId() + "_recipe")));
@@ -444,7 +447,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#B#")
                 .pattern("#C#")
                 .define('#', Tags.Items.GLASS_PANES)
-                .define('B', Items.BONE_MEAL)
+                .define('B', ItemTags.HOES)
                 .define('C', Items.MELON)
                 .unlockedBy("has_melon", has(Items.MELON))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(MELON_FARM.get().getDescriptionId() + "_recipe")));
@@ -474,7 +477,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("#B#")
                 .pattern("#C#")
                 .define('#', Tags.Items.GLASS_PANES)
-                .define('B', Items.BONE_MEAL)
+                .define('B', ItemTags.HOES)
                 .define('C', Items.SWEET_BERRIES)
                 .unlockedBy("has_sweet_berries", has(Items.SWEET_BERRIES))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(BERRY_FARM.get().getDescriptionId() + "_recipe")));
