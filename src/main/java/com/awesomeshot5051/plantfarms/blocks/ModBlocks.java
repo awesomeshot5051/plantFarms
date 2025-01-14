@@ -1,24 +1,19 @@
 package com.awesomeshot5051.plantfarms.blocks;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.blocks.nether.crimsonForest.crimsonFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.nether.other.netherWartFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.nether.warpedForest.warpedFarmBlock;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.blocks.nether.crimsonForest.*;
+import com.awesomeshot5051.plantfarms.blocks.nether.other.*;
+import com.awesomeshot5051.plantfarms.blocks.nether.warpedForest.*;
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.Trees.*;
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.crops.*;
 import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.mushroomFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.vineFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.overworld.underwater.cgrassFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.overworld.underwater.kelpFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.overworld.underwater.leafFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.overworld.underwater.padFarmBlock;
-import com.awesomeshot5051.plantfarms.blocks.theend.chorusFarmBlock;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.awesomeshot5051.plantfarms.blocks.overworld.aboveGround.miscellaneous.*;
+import com.awesomeshot5051.plantfarms.blocks.overworld.underwater.*;
+import com.awesomeshot5051.plantfarms.blocks.theend.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.bus.api.*;
+import net.neoforged.neoforge.registries.*;
 
 public class ModBlocks {
 
@@ -29,7 +24,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(Main.MODID);
     //    private static final DeferredRegister.Blocks BLOCK_REGISTER = DeferredRegister.createBlocks(Main.MODID);
 //     End Plants
-    private static final DeferredRegister<Block> BLOCK_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK, Main.MODID);
+    public static final DeferredRegister<Block> BLOCK_REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK, Main.MODID);
     public static final DeferredHolder<Block, chorusFarmBlock> CHORUS_FARM = BLOCK_REGISTER.register("chorus_farm", chorusFarmBlock::new);
     /// Overworld
 
