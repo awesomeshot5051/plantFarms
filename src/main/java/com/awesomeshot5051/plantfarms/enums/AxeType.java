@@ -1,11 +1,10 @@
 package com.awesomeshot5051.plantfarms.enums;
 
-import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.util.*;
+import net.minecraft.world.item.*;
+import org.jetbrains.annotations.*;
 
-import java.util.List;
+import java.util.*;
 
 public enum AxeType implements StringRepresentable {
     WOODEN,
@@ -24,6 +23,16 @@ public enum AxeType implements StringRepresentable {
         if (item == Items.DIAMOND_AXE) return DIAMOND;
         if (item == Items.NETHERITE_AXE) return NETHERITE;
         return WOODEN;  // Default
+    }
+
+    public static int getRank(Item item) {
+        if (fromItem(item).equals(WOODEN)) return 0;
+        if (fromItem(item).equals(STONE)) return 1;
+        if (fromItem(item).equals(IRON)) return 2;
+        if (fromItem(item).equals(GOLDEN)) return 3;
+        if (fromItem(item).equals(DIAMOND)) return 4;
+        if (fromItem(item).equals(NETHERITE)) return 5;
+        return 0;
     }
 
     @Override

@@ -1,31 +1,28 @@
 package com.awesomeshot5051.plantfarms.data.providers.recipe.recipe;
 
-import com.awesomeshot5051.plantfarms.Main;
-import com.awesomeshot5051.plantfarms.datacomponents.ModDataComponents;
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.ItemContainerContents;
+import com.awesomeshot5051.plantfarms.*;
+import com.awesomeshot5051.plantfarms.datacomponents.*;
+import com.awesomeshot5051.plantfarms.enums.*;
+import com.mojang.serialization.*;
+import com.mojang.serialization.codecs.*;
+import net.minecraft.core.*;
+import net.minecraft.core.component.*;
+import net.minecraft.core.registries.*;
+import net.minecraft.network.*;
+import net.minecraft.network.codec.*;
+import net.minecraft.resources.*;
+import net.minecraft.tags.*;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.*;
 import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.item.enchantment.ItemEnchantments;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.item.enchantment.*;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.block.*;
+import net.neoforged.neoforge.registries.*;
+import org.jetbrains.annotations.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 import static com.awesomeshot5051.plantfarms.blocks.ModBlocks.*;
 
@@ -265,13 +262,6 @@ public class UpgradeRecipe extends ShapedRecipe {
     }
 
     private boolean isHigherAxeType(ItemStack baseAxeType, ItemStack modifierAxeType) {
-        // Define PickType levels in ascending order of strength
-        List<Item> axeTypeHierarchy = new ArrayList<>(List.of(
-                Items.WOODEN_AXE, Items.GOLDEN_AXE, Items.STONE_AXE, Items.IRON_AXE,
-                Items.DIAMOND_AXE, Items.NETHERITE_AXE
-        ));
-
-        // Map each SWORD type to its corresponding material
         Map<Item, Ingredient> AxeToMaterialMap = Map.of(
                 Items.WOODEN_AXE, Ingredient.of(Items.OAK_PLANKS, Items.SPRUCE_PLANKS, Items.BIRCH_PLANKS,
                         Items.JUNGLE_PLANKS, Items.ACACIA_PLANKS, Items.DARK_OAK_PLANKS,
@@ -283,44 +273,18 @@ public class UpgradeRecipe extends ShapedRecipe {
                 Items.NETHERITE_AXE, Ingredient.of(Items.NETHERITE_INGOT)
         );
 
-        // Convert baseAxeType and modifierAxeType to their corresponding materials
-        Item baseAxeItem = baseAxeType.getItem();
-        Item modifierAxeItem = modifierAxeType.getItem();
-
-        Item baseMaterialType = null;
         Item modifierMaterialType = null;
 
-        // Find the materials corresponding to the SWORD items
         for (Map.Entry<Item, Ingredient> entry : AxeToMaterialMap.entrySet()) {
-            if (entry.getKey().equals(baseAxeType.getItem())) {
-                baseMaterialType = entry.getKey();
-            }
             if (entry.getValue().test(modifierAxeType)) {
                 modifierMaterialType = entry.getKey();
             }
         }
-
-        // Ensure both types were mapped to a valid SWORD
-        if (baseMaterialType == null || modifierMaterialType == null) {
-            return false; // Invalid types, cannot compare
-        }
-
-        // Compare indices in the hierarchy
-        int baseIndex = axeTypeHierarchy.indexOf(baseMaterialType);
-        int modifierIndex = axeTypeHierarchy.indexOf(modifierMaterialType);
-
-        // Return true if the modifier type is higher in the hierarchy
-        return modifierIndex > baseIndex;
+        return AxeType.getRank(modifierMaterialType) > AxeType.getRank(baseAxeType.getItem());
     }
 
-    private boolean isHigherHoeType(ItemStack baseHoeType, ItemStack modifierHoeType) {
-        // Define PickType levels in ascending order of strength
-        List<Item> hoeTypeHierarchy = new ArrayList<>(List.of(
-                Items.WOODEN_HOE, Items.GOLDEN_HOE, Items.STONE_HOE, Items.IRON_HOE,
-                Items.DIAMOND_HOE, Items.NETHERITE_HOE
-        ));
 
-        // Map each SWORD type to its corresponding material
+    private boolean isHigherHoeType(ItemStack baseHoeType, ItemStack modifierHoeType) {
         Map<Item, Ingredient> HoeToMaterialMap = Map.of(
                 Items.WOODEN_HOE, Ingredient.of(Items.OAK_PLANKS, Items.SPRUCE_PLANKS, Items.BIRCH_PLANKS,
                         Items.JUNGLE_PLANKS, Items.ACACIA_PLANKS, Items.DARK_OAK_PLANKS,
@@ -332,34 +296,15 @@ public class UpgradeRecipe extends ShapedRecipe {
                 Items.NETHERITE_HOE, Ingredient.of(Items.NETHERITE_INGOT)
         );
 
-        // Convert baseHoeType and modifierHoeType to their corresponding materials
-        Item baseHoeItem = baseHoeType.getItem();
-        Item modifierHoeItem = modifierHoeType.getItem();
-
-        Item baseMaterialType = null;
         Item modifierMaterialType = null;
 
-        // Find the materials corresponding to the SWORD items
         for (Map.Entry<Item, Ingredient> entry : HoeToMaterialMap.entrySet()) {
-            if (entry.getKey().equals(baseHoeType.getItem())) {
-                baseMaterialType = entry.getKey();
-            }
             if (entry.getValue().test(modifierHoeType)) {
                 modifierMaterialType = entry.getKey();
             }
         }
 
-        // Ensure both types were mapped to a valid SWORD
-        if (baseMaterialType == null || modifierMaterialType == null) {
-            return false; // Invalid types, cannot compare
-        }
-
-        // Compare indices in the hierarchy
-        int baseIndex = hoeTypeHierarchy.indexOf(baseMaterialType);
-        int modifierIndex = hoeTypeHierarchy.indexOf(modifierMaterialType);
-
-        // Return true if the modifier type is higher in the hierarchy
-        return modifierIndex > baseIndex;
+        return HoeType.getRank(modifierMaterialType) > HoeType.getRank(baseHoeType.getItem());
     }
 
 
