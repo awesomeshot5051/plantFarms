@@ -4,12 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MCreatorWorkspaces.plantFarms.PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MCreatorWorkspaces.plantFarms.PlantFarms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MobFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MobFarms.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/realapi/PlantFarms.realapi.main.iml" filepath="$PROJECT_DIR$/.idea/modules/realapi/PlantFarms.realapi.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.mobfarms.PlantFarms.main~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.plantFarms.PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.plantFarms.PlantFarms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/plantFarms.PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plantFarms.PlantFarms.main.iml" />
     </modules>
   </component>
