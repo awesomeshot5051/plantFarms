@@ -2,6 +2,7 @@ package com.awesomeshot5051.plantfarms.integration.waila;
 
 import com.awesomeshot5051.plantfarms.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
 import net.minecraft.*;
 import net.minecraft.core.component.*;
 import net.minecraft.nbt.*;
@@ -28,6 +29,11 @@ public class HUDHandlerVillager implements IBlockComponentProvider {
         if (blockAccessor.getBlockEntity() instanceof VillagerTileentity blockEntity) {
             ItemStack axeType = blockEntity.getAxeType();
             ItemStack hoeType = blockEntity.getHoeType();
+            if (blockEntity instanceof pumpkinFarmTileentity farm) {
+                ItemStack shears = farm.getShears();
+                if (shears != ItemStack.EMPTY)
+                    iTooltip.add(Component.translatable(convertToReadableName(shears.getDescriptionId()) + " is enabled").withStyle(ChatFormatting.RED));
+            }
             if (hoeType != ItemStack.EMPTY || axeType != ItemStack.EMPTY) {
                 iTooltip.add(Component.translatable(convertToReadableName(axeOrHoe(axeType, hoeType).getDescriptionId())).withStyle(ChatFormatting.RED));
             }

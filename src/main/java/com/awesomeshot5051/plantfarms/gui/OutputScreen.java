@@ -8,7 +8,7 @@ import net.minecraft.resources.*;
 import net.minecraft.world.entity.player.*;
 
 public class OutputScreen extends ScreenBase<OutputContainer> {
-    public static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(Main.MODID, "assets/plant_farms/textures/gui/container/output.png");
+    public static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(Main.MODID, "textures/gui/container/output.png");
     private final Inventory playerInventory;
 
     public OutputScreen(OutputContainer container, Inventory playerInventory, Component name) {

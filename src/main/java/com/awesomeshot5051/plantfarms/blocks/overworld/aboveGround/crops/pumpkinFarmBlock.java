@@ -108,9 +108,11 @@ public class pumpkinFarmBlock extends BlockBase implements EntityBlock, IItemBlo
                 farmTileEntity.setChanged();
                 updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, hoeType.getStackInSlot(0));
             }
-            farmTileEntity.shears = shears.getStackInSlot(0);
-            farmTileEntity.setChanged();
-            updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, shears.getStackInSlot(0));
+            if (!shears.stream().toList().isEmpty()) {
+                farmTileEntity.shears = shears.getStackInSlot(0);
+                farmTileEntity.setChanged();
+                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, shears.getStackInSlot(0));
+            }
             level.sendBlockUpdated(pos, state, state, 3);
         }
     }

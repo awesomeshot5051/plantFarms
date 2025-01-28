@@ -2,6 +2,7 @@ package com.awesomeshot5051.plantfarms.integration.theoneprobe;
 
 import com.awesomeshot5051.plantfarms.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
+import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
 import mcjty.theoneprobe.api.*;
 import net.minecraft.resources.*;
 import net.minecraft.world.entity.player.*;
@@ -34,6 +35,14 @@ public class TileInfoProvider implements IProbeInfoProvider {
             IProbeInfo info = iProbeInfo.horizontal(iProbeInfo.defaultLayoutStyle().alignment(ElementAlignment.ALIGN_CENTER));
             ItemStack axeType = villager.getAxeType();
             ItemStack hoeType = villager.getHoeType();
+            if (villager instanceof pumpkinFarmTileentity farm) {
+                ItemStack shears = farm.getShears();
+                if (shears != ItemStack.EMPTY) {
+                    info.item(shears).text(convertToReadableName(shears.getDescriptionId()) + " is enabled");
+                } else {
+                    info.text("Shears is disabled on this farm");
+                }
+            }
             info.item(axeOrHoe(axeType, hoeType)).text(convertToReadableName(axeOrHoe(axeType, hoeType).getDescriptionId()));
         }
     }

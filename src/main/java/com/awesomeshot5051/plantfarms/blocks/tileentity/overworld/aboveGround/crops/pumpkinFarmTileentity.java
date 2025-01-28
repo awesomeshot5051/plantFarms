@@ -17,6 +17,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.*;
 import net.minecraft.world.level.block.state.*;
 import net.neoforged.neoforge.items.*;
+import org.checkerframework.checker.nullness.qual.*;
 
 import java.util.*;
 
@@ -53,6 +54,11 @@ public class pumpkinFarmTileentity extends VillagerTileentity implements ITickab
             baseValue = 10;
         }
         return getPumpkinSpawnTime(farm) + (hoe.equals(HoeType.NETHERITE) ? (baseValue * 3.2) : hoe.equals(HoeType.DIAMOND) ? (baseValue * 5.6) : hoe.equals(HoeType.IRON) ? (baseValue * 4.8) : hoe.equals(HoeType.STONE) ? (baseValue * 6.4) : hoe.equals(HoeType.WOODEN) ? (baseValue * 6.4) : 6.4);
+    }
+
+    @NonNull
+    public ItemStack getShears() {
+        return (shears == null) ? ItemStack.EMPTY : shears;
     }
 
     public long getTimer() {

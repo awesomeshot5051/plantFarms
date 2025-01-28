@@ -99,11 +99,11 @@ public class crimsonFarmBlock extends BlockBase implements EntityBlock, IItemBlo
         super.setPlacedBy(level, pos, state, placer, stack);
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof crimsonFarmTileentity farmTileEntity) {
-            ItemContainerContents hoeType = stack.get(ModDataComponents.HOE_TYPE);
-            if (hoeType != null) {
-                farmTileEntity.axeType = hoeType.getStackInSlot(0);
+            ItemContainerContents axeType = stack.get(ModDataComponents.AXE_TYPE);
+            if (axeType != null) {
+                farmTileEntity.axeType = axeType.getStackInSlot(0);
                 farmTileEntity.setChanged();
-                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, hoeType.getStackInSlot(0));
+                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, axeType.getStackInSlot(0));
                 level.sendBlockUpdated(pos, state, state, 3);
             }
         }
