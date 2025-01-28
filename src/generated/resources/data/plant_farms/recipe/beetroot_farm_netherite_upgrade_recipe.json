@@ -1,0 +1,21 @@
+{
+  "type": "plant_farms:upgrade_serializer",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "plant_farms:beetroot_farm"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    " N ",
+    "NFN",
+    " N "
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:beetroot_farm"
+  }
+}

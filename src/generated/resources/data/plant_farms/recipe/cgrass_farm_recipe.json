@@ -1,0 +1,24 @@
+{
+  "type": "plant_farms:shaped_serializer",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "c:glass_panes"
+    },
+    "C": {
+      "item": "minecraft:seagrass"
+    },
+    "W": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "###",
+    "#W#",
+    "#C#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:cgrass_farm"
+  }
+}

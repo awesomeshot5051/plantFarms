@@ -1,0 +1,16 @@
+{
+  "type": "plant_farms:tfarm_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "tag": "minecraft:hoes"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:tfarm_block"
+  }
+}

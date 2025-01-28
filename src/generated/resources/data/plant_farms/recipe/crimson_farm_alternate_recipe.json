@@ -1,0 +1,19 @@
+{
+  "type": "plant_farms:shapeless_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    },
+    {
+      "tag": "minecraft:axes"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:crimson_farm"
+  }
+}

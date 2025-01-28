@@ -1,0 +1,16 @@
+{
+  "type": "plant_farms:enchanting_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:enchanted_book"
+    },
+    {
+      "item": "plant_farms:farm_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:farm_block"
+  }
+}

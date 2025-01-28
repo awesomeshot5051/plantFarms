@@ -1,0 +1,21 @@
+{
+  "type": "plant_farms:upgrade_serializer",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "plant_farms:potato_farm"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GFG",
+    "GGG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:potato_farm"
+  }
+}
