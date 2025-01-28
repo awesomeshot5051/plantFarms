@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.*;
 import net.minecraft.world.inventory.*;
 
 public abstract class InputOutputScreen<T extends AbstractContainerMenu> extends ScreenBase<T> {
-    public static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(Main.MODID, "textures/gui/container/input_output.png");
+    public static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath(Main.MODID, "assets/plant_farms/textures/gui/container/input_output.png");
     private final Inventory playerInventory;
 
     public InputOutputScreen(T container, Inventory playerInventory, Component name) {
