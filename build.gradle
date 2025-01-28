@@ -1,3 +1,5 @@
+import jdk.internal.org.jline.utils.ShutdownHooks
+
 plugins {
     id 'java-library'
     id 'maven-publish'
@@ -138,7 +140,7 @@ tasks.register("generateModMetadata", ProcessResources) {
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
-neoForge.ideSyncTask generateModMetadata as Task
+neoForge.ideSyncTask generateModMetadata as ShutdownHooks.Task
 
 publishing {
     publications {
