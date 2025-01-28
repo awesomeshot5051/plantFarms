@@ -38,6 +38,7 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
         outputItemHandler = new OutputItemHandler(inventory);
     }
 
+
     public static double getCrimsonSpawnTime(crimsonFarmTileentity farm) {
         AxeType axe = AxeType.fromItem(farm.getAxeType().getItem());
         return (double) Main.SERVER_CONFIG.acaciaSpawnTime.get() / (axe.equals(AxeType.NETHERITE) ? 30 : axe.equals(AxeType.DIAMOND) ? 25 : axe.equals(AxeType.GOLDEN) ? 20 : axe.equals(AxeType.IRON) ? 15 : axe.equals(AxeType.STONE) ? 10 : 1);
@@ -140,6 +141,7 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
         compound.putLong("Timer", timer);
     }
 
+
     @Override
     protected void loadAdditional(CompoundTag compound, HolderLookup.Provider provider) {
         ContainerHelper.loadAllItems(compound, inventory, provider);
@@ -158,5 +160,15 @@ public class crimsonFarmTileentity extends VillagerTileentity implements ITickab
 
     public IItemHandler getItemHandler() {
         return outputItemHandler;
+    }
+
+    @Override
+    public ItemStack getAxeType() {
+        return axeType;
+    }
+
+    @Override
+    protected Map<ResourceKey<Enchantment>, Boolean> getAxeEnchantments() {
+        return axeEnchantments;
     }
 }
