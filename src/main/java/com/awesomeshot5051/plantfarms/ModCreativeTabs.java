@@ -11,7 +11,6 @@ import net.neoforged.neoforge.registries.*;
 public class ModCreativeTabs {
     private static final DeferredRegister<CreativeModeTab> TAB_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Main.MODID);
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_PLANT_FARMS = TAB_REGISTER.register("plant_farms", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OAK_FARM.get())).displayItems((features, output) -> {
-        output.accept(new ItemStack(ModBlocks.INVENTORY_VIEWER.get()));
         output.accept(new ItemStack(ModBlocks.CHORUS_FARM.get()));
         output.accept(new ItemStack(ModBlocks.OAK_FARM.get()));
         output.accept(new ItemStack(ModBlocks.SPRUCE_FARM.get()));
@@ -60,6 +59,8 @@ public class ModCreativeTabs {
         output.accept(new ItemStack(ModBlocks.WART_FARM.get()));
         output.accept(new ItemStack(ModBlocks.FARM_BLOCK.get()));
         output.accept(new ItemStack(ModBlocks.TFARM_BLOCK.get()));
+//        output.accept(new ItemStack(ModItems.SPEED_UPGRADE.get()));
+//        output.accept(new ItemStack(ModItems.NETHER_UPGRADE.get()));
     }).title(Component.translatable("itemGroup.plant_farms")).build());
 
     public static void init(IEventBus eventBus) {

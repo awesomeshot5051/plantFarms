@@ -11,11 +11,9 @@ import com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers
 import net.minecraft.core.*;
 import net.minecraft.network.chat.*;
 import net.minecraft.world.*;
-import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.*;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.component.*;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.*;
@@ -26,8 +24,6 @@ import net.neoforged.api.distmarker.*;
 
 import javax.annotation.*;
 import java.util.*;
-
-import static net.minecraft.world.item.BlockItem.*;
 
 public class lilyFarmBlock extends BlockBase implements EntityBlock, IItemBlock {
     public lilyFarmBlock() {
@@ -76,21 +72,6 @@ public class lilyFarmBlock extends BlockBase implements EntityBlock, IItemBlock 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level1, BlockState state, BlockEntityType<T> type) {
         return new SimpleBlockEntityTicker<>();
-    }
-
-    @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
-        super.setPlacedBy(level, pos, state, placer, stack);
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        if (blockEntity instanceof lilyFarmTileentity farmTileEntity) {
-            ItemContainerContents hoeType = stack.get(ModDataComponents.HOE_TYPE);
-            if (hoeType != null) {
-                farmTileEntity.hoeType = hoeType.getStackInSlot(0);
-                farmTileEntity.setChanged();
-                updateCustomBlockEntityTag(level, placer instanceof Player ? (Player) placer : null, pos, hoeType.getStackInSlot(0));
-                level.sendBlockUpdated(pos, state, state, 3);
-            }
-        }
     }
 
     @Nullable

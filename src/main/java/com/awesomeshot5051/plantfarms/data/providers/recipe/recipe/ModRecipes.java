@@ -22,7 +22,8 @@ public class ModRecipes {
     public static final Supplier<RecipeType<CustomShapelessBlockRecipe>> SHAPELESS_FARM_RECIPE = RECIPE_TYPES.register("shapeless_farm_recipe", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(Main.MODID, "shapeless_farm_recipe")));
     public static final Supplier<RecipeType<UpgradeRecipe>> UPGRADE_RECIPE = RECIPE_TYPES.register("upgrade_recipe", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(Main.MODID, "upgrade_recipe")));
     public static final Supplier<RecipeType<EnchantmentAdditionRecipe>> ENCHANTING_RECIPE = RECIPE_TYPES.register("enchanting_recipe", () -> RecipeType.simple(ResourceLocation.fromNamespaceAndPath(Main.MODID, "enchanting_recipe")));
-
+    public static final Supplier<RecipeSerializer<CardUpgradeRecipe>> CARD_UPGRADE_SERIALIZER =
+            RECIPE_SERIALIZERS.register("card_upgrade_serializer", CardUpgradeRecipe.Serializer::new);
     public static void registerRecipes(IEventBus eventBus) {
         RECIPE_SERIALIZERS.register(eventBus);
     }

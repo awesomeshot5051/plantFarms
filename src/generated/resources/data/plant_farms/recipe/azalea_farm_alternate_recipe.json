@@ -10,6 +10,9 @@
     },
     {
       "item": "plant_farms:farm_block"
+    },
+    {
+      "tag": "minecraft:axes"
     }
   ],
   "result": {

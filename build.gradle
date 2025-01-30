@@ -2,6 +2,12 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.76'
+    id 'com.gradleup.shadow' version '9.0.0-beta6'
+}
+shadowJar {
+    configurations = [project.configurations.shadow]
+    archiveClassifier = ''
+    relocate 'com.awesomeshot5051.corelib', "com.awesomeshot5051.plantfarms.corelib"
 }
 version = mod_version
 group = mod_group_id
@@ -111,10 +117,8 @@ dependencies {
     implementation "curse.maven:jade-324717:${jade_id}"
     localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
-    compileOnly "com.awesomeshot5051.corelib:corelib:1.21-2.1.5"
-    implementation("com.awesomeshot5051.corelib:corelib:1.21-2.1.5") {
-        exclude group: 'com.github.jitpack', module: 'gradle-simple'
-    }
+    runtimeOnly "com.awesomeshot5051.corelib:corelib:1.21-2.1.5"
+    shadow("com.awesomeshot5051.corelib:corelib:1.21-2.1.5")
 }
 
 tasks.register("generateModMetadata", ProcessResources) {

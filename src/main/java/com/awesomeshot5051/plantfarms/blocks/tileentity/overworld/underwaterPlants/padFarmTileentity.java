@@ -7,23 +7,18 @@ import com.awesomeshot5051.plantfarms.blocks.*;
 import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
 import net.minecraft.core.*;
 import net.minecraft.nbt.*;
-import net.minecraft.resources.*;
 import net.minecraft.server.level.*;
 import net.minecraft.world.*;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.enchantment.*;
 import net.minecraft.world.level.block.state.*;
 import net.neoforged.neoforge.items.*;
 
 import java.util.*;
 
-import static com.awesomeshot5051.plantfarms.datacomponents.HoeEnchantments.*;
-
 public class padFarmTileentity extends VillagerTileentity implements ITickableBlockEntity {
     protected NonNullList<ItemStack> inventory;
     protected long timer;
-    public Map<ResourceKey<Enchantment>, Boolean> hoeEnchantments = initializeHoeEnchantments();
-    public ItemStack hoeType = new ItemStack(Items.WOODEN_HOE);
+
     protected ItemStackHandler itemHandler;
     protected OutputItemHandler outputItemHandler;
 

@@ -61,6 +61,13 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> CGRASS_FARM = ITEM_REGISTER.register("cgrass_farm", () -> ModBlocks.CGRASS_FARM.get().toItem());
     public static final DeferredHolder<Item, Item> KELP_FARM = ITEM_REGISTER.register("kelp_farm", () -> ModBlocks.KELP_FARM.get().toItem());
     public static final DeferredHolder<Item, Item> ICON_ITEM = ITEM_REGISTER.register("icon_item", () -> new IconItem(new Item.Properties()));
+
+
+    public static final DeferredItem<Item> SPEED_UPGRADE = ITEM_REGISTER.register("speed_upgrade",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NETHER_UPGRADE = ITEM_REGISTER.register("nether_upgrade",
+            () -> new Item(new Item.Properties()));
+
     private static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPE_REGISTER = DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, Main.MODID);
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<VillagerData>> VILLAGER_DATA_COMPONENT = DATA_COMPONENT_TYPE_REGISTER.register("villager", () -> DataComponentType.<VillagerData>builder().persistent(VillagerData.CODEC).networkSynchronized(VillagerData.STREAM_CODEC).build());
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<VillagerBlockEntityData>> BLOCK_ENTITY_DATA_COMPONENT = DATA_COMPONENT_TYPE_REGISTER.register("block_entity", () -> DataComponentType.<VillagerBlockEntityData>builder().networkSynchronized(VillagerBlockEntityData.STREAM_CODEC).build());

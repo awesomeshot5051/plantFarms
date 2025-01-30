@@ -22,7 +22,59 @@ import java.util.concurrent.*;
 import static com.awesomeshot5051.plantfarms.blocks.ModBlocks.*;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public static final List<DeferredHolder<Block, ?>> ALL_FARMS = List.of(CHORUS_FARM, OAK_FARM, SPRUCE_FARM, BIRCH_FARM, JUNGLE_FARM, DARK_OAK_FARM, ACACIA_FARM, AZALEA_FARM, MANGROVE_FARM, CHERRY_FARM, WHEAT_FARM, CARROT_FARM, GCARROT_FARM, POTATO_FARM, BEETROOT_FARM, PUMPKIN_FARM, MELON_FARM, SUGAR_FARM, COCO_FARM, BERRY_FARM, BAMBOO_FARM, DANDELION_FARM, POPPY_FARM, ORCHID_FARM, ALLIUM_FARM, AZURE_FARM, RED_FARM, ORANGE_FARM, WHITE_FARM, PINK_FARM, DAISY_FARM, CORNFLOWER_FARM, LILY_FARM, SUNFLOWER_FARM, LILAC_FARM, ROSE_FARM, PEONY_FARM, VINE_FARM, MUSHROOM_FARM, CGRASS_FARM, PAD_FARM, LEAF_FARM, KELP_FARM, CRIMSON_FARM, WARPED_FARM, WART_FARM, FARM_BLOCK, TFARM_BLOCK);
+    public static final List<DeferredHolder<Block, ?>> FARMS_WITHOUT_TOOLS = List.of(
+            CGRASS_FARM,
+            KELP_FARM,
+            LEAF_FARM,
+            PAD_FARM,
+            DANDELION_FARM,
+            POPPY_FARM,
+            ORCHID_FARM,
+            ALLIUM_FARM,
+            AZURE_FARM,
+            RED_FARM,
+            ORANGE_FARM,
+            WHITE_FARM,
+            PINK_FARM,
+            DAISY_FARM,
+            CORNFLOWER_FARM,
+            LILY_FARM,
+            SUNFLOWER_FARM,
+            LILAC_FARM,
+            ROSE_FARM,
+            PEONY_FARM,
+            SUGAR_FARM,
+            COCO_FARM,
+            CRIMSON_FARM,
+            WARPED_FARM,
+            CHORUS_FARM,
+            MUSHROOM_FARM,
+            VINE_FARM,
+            GCARROT_FARM
+    );
+    public static final List<DeferredHolder<Block, ?>> NETHER_FARMS = List.of(CRIMSON_FARM, WART_FARM, WARPED_FARM);
+    public static final List<DeferredHolder<Block, ?>> ALL_FARMS = List.of(
+            OAK_FARM,
+            SPRUCE_FARM,
+            BIRCH_FARM,
+            JUNGLE_FARM,
+            DARK_OAK_FARM,
+            ACACIA_FARM,
+            AZALEA_FARM,
+            MANGROVE_FARM,
+            CHERRY_FARM,
+            WHEAT_FARM,
+            CARROT_FARM,
+            GCARROT_FARM,
+            POTATO_FARM,
+            BEETROOT_FARM,
+            PUMPKIN_FARM,
+            MELON_FARM,
+            COCO_FARM,
+            BERRY_FARM,
+            BAMBOO_FARM
+    );
+
 
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
@@ -463,6 +515,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.AZALEA)
                 .requires(Items.WATER_BUCKET)
                 .requires(ModItems.FARM_BLOCK.get())
+                .requires(ItemTags.AXES)
                 .unlockedBy("has_azalea", has(Items.AZALEA))
                 .save((recipeOutput), ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(AZALEA_FARM.get().getDescriptionId() + "_alternate_recipe")));
         CustomShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, BERRY_FARM.get())
@@ -678,9 +731,59 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy("has_farm", has(farmBlock.asItem()))
                     .save((recipeOutput), ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(farmBlock.getDescriptionId() + "_enchantment_removal_recipe")));
         });
+        FARMS_WITHOUT_TOOLS.forEach(farmBlockSupplier -> {
+            Block farmBlock = farmBlockSupplier.get();
+            CardUpgradeRecipeBuilder.shapeless(RecipeCategory.MISC, farmBlock)
+                    .requires(farmBlock)
+                    .requires(ModItems.SPEED_UPGRADE)
+                    .requires(Items.SUGAR)
+                    .requires(Items.REDSTONE)
+                    .requires(Items.BLAZE_POWDER)
+                    .unlockedBy("has_speed_upgrade", has(ModItems.SPEED_UPGRADE))
+                    .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(farmBlock.getDescriptionId() + "_speed_upgrade_recipe")));
+        });
+        NETHER_FARMS.forEach(farmBlockSupplier -> {
+            Block farmBlock = farmBlockSupplier.get();
+            CardUpgradeRecipeBuilder.shapeless(RecipeCategory.MISC, farmBlock)
+                    .requires(farmBlock)
+                    .requires(ModItems.NETHER_UPGRADE)
+                    .requires(Items.GHAST_TEAR)
+                    .requires(Items.NETHERRACK)
+                    .requires(Items.BLAZE_POWDER)
+                    .unlockedBy("has_speed_upgrade", has(ModItems.SPEED_UPGRADE))
+                    .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToRegistryName(farmBlock.getDescriptionId() + "_nether_upgrade_recipe")));
+        });
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEED_UPGRADE)
+                .pattern("RRR")
+                .pattern("RFR")
+                .pattern("RNR")
+                .define('R', Items.REDSTONE)
+                .define('F', Items.FLINT_AND_STEEL)
+                .define('N', Items.QUARTZ)
+                .unlockedBy("has_flint_and_steel", has(Items.FLINT_AND_STEEL))
+                .unlockedBy("has_netherrack", has(Items.REDSTONE))
+                .unlockedBy("has_quartz", has(Items.QUARTZ))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToItemRegistryName(ModItems.SPEED_UPGRADE.asItem().getDescriptionId())));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NETHER_UPGRADE)
+                .pattern("QQQ")
+                .pattern("NNN")
+                .pattern("GGG")
+                .define('Q', Items.QUARTZ)
+                .define('N', Items.NETHERRACK)
+                .define('G', Items.GLOWSTONE)
+                .unlockedBy("has_quartz", has(Items.QUARTZ))
+                .unlockedBy("has_netherrack", has(Items.NETHERRACK))
+                .unlockedBy("has_glowstone", has(Items.GLOWSTONE))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Main.MODID, convertToItemRegistryName(ModItems.NETHER_UPGRADE.asItem().getDescriptionId())));
     }
 
     private String convertToRegistryName(String block) {
         return block.toLowerCase().replace(' ', '_').replace("block.plant_farms.", "");
     }
+
+    private String convertToItemRegistryName(String block) {
+        return block.toLowerCase().replace(' ', '_').replace("item.plant_farms.", "");
+    }
 }
+
+

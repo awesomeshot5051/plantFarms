@@ -60,6 +60,7 @@
   "gui.plant_farms.input": "Input Items",
   "gui.plant_farms.output": "Output Items",
   "gui.plant_farms.inventory_viewer": "Inventory Viewer",
+  "item.plant_farms.speed_upgrade": "Speed Upgrade",
   "itemGroup.plant_farms": "Plant Farms",
   "category.plant_farms": "Plant Farms",
   "config.jade.plugin_plant_farms.villager": "Villager",
