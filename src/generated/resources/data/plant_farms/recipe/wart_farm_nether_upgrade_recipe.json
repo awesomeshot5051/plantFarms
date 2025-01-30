@@ -1,0 +1,25 @@
+{
+  "type": "plant_farms:card_upgrade_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "plant_farms:wart_farm"
+    },
+    {
+      "item": "plant_farms:nether_upgrade"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:wart_farm"
+  }
+}

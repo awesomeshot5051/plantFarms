@@ -1,0 +1,25 @@
+{
+  "type": "plant_farms:card_upgrade_serializer",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "plant_farms:lily_farm"
+    },
+    {
+      "item": "plant_farms:speed_upgrade"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:lily_farm"
+  }
+}

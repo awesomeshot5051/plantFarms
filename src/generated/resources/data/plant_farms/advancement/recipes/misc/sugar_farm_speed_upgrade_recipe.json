@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_speed_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "plant_farms:speed_upgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "plant_farms:sugar_farm_speed_upgrade_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_speed_upgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "plant_farms:sugar_farm_speed_upgrade_recipe"
+    ]
+  }
+}
