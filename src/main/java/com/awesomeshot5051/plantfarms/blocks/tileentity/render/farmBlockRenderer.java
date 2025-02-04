@@ -1,32 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
-import com.mojang.blaze3d.vertex.*;
-import com.mojang.math.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.client.renderer.entity.*;
-import net.minecraft.core.*;
-
-public class farmBlockRenderer extends RendererBase<farmBlockTileentity> {
-    public farmBlockRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-    }
-
-    @Override
-    public void render(farmBlockTileentity inventoryViewer, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(inventoryViewer, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        Direction direction = Direction.SOUTH;
-        if (inventoryViewer.getVillagerEntity() != null) {
-            matrixStack.pushPose();
-            VillagerRenderer villagerRenderer = getVillagerRenderer();
-            matrixStack.translate(0.5D, 1D / 16D, 0.5D);
-            matrixStack.mulPose(Axis.YP.rotationDegrees(-direction.toYRot()));
-            matrixStack.scale(0.45F, 0.45F, 0.45F);
-            villagerRenderer.render(inventoryViewer.getVillagerEntity(), 0F, 1F, matrixStack, buffer, combinedLight);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:60c125e028f663f5ee5b2f4397fc285e7aeaf085a3cb2fab22ac18fbd599a5ee
+size 752
