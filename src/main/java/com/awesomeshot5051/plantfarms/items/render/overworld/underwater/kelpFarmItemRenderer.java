@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.underwater;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.underwaterPlants.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.underwater.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class kelpFarmItemRenderer extends BlockItemRendererBase<kelpFarmRenderer, kelpFarmTileentity> {
-    public kelpFarmItemRenderer() {
-        super(kelpFarmRenderer::new, () -> new kelpFarmTileentity(BlockPos.ZERO, ModBlocks.KELP_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f0e3000c5b5b99613187cc4fd698ee185b7ddeb1fc2bda475d71f922f53d2c3
+size 690

@@ -1,31 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import com.mojang.blaze3d.vertex.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.block.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.data.*;
-
-public class daisyFarmRenderer extends RendererBase<daisyFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
-
-    public daisyFarmRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
-    }
-
-    @Override
-    public void render(daisyFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        if (farm.getTimer() >= daisyFarmTileentity.getDaisySpawnTime() && farm.getTimer() < daisyFarmTileentity.getDaisyDeathTime()) {
-            renderSapling(matrixStack);
-            blockRenderDispatcher.renderSingleBlock(Blocks.OXEYE_DAISY.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8ef6c99861d9d03f98dbd2c2ca64b2a598b0cd682e7bb6e7f7565867b37e9ad
+size 1616

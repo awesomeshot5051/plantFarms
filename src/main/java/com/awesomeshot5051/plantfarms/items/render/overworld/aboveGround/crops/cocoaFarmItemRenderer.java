@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class cocoaFarmItemRenderer extends BlockItemRendererBase<cocoFarmRenderer, cocoFarmTileentity> {
-    public cocoaFarmItemRenderer() {
-        super(cocoFarmRenderer::new, () -> new cocoFarmTileentity(BlockPos.ZERO, ModBlocks.COCO_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9302eb22c462616020d137e857a4645f0875558612507f26c73c99bc73057599
+size 695

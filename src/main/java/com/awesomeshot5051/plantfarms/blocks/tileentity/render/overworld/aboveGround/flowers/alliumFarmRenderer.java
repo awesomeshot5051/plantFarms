@@ -1,31 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import com.mojang.blaze3d.vertex.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.block.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.data.*;
-
-public class alliumFarmRenderer extends RendererBase<alliumFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
-
-    public alliumFarmRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
-    }
-
-    @Override
-    public void render(alliumFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        if (farm.getTimer() >= alliumFarmTileentity.getAlliumSpawnTime() && farm.getTimer() < alliumFarmTileentity.getAlliumDeathTime()) {
-            renderSapling(matrixStack);
-            blockRenderDispatcher.renderSingleBlock(Blocks.ALLIUM.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bf621fd852334840f137a83421ef50b0830070f94efa32af22424379f5ee59b
+size 1619

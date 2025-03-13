@@ -1,31 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import com.mojang.blaze3d.vertex.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.block.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.data.*;
-
-public class lilacFarmRenderer extends RendererBase<lilacFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
-
-    public lilacFarmRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
-    }
-
-    @Override
-    public void render(lilacFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        if (farm.getTimer() >= lilacFarmTileentity.getLilacSpawnTime() && farm.getTimer() < lilacFarmTileentity.getLilacDeathTime()) {
-            renderSapling(matrixStack);
-            blockRenderDispatcher.renderSingleBlock(Blocks.LILAC.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:450c5d25892756d5f9a111096f40f7f2e7c3a0fdd84fd842b592907d7a49ad9a
+size 1610

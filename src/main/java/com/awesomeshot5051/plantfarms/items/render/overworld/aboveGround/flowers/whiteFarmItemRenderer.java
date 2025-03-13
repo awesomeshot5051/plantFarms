@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class whiteFarmItemRenderer extends BlockItemRendererBase<whiteFarmRenderer, whiteFarmTileentity> {
-    public whiteFarmItemRenderer() {
-        super(whiteFarmRenderer::new, () -> new whiteFarmTileentity(BlockPos.ZERO, ModBlocks.WHITE_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ddd7f35466388726bc8ebcdfc70602bf4c53bb709b01db7d597ffd908dcf946f
+size 706

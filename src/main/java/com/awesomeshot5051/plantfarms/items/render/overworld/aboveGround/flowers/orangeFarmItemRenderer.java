@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class orangeFarmItemRenderer extends BlockItemRendererBase<orangeFarmRenderer, orangeFarmTileentity> {
-    public orangeFarmItemRenderer() {
-        super(orangeFarmRenderer::new, () -> new orangeFarmTileentity(BlockPos.ZERO, ModBlocks.ORANGE_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6de8b07c6c1550ca51093cc9329249a606d81e06af5fb69e5a6bb31c41e7cf0
+size 713

@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class dandelionFarmItemRenderer extends BlockItemRendererBase<dandelionFarmRenderer, dandelionFarmTileentity> {
-    public dandelionFarmItemRenderer() {
-        super(dandelionFarmRenderer::new, () -> new dandelionFarmTileentity(BlockPos.ZERO, ModBlocks.DANDELION_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a7b8bad3281bd10766b83fa8fdf62bbf22d2930e57a2595bc7e6453cec4c5ae
+size 734

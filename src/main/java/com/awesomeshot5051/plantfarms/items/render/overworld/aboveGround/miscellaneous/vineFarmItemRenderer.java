@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.miscellaneous;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.miscellaneous.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.miscellaneous.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class vineFarmItemRenderer extends BlockItemRendererBase<vineFarmRenderer, vineFarmTileentity> {
-    public vineFarmItemRenderer() {
-        super(vineFarmRenderer::new, () -> new vineFarmTileentity(BlockPos.ZERO, ModBlocks.VINE_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d20401ced3655952e68f88419e1979b0ddfa53cbe876b8fec35725ff080c222
+size 717

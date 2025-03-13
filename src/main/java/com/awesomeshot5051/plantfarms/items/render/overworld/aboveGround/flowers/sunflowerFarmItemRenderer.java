@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class sunflowerFarmItemRenderer extends BlockItemRendererBase<sunflowerFarmRenderer, sunflowerFarmTileentity> {
-    public sunflowerFarmItemRenderer() {
-        super(sunflowerFarmRenderer::new, () -> new sunflowerFarmTileentity(BlockPos.ZERO, ModBlocks.SUNFLOWER_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1806a6eb41bbaac9be38ac8c0114eda411191ace2260050a95ae4fea94ac46e0
+size 734

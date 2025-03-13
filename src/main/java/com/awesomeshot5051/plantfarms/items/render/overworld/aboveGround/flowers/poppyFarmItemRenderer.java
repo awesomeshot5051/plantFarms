@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.flowers;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.flowers.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class poppyFarmItemRenderer extends BlockItemRendererBase<poppyFarmRenderer, poppyFarmTileentity> {
-    public poppyFarmItemRenderer() {
-        super(poppyFarmRenderer::new, () -> new poppyFarmTileentity(BlockPos.ZERO, ModBlocks.POPPY_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b995627e5144edb67d15692b0bfdb6ab95cb5fc2efa3793649fcbef4a838e3f1
+size 706
