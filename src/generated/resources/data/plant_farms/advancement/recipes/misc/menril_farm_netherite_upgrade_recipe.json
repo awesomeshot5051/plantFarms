@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_speed_upgrade": {
+    "has_netherite": {
       "conditions": {
         "items": [
           {
-            "items": "plant_farms:speed_upgrade"
+            "items": "minecraft:netherite_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "plant_farms:warped_farm_speed_upgrade_recipe"
+        "recipe": "plant_farms:menril_farm_netherite_upgrade_recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_speed_upgrade"
+      "has_netherite"
     ]
   ],
   "rewards": {
     "recipes": [
-      "plant_farms:warped_farm_speed_upgrade_recipe"
+      "plant_farms:menril_farm_netherite_upgrade_recipe"
     ]
   }
 }

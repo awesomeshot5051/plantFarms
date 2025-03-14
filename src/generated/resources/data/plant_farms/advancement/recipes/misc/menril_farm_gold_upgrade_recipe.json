@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_speed_upgrade": {
+    "has_gold": {
       "conditions": {
         "items": [
           {
-            "items": "plant_farms:speed_upgrade"
+            "items": "minecraft:gold_ingot"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "plant_farms:chorus_farm_speed_upgrade_recipe"
+        "recipe": "plant_farms:menril_farm_gold_upgrade_recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_speed_upgrade"
+      "has_gold"
     ]
   ],
   "rewards": {
     "recipes": [
-      "plant_farms:chorus_farm_speed_upgrade_recipe"
+      "plant_farms:menril_farm_gold_upgrade_recipe"
     ]
   }
 }
