@@ -1,0 +1,24 @@
+{
+  "type": "plant_farms:shaped_serializer",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "c:glass_panes"
+    },
+    "B": {
+      "tag": "minecraft:axes"
+    },
+    "C": {
+      "item": "integrateddynamics:menril_sapling"
+    }
+  },
+  "pattern": [
+    "###",
+    "#B#",
+    "#C#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "plant_farms:menril_farm"
+  }
+}
