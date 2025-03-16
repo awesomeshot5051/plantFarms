@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.iml" group="PlantFarms" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms_main.iml" group="PlantFarms" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms_test.iml" group="PlantFarms" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" />
     </modules>
   </component>
 </project>

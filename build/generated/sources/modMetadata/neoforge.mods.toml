@@ -4,7 +4,7 @@ license = "All rights reserved"
 #issueTrackerURL = "https://github.com/henkelmax/easy-villagers/issues"
 [[mods]]
 modId = "plant_farms"
-#version = "1.21.1-2.0.6"
+#version = "1.21.1-2.0.7"
 displayName = "Plant Farms"
 #updateJSONURL = "https://update.maxhenkel.de/neoforge/plant_farms"
 #displayURL = "https://www.curseforge.com/minecraft/mc-mods/easy-villagers"

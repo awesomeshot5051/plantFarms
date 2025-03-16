@@ -1,17 +1,3 @@
-package com.awesomeshot5051.plantfarms;
-
-import net.minecraft.core.*;
-import net.minecraft.world.item.*;
-import net.neoforged.neoforge.items.*;
-import org.jetbrains.annotations.*;
-
-public class OutputItemHandler extends ItemStackHandler {
-    public OutputItemHandler(NonNullList<ItemStack> stacks) {
-        super(stacks);
-    }
-
-    @Override
-    public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-        return false;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:23a1f9bdd13173901ce4e05ba4bc74048612b60f82397c25edc029068e8b0dba
+size 443
