@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class sugarFarmItemRenderer extends BlockItemRendererBase<sugarFarmRenderer, sugarFarmTileentity> {
-    public sugarFarmItemRenderer() {
-        super(sugarFarmRenderer::new, () -> new sugarFarmTileentity(BlockPos.ZERO, ModBlocks.SUGAR_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4cf6135b92db0fa8a64e37d178f8531bd517dde4328d6659c7510d2e4d043ff6
+size 679

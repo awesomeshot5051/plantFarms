@@ -1,14 +1,3 @@
-package com.awesomeshot5051.plantfarms.integration.jei;
-
-import com.awesomeshot5051.plantfarms.*;
-import mezz.jei.api.*;
-import net.minecraft.resources.*;
-import org.jetbrains.annotations.*;
-
-@JeiPlugin
-public class JEIPlugin implements IModPlugin {
-    @Override
-    public @NotNull ResourceLocation getPluginUid() {
-        return ResourceLocation.fromNamespaceAndPath(Main.MODID, "plant_farms");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a75e423112a77525d01f96fa03e74f9886b630a28603df7c5b275c1ea6316ff
+size 406

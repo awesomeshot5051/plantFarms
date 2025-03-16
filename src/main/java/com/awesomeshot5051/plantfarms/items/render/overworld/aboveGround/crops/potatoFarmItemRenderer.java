@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class potatoFarmItemRenderer extends BlockItemRendererBase<potatoFarmRenderer, potatoFarmTileentity> {
-    public potatoFarmItemRenderer() {
-        super(potatoFarmRenderer::new, () -> new potatoFarmTileentity(BlockPos.ZERO, ModBlocks.POTATO_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ff638cfb4b98098a0be57f21cfee1c8924a2c7f87c1525c289100a42d6f6424
+size 686

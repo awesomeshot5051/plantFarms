@@ -1,23 +1,3 @@
-package com.awesomeshot5051.plantfarms.gui;
-
-import com.awesomeshot5051.corelib.inventory.*;
-import net.minecraft.world.*;
-import net.minecraft.world.entity.player.*;
-import net.minecraft.world.inventory.*;
-import net.minecraft.world.level.block.*;
-
-public abstract class ModContainerBase extends ContainerBase {
-    protected ContainerLevelAccess access;
-
-    public ModContainerBase(MenuType containerType, int id, Container playerInventory, Container inventory, ContainerLevelAccess access) {
-        super(containerType, id, playerInventory, inventory);
-        this.access = access;
-    }
-
-    public abstract Block getBlock();
-
-    @Override
-    public boolean stillValid(Player player) {
-        return super.stillValid(player) && AbstractContainerMenu.stillValid(access, player, getBlock());
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8509f17a04ef354acc60991e8ee113a92e56f3565ef5a14c17217ed7e768314b
+size 807

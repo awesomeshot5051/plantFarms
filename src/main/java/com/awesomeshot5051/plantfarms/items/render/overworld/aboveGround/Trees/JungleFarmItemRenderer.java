@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class JungleFarmItemRenderer extends BlockItemRendererBase<JungleFarmRenderer, JungleFarmTileentity> {
-    public JungleFarmItemRenderer() {
-        super(JungleFarmRenderer::new, () -> new JungleFarmTileentity(BlockPos.ZERO, ModBlocks.JUNGLE_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3cb3eb56099fd63ab73330293f22381bca94044c4d65a1acd21e2a621ad140a
+size 686

@@ -1,31 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import com.mojang.blaze3d.vertex.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.block.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.data.*;
-
-public class AcaciaFarmRenderer extends RendererBase<AcaciaFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
-
-    public AcaciaFarmRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
-    }
-
-    @Override
-    public void render(AcaciaFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        if (farm.getTimer() >= AcaciaFarmTileentity.getAcaciaSpawnTime(farm) && farm.getTimer() < AcaciaFarmTileentity.getAcaciaDeathTime(farm)) {
-            renderSapling(matrixStack);
-            blockRenderDispatcher.renderSingleBlock(Blocks.ACACIA_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9cf37ac03486f9120984a4b723de2a389571c274a26b208e766b2faaff057339
+size 1584

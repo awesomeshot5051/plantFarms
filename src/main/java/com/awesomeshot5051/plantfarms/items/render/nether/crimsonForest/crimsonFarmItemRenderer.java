@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.nether.crimsonForest;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.crimsonForest.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.nether.crimsonForest.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class crimsonFarmItemRenderer extends BlockItemRendererBase<crimsonFarmRenderer, crimsonFarmTileentity> {
-    public crimsonFarmItemRenderer() {
-        super(crimsonFarmRenderer::new, () -> new crimsonFarmTileentity(BlockPos.ZERO, ModBlocks.CRIMSON_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:289621d8ae51ba895ee15e451038aee9c6d3a78db33dbfbf3a3fe5e3c7fe6e51
+size 672

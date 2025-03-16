@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class OakFarmItemRenderer extends BlockItemRendererBase<OakFarmRenderer, OakFarmTileentity> {
-    public OakFarmItemRenderer() {
-        super(OakFarmRenderer::new, () -> new OakFarmTileentity(BlockPos.ZERO, ModBlocks.OAK_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:98935f9443c5fdf2c870b8b52383280f8f248f9f811a0bb710c8d5b07d6e3339
+size 665

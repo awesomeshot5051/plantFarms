@@ -1,31 +1,3 @@
-package com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import com.mojang.blaze3d.vertex.*;
-import net.minecraft.client.renderer.*;
-import net.minecraft.client.renderer.block.*;
-import net.minecraft.client.renderer.blockentity.*;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.data.*;
-
-public class BirchFarmRenderer extends RendererBase<BirchFarmTileentity> {
-    private final BlockRenderDispatcher blockRenderDispatcher;
-
-    public BirchFarmRenderer(BlockEntityRendererProvider.Context renderer) {
-        super(renderer);
-        this.blockRenderDispatcher = renderer.getBlockRenderDispatcher();
-    }
-
-    @Override
-    public void render(BirchFarmTileentity farm, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int combinedLight, int combinedOverlay) {
-        super.render(farm, partialTicks, matrixStack, buffer, combinedLight, combinedOverlay);
-        matrixStack.pushPose();
-        if (farm.getTimer() >= BirchFarmTileentity.getBirchSpawnTime(farm) && farm.getTimer() < BirchFarmTileentity.getBirchDeathTime(farm)) {
-            renderSapling(matrixStack);
-            blockRenderDispatcher.renderSingleBlock(Blocks.BIRCH_SAPLING.defaultBlockState(), matrixStack, buffer, combinedLight, combinedOverlay, ModelData.EMPTY, null);
-            matrixStack.popPose();
-        }
-        matrixStack.popPose();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f299c87f6b3bc32b01436b1b66305e3ccd55c727f2b98a73be5f4316c9dd82b8
+size 1575

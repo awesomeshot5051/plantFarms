@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class AcaciaFarmItemRenderer extends BlockItemRendererBase<AcaciaFarmRenderer, AcaciaFarmTileentity> {
-    public AcaciaFarmItemRenderer() {
-        super(AcaciaFarmRenderer::new, () -> new AcaciaFarmTileentity(BlockPos.ZERO, ModBlocks.ACACIA_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a92dd67842e6293ff01dc0fec15f4c8b4967a42c6ac6ddaa3d7c3a1d5632f4d
+size 686

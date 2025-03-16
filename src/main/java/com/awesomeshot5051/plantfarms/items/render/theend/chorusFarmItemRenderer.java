@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.theend;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.theend.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.theend.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class chorusFarmItemRenderer extends BlockItemRendererBase<ChorusFarmRenderer, ChorusFarmTileentity> {
-    public chorusFarmItemRenderer() {
-        super(ChorusFarmRenderer::new, () -> new ChorusFarmTileentity(BlockPos.ZERO, ModBlocks.CHORUS_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:268dd9400224905fe20cd194c8ddffd43846ef2aa5483ee7c439deb60718ba64
+size 623

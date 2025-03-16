@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class gcarrotFarmItemRenderer extends BlockItemRendererBase<gcarrotFarmRenderer, gcarrotFarmTileentity> {
-    public gcarrotFarmItemRenderer() {
-        super(gcarrotFarmRenderer::new, () -> new gcarrotFarmTileentity(BlockPos.ZERO, ModBlocks.GCARROT_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da69909e43a1ad34d4b0b6d84871c7bfabfd980f12cdfbff98038cf663adeeaf
+size 693

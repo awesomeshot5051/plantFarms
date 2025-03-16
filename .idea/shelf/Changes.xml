@@ -1,0 +1,9 @@
+<changelist name="Changes" date="1742101145422" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" />
+  <option name="DESCRIPTION" value="Changes" />
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/java/com/awesomeshot5051/plantfarms/corelib/corelib-v1.21-2.1.5.jar" />
+    <option name="AFTER_PATH" value="src/main/java/com/awesomeshot5051/plantfarms/corelib/corelib-v1.21-2.1.5.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Changes/corelib-v1.21-2.1.5.jar" />
+  </binary>
+</changelist>

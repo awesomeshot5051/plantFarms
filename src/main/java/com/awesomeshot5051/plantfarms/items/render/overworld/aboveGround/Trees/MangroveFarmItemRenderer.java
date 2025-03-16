@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class MangroveFarmItemRenderer extends BlockItemRendererBase<MangroveFarmRenderer, MangroveFarmTileentity> {
-    public MangroveFarmItemRenderer() {
-        super(MangroveFarmRenderer::new, () -> new MangroveFarmTileentity(BlockPos.ZERO, ModBlocks.MANGROVE_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d08ad843ba8e7da3cb23d3701e44d8ae4b55c91afc564c1fd176ee737efd3f01
+size 700

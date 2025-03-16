@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class AzaleaFarmItemRenderer extends BlockItemRendererBase<AzaleaFarmRenderer, AzaleaFarmTileentity> {
-    public AzaleaFarmItemRenderer() {
-        super(AzaleaFarmRenderer::new, () -> new AzaleaFarmTileentity(BlockPos.ZERO, ModBlocks.AZALEA_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0620faf1de4cc55c303c99efa06af7dfcd530f687f13a5e0a36f8ea27525c234
+size 686

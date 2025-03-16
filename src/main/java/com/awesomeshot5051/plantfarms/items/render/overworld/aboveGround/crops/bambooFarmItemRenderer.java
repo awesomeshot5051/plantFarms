@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class bambooFarmItemRenderer extends BlockItemRendererBase<bambooFarmRenderer, bambooFarmTileentity> {
-    public bambooFarmItemRenderer() {
-        super(bambooFarmRenderer::new, () -> new bambooFarmTileentity(BlockPos.ZERO, ModBlocks.BAMBOO_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:457059078278141182c3216881a767b753b24dbde61eedaae8bbdcca9dbb4c4f
+size 686

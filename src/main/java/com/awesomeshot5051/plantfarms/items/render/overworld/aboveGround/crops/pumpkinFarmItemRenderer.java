@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class pumpkinFarmItemRenderer extends BlockItemRendererBase<pumpkinFarmRenderer, pumpkinFarmTileentity> {
-    public pumpkinFarmItemRenderer() {
-        super(pumpkinFarmRenderer::new, () -> new pumpkinFarmTileentity(BlockPos.ZERO, ModBlocks.PUMPKIN_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af6413444f95bbcfa5376c3ab4fb051032c811c37a99c35b0d311c9ee0454922
+size 693

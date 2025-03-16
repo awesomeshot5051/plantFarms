@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.Trees;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.trees.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.Trees.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class BirchFarmItemRenderer extends BlockItemRendererBase<BirchFarmRenderer, BirchFarmTileentity> {
-    public BirchFarmItemRenderer() {
-        super(BirchFarmRenderer::new, () -> new BirchFarmTileentity(BlockPos.ZERO, ModBlocks.BIRCH_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9d67eadb51a20991730d8dd0f1c6ae567cac5b74aff05ea7b6ed3f1665a8510
+size 679

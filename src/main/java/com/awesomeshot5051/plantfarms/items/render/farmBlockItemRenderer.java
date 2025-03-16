@@ -1,12 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.*;
-import net.minecraft.core.*;
-
-public class farmBlockItemRenderer extends BlockItemRendererBase<farmBlockRenderer, farmBlockTileentity> {
-    public farmBlockItemRenderer() {
-        super(farmBlockRenderer::new, () -> new farmBlockTileentity(BlockPos.ZERO, ModBlocks.FARM_BLOCK.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfb82d032792b88532030ae758446153b90172e5578f0a1669a19b1d1b86b42a
+size 541

@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.overworld.aboveGround.crops;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.overworld.aboveGround.crops.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class berryFarmItemRenderer extends BlockItemRendererBase<berryFarmRenderer, berryFarmTileentity> {
-    public berryFarmItemRenderer() {
-        super(berryFarmRenderer::new, () -> new berryFarmTileentity(BlockPos.ZERO, ModBlocks.BERRY_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e86c982ba6c72d1ddd2575e60e67deb9ddb8ed9789dff96457cd64503b62799
+size 679

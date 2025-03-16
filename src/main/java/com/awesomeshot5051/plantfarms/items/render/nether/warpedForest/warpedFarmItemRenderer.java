@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.nether.warpedForest;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.warpedForest.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.nether.warpedForest.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class warpedFarmItemRenderer extends BlockItemRendererBase<warpedFarmRenderer, warpedFarmTileentity> {
-    public warpedFarmItemRenderer() {
-        super(warpedFarmRenderer::new, () -> new warpedFarmTileentity(BlockPos.ZERO, ModBlocks.WARPED_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb87a24e8d6cbb086bc1e3fd228da5b837b3a3153849824a01fa51c85f2268f3
+size 662

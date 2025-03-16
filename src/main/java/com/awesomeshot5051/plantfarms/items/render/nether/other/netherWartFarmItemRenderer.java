@@ -1,13 +1,3 @@
-package com.awesomeshot5051.plantfarms.items.render.nether.other;
-
-import com.awesomeshot5051.plantfarms.blocks.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.nether.other.*;
-import com.awesomeshot5051.plantfarms.blocks.tileentity.render.nether.other.*;
-import com.awesomeshot5051.plantfarms.items.render.*;
-import net.minecraft.core.*;
-
-public class netherWartFarmItemRenderer extends BlockItemRendererBase<netherWartFarmRenderer, netherWartFarmTileentity> {
-    public netherWartFarmItemRenderer() {
-        super(netherWartFarmRenderer::new, () -> new netherWartFarmTileentity(BlockPos.ZERO, ModBlocks.WART_FARM.get().defaultBlockState()));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a70d27ffbb5f05814607a6f5fef83536dde57c3a444dfeae13292c4d78a90b12
+size 663
