@@ -7,7 +7,7 @@ forgedatauserdev
 --assetIndex
 17
 --assetsDir
-C:\\Users\\ignor\\.gradle\\caches\\neoformruntime\\assets
+C:\\Users\\Traee\\.gradle\\caches\\neoformruntime\\assets
 --gameDir
 .
 --fml.neoForgeVersion
@@ -24,6 +24,6 @@ C:\\Users\\ignor\\.gradle\\caches\\neoformruntime\\assets
 plant_farms
 --all
 --output
-C:\\Users\\ignor\\OneDrive\\Documents\\GitHub\\plantFarms\\src\\generated\\resources
+D:\\MCreatorWorkspaces\\plantFarms\\src\\generated\\resources
 --existing
-C:\\Users\\ignor\\OneDrive\\Documents\\GitHub\\plantFarms\\src\\main\\resources
+D:\\MCreatorWorkspaces\\plantFarms\\src\\main\\resources
