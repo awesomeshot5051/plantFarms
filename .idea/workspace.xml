@@ -4,28 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e841553-ffad-4985-bfae-b31fc1dcce59" name="Changes" comment="Adding Integrated Dynamics Integration">
+    <list default="true" id="7e841553-ffad-4985-bfae-b31fc1dcce59" name="Changes" comment="Adding fluid render">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hotswap_agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/com.awesomeshot5051.plantFarms.PlantFarms.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/integration/waila/HUDHandlerFarm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PlantFarms.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/blocks/tileentity/render/overworld/underwater/kelpFarmRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/blocks/tileentity/render/overworld/underwater/kelpFarmRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/corelib/corelib-v1.21-2.1.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/datacomponents/FarmData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/datacomponents/FarmData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerRunClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerRunClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/runGameTestServer.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/runGameTestServer.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverLegacyClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverLegacyClasspath.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/downloadAssets/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/downloadAssets/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/CardUpgradeRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/CardUpgradeRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/EnchantmentAdditionRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/EnchantmentAdditionRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/EnchantmentRemovalRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/EnchantmentRemovalRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/UpgradeRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/data/providers/recipe/recipe/UpgradeRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/integration/waila/HUDHandlerVillager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/integration/waila/PluginEasyVillagers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/awesomeshot5051/plantfarms/integration/waila/PluginPlantFarms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +70,13 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="PlantFarms" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PlantFarms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -92,9 +115,6 @@
     &quot;accountId&quot;: &quot;d125ac74-9389-4b3b-91dc-3cb5307b4960&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.awesomeshot5051.corelib/corelib/1.21-3.0.5/279ed88dcfcb61997234a1b3189d297293e7f92b/corelib-1.21-3.0.5.jar!/com/awesomeshot5051/corelib/client/CustomRendererBlockItem.class" root0="SKIP_INSPECTION" />
-  </component>
   <component name="KotlinScriptingSettings">
     <option name="suppressDefinitionsCheck" value="true" />
     <scriptDefinition className="org.jetbrains.kotlin.mainKts.MainKtsScript" definitionName="MainKtsScript">
@@ -129,29 +149,41 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2uJTdeaLJCQCEE73meGDPSkc7QR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build plantFarms.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.plantFarms [ReleaseJar].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.plantFarms [runClient].executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master-1.21.1&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ignor/OneDrive/Documents/GitHub/plantFarms&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.intentionPowerPack&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build plantFarms.executor": "Run",
+    "Gradle.plantFarms [ReleaseJar].executor": "Run",
+    "Gradle.plantFarms [build].executor": "Run",
+    "Gradle.plantFarms [createGameTestServerLaunchScript].executor": "Run",
+    "Gradle.plantFarms [runClient].executor": "Run",
+    "Gradle.plantFarms [runGameTestServer].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master-1.21.1",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/MCreatorWorkspaces/plantFarms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.intentionPowerPack",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MCreatorWorkspaces\plantFarms" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ignor\OneDrive\Documents\GitHub\plantFarms" />
     </key>
@@ -219,6 +251,50 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="plantFarms [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="plantFarms [createGameTestServerLaunchScript]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="createGameTestServerLaunchScript" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="plantFarms [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -241,20 +317,56 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="plantFarms [runGameTestServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runGameTestServer" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Data" />
       <item itemvalue="Application.GameTestServer" />
       <item itemvalue="Application.Server" />
+      <item itemvalue="Gradle.plantFarms [build]" />
       <item itemvalue="Gradle.plantFarms [ReleaseJar]" />
+      <item itemvalue="Gradle.plantFarms [createGameTestServerLaunchScript]" />
       <item itemvalue="Gradle.plantFarms [runClient]" />
+      <item itemvalue="Gradle.plantFarms [runGameTestServer]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.plantFarms [runClient]" />
+        <item itemvalue="Gradle.plantFarms [build]" />
+        <item itemvalue="Gradle.plantFarms [runGameTestServer]" />
+        <item itemvalue="Gradle.plantFarms [createGameTestServerLaunchScript]" />
         <item itemvalue="Gradle.plantFarms [ReleaseJar]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -264,6 +376,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741965765499</updated>
+      <workItem from="1745529149805" duration="304000" />
+      <workItem from="1745529777694" duration="2000" />
+      <workItem from="1747407944575" duration="1685000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Integrated Dynamics Integration">
       <option name="closed" value="true" />
@@ -273,14 +388,26 @@
       <option name="project" value="LOCAL" />
       <updated>1742821779621</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding fluid render">
+      <option name="closed" value="true" />
+      <created>1742856500213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742856500213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding a second person" />
     <MESSAGE value="Plant Farms 1.21.1 v2.0.7&#10;Added Integrated Dynamics compatibility. Only works if Integrated Dynamics is installed." />
     <MESSAGE value="Adding Integrated Dynamics Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Integrated Dynamics Integration" />
+    <MESSAGE value="Adding fluid render" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fluid render" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
