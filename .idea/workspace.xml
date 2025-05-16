@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e841553-ffad-4985-bfae-b31fc1dcce59" name="Changes" comment="Adding fluid render" />
+    <list default="true" id="7e841553-ffad-4985-bfae-b31fc1dcce59" name="Changes" comment="Adding fluid render">
+      <change beforePath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,12 +36,6 @@
                 <item name="PlantFarms" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PlantFarms" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -57,6 +54,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master-1.21.1" />
@@ -149,7 +147,7 @@
       <recent name="C:\Users\ignor\OneDrive\Documents\GitHub\plantFarms" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.plantFarms [runClient]">
+  <component name="RunManager" selected="Gradle.plantFarms [ReleaseJar]">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
       <module name="PlantFarms.main" />
@@ -313,11 +311,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.plantFarms [ReleaseJar]" />
         <item itemvalue="Gradle.plantFarms [runClient]" />
         <item itemvalue="Gradle.plantFarms [build]" />
         <item itemvalue="Gradle.plantFarms [runGameTestServer]" />
         <item itemvalue="Gradle.plantFarms [createGameTestServerLaunchScript]" />
-        <item itemvalue="Gradle.plantFarms [ReleaseJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +337,7 @@
       <updated>1741965765499</updated>
       <workItem from="1745529149805" duration="304000" />
       <workItem from="1745529777694" duration="2000" />
-      <workItem from="1747407944575" duration="2011000" />
+      <workItem from="1747407944575" duration="2335000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Integrated Dynamics Integration">
       <option name="closed" value="true" />
@@ -365,11 +363,30 @@
       <option name="project" value="LOCAL" />
       <updated>1747411683619</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding fluid render">
+      <option name="closed" value="true" />
+      <created>1747411924315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747411924315</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding a second person" />
